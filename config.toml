@@ -7,7 +7,7 @@ theme = "hyde-x"
 paginate = 10
 
 [author]
-    name = "Harvey Thompson"
+    name = "Harth Software"
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.
@@ -34,7 +34,7 @@ paginate = 10
     # Changes sidebar background and link/accent colours.
     # See below for more colour options.
     # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
-    theme = "theme-base-0d"
+    theme = "theme-base-08"
 
     # Select a syntax highight.
     # Check the static/css/highlight directory for options.
@@ -42,11 +42,11 @@ paginate = 10
 
     # Displays under the author name in the sidebar, keep it short.
     # You can use markdown here.
-    tagline = "Harth Programming Language."
+    tagline = "<i>A reasonable programming language for a more enlightened age.</i>"
 
     # Text for the top menu link, which goes the root URL for the site.
     # Default (if omitted) is "Blog".
-    home = "Blog"
+    home = "Home"
 
     # Metadata used to drive integrations.
     googleAuthorship = ""
