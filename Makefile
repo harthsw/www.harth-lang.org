@@ -2,4 +2,4 @@
 DEPLOY_PATH = .deploy
 
 deploy:
-	hugo-deploy -d $(DEPLOY_PATH) -b master
+	hugo-deploy -d $(DEPLOY_PATH)
