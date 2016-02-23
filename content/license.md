@@ -1,9 +1,13 @@
-+++
-date = "2015-11-04"
-title = "License"
-description = "License non-code blog conent and source code files and snippets."
-keywords = ["license", "blog", "code"]
-+++
+---
+date: "2015-11-04"
+title: "License"
+description: "License non-code blog conent and source code files and snippets."
+keywords:
+  - "license"
+  - "blog"
+  - "code"
+---
+
 ### Content license
 
 All non-code blog content is licensed under [Creative Commons BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/).
