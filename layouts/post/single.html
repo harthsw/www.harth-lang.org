@@ -1,0 +1,23 @@
+{{ partial "header" . }}
+
+{{ partial "nav" . }}
+
+<section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+    <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=""></a>
+    </nav>
+    <div class="wy-nav-content">
+        <div class="rst-content">
+            {{ partial "breadcrumbs" . }}
+            <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                <div itemprop="articleBody">
+                    <h1>{{ .Title }}</h1>                    
+                    BLOG BLOG {{ .Content }}
+                </div>
+            </div>
+            {{ partial "footer" . }}
+        </div>
+    </div>
+</section>
+{{ partial "js" . }}

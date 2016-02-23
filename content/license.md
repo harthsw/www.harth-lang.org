@@ -6,6 +6,7 @@ keywords:
   - "license"
   - "blog"
   - "code"
+weight: 0
 ---
 
 ### Content license
