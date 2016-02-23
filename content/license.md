@@ -1,12 +1,10 @@
 ---
-date: "2015-11-04"
 title: "License"
 description: "License non-code blog conent and source code files and snippets."
 keywords:
   - "license"
   - "blog"
   - "code"
-weight: 0
 ---
 
 ### Content license
@@ -17,7 +15,7 @@ All non-code blog content is licensed under [Creative Commons BY-NC-SA](http://c
 
 All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.
 
-> Copyright 2015 Harvey Thompson
+> Copyright 2016 Harvey Thompson
 > 
 > Licensed under the Apache License, Version 2.0 (the "License");
 > you may not use this file except in compliance with the License.
