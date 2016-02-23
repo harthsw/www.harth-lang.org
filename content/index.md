@@ -1,12 +1,15 @@
 ---
-title: "Welcome to the Docker Docs!"
-description: "Home page for Docker's documentation"
+title: "Harth Programming Language"
+description: "Home page for the Harth Programming Language"
 keywords: 
-  - "Docker, documentation, manual, guide, reference, api"
+  - "harth, documentation, manual, guide, reference, api"
 ---
 
-# Welcome Friends to the Docker Docs!
+# The Harth Programming Language
 
+Main Page Here
+
+<!--
 <style type="text/css">
 .splash {border:0;background:none;}
 .splash td{vertical-align:top;background:none;padding:10px 5px;border-style:none;border-width:0px;overflow:hidden;word-break:normal;}
@@ -66,3 +69,4 @@ please email the <a href="mailto:feedback@docker.com">feedback to us</a>, we
 will be happy to hear from you.
 
 ![](https://docs.docker.com/images/docker-friends.png)
+-->
