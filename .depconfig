@@ -1,9 +1,2 @@
 [core]
 	default-dep-dir = themes
-
-[dep "harth-hugo-theme"]
-	relpath = themes/harth-hugo-theme
-	url = git@github.com:harthsw/harth-hugo-theme.git
-	vcs = git
-	branch = refs/heads/master
-	commit = d8dab3d482b398ee3905431146a871074e1af243
