@@ -1,0 +1,197 @@
+/*
+	For legal information look for the license.txt in the same directory.
+*/
+
+pre,  code {
+	color: #333;
+}
+ .n { /* name */
+	color: #1b9af7;
+}
+ .k { /* keyword */
+	color: #8bd300;
+}
+ .o { /* operator */
+	color: #ed4694;
+}
+ .p { /* punctuation */
+}
+ .c { /* comment */
+	color: #888;
+}
+ .err { /* error */
+	color: #ff4351;
+}
+ .cm { /* comment.multiline */
+	color: #888;
+}
+ .cp { /* comment.preproc */
+	color: #888;
+}
+ .c1 { /* comment.single */
+	color: #888;
+}
+ .cs { /* comment.special */
+	color: #888;
+}
+ .gd { /* generic.deleted */
+}
+ .gd .x { /* generic.deleted.specific */
+}
+ .ge { /* generic.emph */
+}
+ .gr { /* generic.error */
+	color: #ff4351;
+}
+ .gh { /* generic.heading */
+	color: #888;
+}
+ .gi { /* generic.inserted */
+}
+ .gi .x { /* generic.inserted.specific */
+}
+ .go { /* generic.output */
+	color: #888;
+}
+ .gp { /* generic.prompt */
+	color: #888;
+}
+ .gs { /* generic.strong */
+}
+ .gu { /* generic.subheading */
+	color: #888;
+}
+ .gt { /* generic.traceback */
+	color: #ff4351;
+}
+ .kc { /* keyword.constant */
+	color: #1b9af7;
+}
+ .kd { /* keyword.declaration */
+	color: #1b9af7;
+}
+ .kp { /* keyword.pseudo */
+	color: #1b9af7;
+}
+ .kr { /* keyword.reserved */
+	color: #1b9af7;
+}
+ .kt { /* keyword.type */
+	color: #1b9af7;
+}
+ .m { /* literal.number */
+	color: #ed4694;
+}
+ .s { /* literal.string */
+	color: #fc880f;
+}
+ .na { /* name.attribute */
+	color: #8bd300;
+}
+ .nb { /* name.builtin */
+	color: #1b9af7;
+}
+ .nc { /* name.class */
+	background-color: rgba(123,114,233,.05);
+	border-radius: 2px;
+	color: #7b72e9;
+}
+ .no { /* name.constant */
+	color: #8bd300;
+}
+ .ni { /* name.entity */
+	color: #7b72e9;
+}
+ .ne { /* name.exception */
+	color: #ed4694;
+}
+ .nf { /* name.function */
+	background-color: rgba(123,114,233,.05);
+	border-radius: 2px;
+	color: #7b72e9;
+}
+ .nd { /* name.decorator */
+	color: #ed4694;
+}
+ .nn { /* name.namespace */
+	color: #ed4694;
+}
+ .nt { /* name.tag */
+	background-color: rgba(27,154,247,.05);
+	border-radius: 2px;
+	color: #1b9af7;
+}
+ .nv { /* name.variable */
+	color: #ed4694;
+}
+ .nx { /* name.other */
+	background-color: rgba(237,70,148,.05);
+	border-radius: 2px;
+	color: #ed4694;
+}
+ .ow { /* operator.word */
+	color: #ed4694;
+}
+ .w { /* text.whitespace */
+	color: #888;
+}
+ .mf { /* literal.number.float */
+	color: #8bd300;
+}
+ .mh { /* literal.number.hex */
+	color: #8bd300;
+}
+ .mi { /* literal.number.integer */
+	color: #8bd300;
+}
+ .mo { /* literal.number.oct */
+	color: #8bd300;
+}
+ .sb { /* literal.string.backtick */
+	color: #fc880f;
+}
+ .sc { /* literal.string.char */
+	color: #fc880f;
+}
+ .sd { /* literal.string.doc */
+	color: #fc880f;
+}
+ .s2 { /* literal.string.double */
+	color: #fc880f;
+}
+ .se { /* literal.string.escape */
+	color: #fc880f;
+}
+ .sh { /* literal.string.heredoc */
+	color: #fc880f;
+}
+ .si { /* literal.string.interpol */
+	color: #fc880f;
+}
+ .sx { /* literal.string.other */
+	color: #fc880f;
+}
+ .sr { /* literal.string.regex */
+	color: #fc880f;
+}
+ .s1 { /* literal.string.single */
+	color: #fc880f;
+}
+ .ss { /* literal.string.symbol */
+	color: #db49d8;
+}
+ .bp { /* name.builtin.pseudo */
+	color: #ed4694;
+}
+ .vc { /* name.variable.class */
+	color: #8bd300;
+}
+ .vg { /* name.variable.global */
+	color: #8bd300;
+}
+ .vi { /* name.variable.instance */
+	color: #8bd300;
+}
+ .il { /* literal.number.integer.long */
+	color: #8bd300;
+}

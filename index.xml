@@ -25,20 +25,21 @@
 
 &lt;p&gt;All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;Copyright 2015 Harvey Thompson
+&lt;blockquote&gt;
+&lt;p&gt;Copyright 2015 Harvey Thompson&lt;/p&gt;
 
-Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;);
+&lt;p&gt;Licensed under the Apache License, Version 2.0 (the &amp;ldquo;License&amp;rdquo;);
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain a copy of the License at&lt;/p&gt;
 
-   http://www.apache.org/licenses/LICENSE-2.0
+&lt;p&gt;&lt;a href=&#34;http://www.apache.org/licenses/LICENSE-2.0&#34;&gt;http://www.apache.org/licenses/LICENSE-2.0&lt;/a&gt;&lt;/p&gt;
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS,
+&lt;p&gt;Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &amp;ldquo;AS IS&amp;rdquo; BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.
-&lt;/code&gt;&lt;/pre&gt;
+limitations under the License.&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     

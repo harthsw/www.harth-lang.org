@@ -1,0 +1,39 @@
+/*
+	Add syntax highlighting for to <code>-elements
+*/
+
+.rst-content code{
+    white-space: nowrap;
+    max-width: 100%;
+    background: #fff;
+    border: solid 1px #e1e4e5;
+    font-size: 75%;
+    padding: 0 5px;
+    font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+    color: #E74C3C;
+    overflow-x: auto;
+}
+
+/*
+	Responsive video players
+*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#disqus_thread {
+    margin-top: 24px;
+}
