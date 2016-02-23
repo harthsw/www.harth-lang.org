@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Harth Programming Language"
 disqusShortname = "610yesnolovely" # Optional, enable Disqus integration
 MetaDataFormat = "yaml"
-theme = "hugo-read-the-docs"
+theme = "harth-hugo-theme"
 paginate = 10
 
 [author]
@@ -24,3 +24,60 @@ paginate = 10
 [params]
 
 
+# Menu configuration should come last in this file;
+# leave at least one blank line at the end
+#
+
+#
+# Blog
+#
+[[menu.main]]
+  name = "Blog"
+  identifier = "mn_blog"
+  weight = 1
+
+#
+# Component projects is a menu for Registry/Notary etc.
+#
+[[menu.main]]
+  name = "Component Projects"
+  identifier = "mn_components"
+  weight = 8
+
+#
+# Component projects is a menu for Registry/Notary etc.
+#
+[[menu.main]]
+  name = "API reference"
+  parent = "mn_components"
+  weight = 90
+
+#
+# About
+#
+[[menu.main]]
+  name = "About"
+  identifier = "mn_about"
+  weight = 9
+
+#
+# Version
+#
+[[menu.main]]
+  name = "Docs archive"
+  identifier = "mn_versions"
+  weight = 10
+
+[[menu.main]]
+  name = "Version 1.9"
+  identifier = "smn_nineteen"
+  parent = "mn_versions"
+  url = "http://docs.docker.com/v1.9/"
+  weight = -1
+
+[[menu.main]]
+  name = "Version 1.8"
+  identifier = "smn_eightteen"
+  parent = "mn_versions"
+  url = "http://docs.docker.com/v1.8/"
+  weight = 1
