@@ -1,6 +1,4 @@
 /.deploy/
 /.preview/
-/themes/
-
 /themes/harth-hugo-theme
-/themes/highlight.js
+/static/highlight
