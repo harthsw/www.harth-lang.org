@@ -8,3 +8,9 @@
 	branch = refs/heads/harveyt
 	commit = c9ef0caa6011a88a59e41f4a09cd2de2360b2a3c
 
+[dep "hugo-read-the-docs"]
+	relpath = themes/hugo-read-the-docs
+	url = git@github.com:harthsw/hugo-read-the-docs.git
+	vcs = git
+	branch = refs/heads/master
+	commit = 67437180a767dc5c9e05dd6c76239fc724e1869a
