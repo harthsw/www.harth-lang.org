@@ -7,8 +7,10 @@ theme = "harth-hugo-theme"
 paginate = 10
 
 [author]
-    name = "<a href=\"http://harthsw.com\"/>Harth Software</a><br>And <a href=\"http://www.610yesnolovely.org\">Harvey Thompson</a>"
-
+    name = "<a href=\"http://www.610yesnolovely.org\">Harvey Thompson</a><br>"
+    # When www.harthsw.com is live:
+    #	<a href=\"http://harthsw.com\"/>Harth Software</a>
+    
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.
     # The format shown here is the same one Jekyll/Octopress uses by default.
@@ -83,16 +85,21 @@ paginate = 10
   identifier = "mn_home"
   url = "/"
   weight = 1
-  
+
 [[menu.main]]
-  name = "Blog"
-  identifier = "mn_blog"
+  name = "Language Reference"
+  identifier = "mn_ref"
   weight = 2
 
 [[menu.main]]
-  name = "About"
-  identifier = "mn_about"
+  name = "Language API"
+  identifier = "mn_api"
   weight = 3
+
+[[menu.main]]
+  name = "Blog"
+  identifier = "mn_blog"
+  weight = 4
 
 # #
 # # Component projects is a menu for Registry/Notary etc.
