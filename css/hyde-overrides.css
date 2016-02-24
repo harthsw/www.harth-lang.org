@@ -1,0 +1,26 @@
+/*
+ * Tweaks and overrides to hyde.css
+ */
+
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-family: "Orbitron", serif;
+  font-size: 2.0rem;
+}
+
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.sidebar-nav-button {
+  font-size: 0.75rem;
+}
+.sidebar-sticky-bottom {
+  font-size: 0.75rem;
+}
+.content .post-title a {
+    color: #000;
+}

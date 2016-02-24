@@ -6,13 +6,117 @@
     <description>Recent content on Harth Programming Language</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2015 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.harth-lang.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker Release Notes</title>
+      <link>http://www.harth-lang.org/release-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.harth-lang.org/release-notes/</guid>
+      <description>
+
+&lt;h1 id=&#34;release-notes:066aa012c0230cd32faa0776e0a81250&#34;&gt;Release notes&lt;/h1&gt;
+
+&lt;p&gt;For information about releases and the features they contain, see the &lt;a href=&#34;http://blog.docker.com/category/engineering/docker-releases/&#34;&gt;releases
+feed on the Docker
+Blog&lt;/a&gt;. For our
+open source projects, you can find detailed information about what changes were
+made in each release in the project changelogs.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/docker/docker/blob/master/CHANGELOG.md&#34;
+target=&#34;_blank&#34;&gt;Docker Engine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/docker/machine/blob/master/CHANGELOG.md&#34;
+target=&#34;_blank&#34;&gt;Docker Machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/docker/compose/blob/master/CHANGELOG.md&#34;
+target=&#34;_blank&#34;&gt;Docker Compose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/docker/swarm/blob/master/CHANGELOG.md&#34;
+target=&#34;_blank&#34;&gt;Docker Swarm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Harth Programming Language</title>
+      <link>http://www.harth-lang.org/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.harth-lang.org/</guid>
+      <description>
+
+&lt;h1 id=&#34;the-harth-programming-language:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;The Harth Programming Language&lt;/h1&gt;
+
+&lt;p&gt;Main Page Here&lt;/p&gt;
+
+&lt;!--
+&lt;style type=&#34;text/css&#34;&gt;
+.splash {border:0;background:none;}
+.splash td{vertical-align:top;background:none;padding:10px 5px;border-style:none;border-width:0px;overflow:hidden;word-break:normal;}
+&lt;/style&gt;
+&lt;table id=&#34;splashTable&#34;&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;splash-031e&#34;&gt;
+    &lt;p&gt;
+    **Docker Engine** provides the core functions you need to create Docker images and run Docker containers. Install Engine
+    on &lt;a href=&#34;engine/installation/linux/ubuntulinux/&#34;/&gt;Ubuntu&lt;/a&gt; or see the &lt;a href=&#34;http://www.harth-lang.org/engine/installation/&#34;/&gt;full list of others&lt;/a&gt; to choose from.
+    &lt;/p&gt; &lt;/td&gt;
+    &lt;td class=&#34;splash-031e&#34;&gt;&lt;p&gt;**Docker Toolbox** delivers all the Docker tools such as Engine, Machine, Compose, and &lt;a href=&#34;http://www.harth-lang.org/kitematic/&#34;/&gt;Kitematic&lt;/a&gt; to your &lt;a href=&#34;http://www.harth-lang.org/engine/installation/mac&#34;/&gt;Mac OS
+    X&lt;/a&gt; or &lt;a href=&#34;http://www.harth-lang.org/engine/installation/windows&#34;/&gt;Windows&lt;/a&gt; desktop.
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td class=&#34;splash-031e&#34;&gt;&lt;p&gt;
+    **Docker Hub** is our hosted registry service for managing your images. There
+    is nothing to install. You just &lt;a
+    href=&#34;https://hub.docker.com/&#34;&gt;sign up&lt;/a&gt;!
+    &lt;p&gt;&lt;/td&gt;
+    &lt;td class=&#34;splash-031e&#34;&gt;&lt;p&gt;
+    **Docker Trusted Registry** (DTR) supplies a private dedicated image registry. To learn about DTR
+for your team, see the &lt;a href=&#34;http://www.harth-lang.org/docker-trusted-registry/&#34;&gt;overview&lt;/a&gt;.
+    &lt;/p&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;splash-031e&#34;&gt;&lt;p&gt;
+    **Docker Machine** automates container provisioning on your network or in
+    the cloud. Install machine on &lt;a href=&#34;http://www.harth-lang.org/machine/install-machine/&#34;&gt;Windows, Mac OS
+    X, or Linux&lt;/a&gt;.&lt;p&gt;
+    &lt;/td&gt;
+    &lt;td class=&#34;splash-031e&#34;&gt;&lt;p&gt;
+    **Docker Swarm** is used to host clustering and container scheduling. &lt;a
+    href=&#34;http://www.harth-lang.org/swarm/get-swarm/&#34;&gt;Deploy your own &#34;swarm&#34;&lt;/a&gt; today in just a
+    few short steps.
+    &lt;/p&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;  
+    &lt;td class=&#34;splash-031e&#34;&gt;&lt;p&gt;
+    **Docker Compose** defines multi-container applications. You can install
+    Docker Compose &lt;a href=&#34;http://www.harth-lang.org/compose/install/&#34;&gt;on Ubuntu, Mac OS X, and other
+    systems&lt;/a&gt;.&lt;p&gt;&lt;/td&gt;
+    &lt;td class=&#34;splash-031e&#34;&gt;&lt;p&gt;
+    **Docker Registry** provides open source Docker image distribution. See the
+    &lt;a href=&#34;http://www.harth-lang.org/registry/deploying/&#34;&gt;registry deployment documentation&lt;/a&gt; for more
+    information.
+    &lt;/P&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+#### **New Navigation!**
+
+You&#39;ll notice we have a new arrangement of the documentation navigation, it is
+now organized by Docker product. This is a step toward more changes to our docs
+look-and-feel coming soon in the near future. If you have comments good or bad,
+please email the &lt;a href=&#34;mailto:feedback@docker.com&#34;&gt;feedback to us&lt;/a&gt;, we
+will be happy to hear from you.
+
+![](https://docs.docker.com/images/docker-friends.png)
+--&gt;
+</description>
+    </item>
     
     <item>
       <title>License</title>
       <link>http://www.harth-lang.org/license/</link>
-      <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.harth-lang.org/license/</guid>
       <description>
@@ -26,7 +130,7 @@
 &lt;p&gt;All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Copyright 2015 Harvey Thompson&lt;/p&gt;
+&lt;p&gt;Copyright 2016 Harvey Thompson&lt;/p&gt;
 
 &lt;p&gt;Licensed under the Apache License, Version 2.0 (the &amp;ldquo;License&amp;rdquo;);
 you may not use this file except in compliance with the License.
@@ -40,6 +144,119 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>just test</title>
+      <link>http://www.harth-lang.org/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.harth-lang.org/test/</guid>
+      <description>
+
+&lt;h1 id=&#34;just-test:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;just test&lt;/h1&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int x = func.CallFunc(1, 2);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;test2.md&#34;&gt;blah&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;heading-2:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;Heading 2&lt;/h2&gt;
+
+&lt;p&gt;Vivamus efficitur ipsum id est congue, sed rhoncus neque consectetur. Sed enim ante, mollis ut erat sit amet, semper euismod erat. Donec tincidunt consequat varius. Suspendisse potenti. Nullam blandit pellentesque consectetur. Nulla bibendum turpis tellus, sit amet tristique quam ultrices quis. Nam commodo eleifend lorem, vel suscipit nisl viverra et. Maecenas viverra lobortis nibh ac aliquet.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Version&lt;/th&gt;
+    &lt;th&gt;Package name&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Fedora 20&lt;/td&gt;
+    &lt;td&gt;
+        &lt;p&gt;
+    &lt;a href=&#34;https://get.docker.com/rpm/1.7.0/fedora-20/RPMS/x86_64/docker-engine-1.7.0-1.fc20.x86_64.rpm&#34;&gt;
+    docker-engine-1.7.0-1.fc20.x86_64.rpm&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+    &lt;a href=&#34;https://get.docker.com/rpm/1.7.0/fedora-20/SRPMS/docker-engine-1.7.0-1.fc20.src.rpm&#34;&gt;
+   docker-engine-1.7.0-1.fc20.src.rpm&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Fedora 21&lt;/td&gt;
+    &lt;td&gt;
+    &lt;p&gt;
+    &lt;a href=&#34;https://get.docker.com/rpm/1.7.0/fedora-21/RPMS/x86_64/docker-engine-1.7.0-1.fc21.x86_64.rpm&#34;&gt;
+    docker-engine-1.7.0-1.fc21.x86_64.rpm&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+    &lt;a href=&#34;https://get.docker.com/rpm/1.7.0/fedora-21/SRPMS/docker-engine-1.7.0-1.fc21.src.rpm&#34;&gt;
+  docker-engine-1.7.0-1.fc21.src.rpm&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Fedora 22&lt;/td&gt;
+    &lt;td&gt;
+    &lt;p&gt;
+    &lt;a href=&#34;https://get.docker.com/rpm/1.7.0/fedora-22/RPMS/x86_64/docker-engine-1.7.0-1.fc22.x86_64.rpm&#34;&gt;
+    docker-engine-1.7.0-1.fc22.x86_64.rpm&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+    &lt;a href=&#34;https://get.docker.com/rpm/1.7.0/fedora-22/SRPMS/docker-engine-1.7.0-1.fc22.src.rpm&#34;&gt;
+    docker-engine-1.7.0-1.fc22.src.rpm&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;heading-3:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;Heading 3&lt;/h3&gt;
+
+&lt;p&gt;Vivamus efficitur ipsum id est congue, sed rhoncus neque consectetur. Sed enim ante, mollis ut erat sit amet, semper euismod erat. Donec tincidunt consequat varius. Suspendisse potenti. Nullam blandit pellentesque consectetur. Nulla bibendum turpis tellus, sit amet tristique quam ultrices quis. Nam commodo eleifend lorem, vel suscipit nisl viverra et. Maecenas viverra lobortis nibh ac aliquet.&lt;/p&gt;
+
+&lt;h4 id=&#34;heading-level-4:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;Heading level 4&lt;/h4&gt;
+
+&lt;p&gt;This is a lower heading level.&lt;/p&gt;
+
+&lt;h2 id=&#34;heading-2-1:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;Heading 2&lt;/h2&gt;
+
+&lt;p&gt;Vivamus efficitur ipsum id est congue, sed rhoncus neque consectetur. Sed enim ante, mollis ut erat sit amet, semper euismod erat. Donec tincidunt consequat varius. Suspendisse potenti. Nullam blandit pellentesque consectetur. Nulla bibendum turpis tellus, sit amet tristique quam ultrices quis. Nam commodo eleifend lorem, vel suscipit nisl viverra et. Maecenas viverra lobortis nibh ac aliquet.&lt;/p&gt;
+
+&lt;h3 id=&#34;heading-3-1:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;Heading 3&lt;/h3&gt;
+
+&lt;p&gt;Vivamus efficitur ipsum id est congue, sed rhoncus neque consectetur. Sed enim ante, mollis ut erat sit amet, semper euismod erat. Donec tincidunt consequat varius. Suspendisse potenti. Nullam blandit pellentesque consectetur. Nulla bibendum turpis tellus, sit amet tristique quam ultrices quis. Nam commodo eleifend lorem, vel suscipit nisl viverra et. Maecenas viverra lobortis nibh ac aliquet.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>just test 2</title>
+      <link>http://www.harth-lang.org/test2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.harth-lang.org/test2/</guid>
+      <description>
+
+&lt;h2 id=&#34;test2:d950817e04abf2512a1ffa509267f987&#34;&gt;test2&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros. Vivamus efficitur ipsum id est congue, sed rhoncus neque consectetur. Sed enim ante, mollis ut erat sit amet, semper euismod erat. Donec tincidunt consequat varius. Suspendisse potenti. Nullam blandit pellentesque consectetur. Nulla bibendum turpis tellus, sit amet tristique quam ultrices quis. Nam commodo eleifend lorem, vel suscipit nisl viverra et. Maecenas viverra lobortis nibh ac aliquet.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>just test 3</title>
+      <link>http://www.harth-lang.org/test3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.harth-lang.org/test3/</guid>
+      <description>
+
+&lt;h2 id=&#34;test2:31734cf674b9f890c9c7f3365b6ad818&#34;&gt;test2&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros. Vivamus efficitur ipsum id est congue, sed rhoncus neque consectetur. Sed enim ante, mollis ut erat sit amet, semper euismod erat. Donec tincidunt consequat varius. Suspendisse potenti. Nullam blandit pellentesque consectetur. Nulla bibendum turpis tellus, sit amet tristique quam ultrices quis. Nam commodo eleifend lorem, vel suscipit nisl viverra et. Maecenas viverra lobortis nibh ac aliquet.&lt;/p&gt;
 </description>
     </item>
     
