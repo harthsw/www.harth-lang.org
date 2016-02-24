@@ -7,7 +7,8 @@ theme = "harth-hugo-theme"
 paginate = 10
 
 [author]
-    name = "<a href=\"http://www.610yesnolovely.org\">Harvey Thompson</a><br>"
+    name = "Harvey Thompson"
+    html = "<a href=\"http://www.610yesnolovely.org\">Harvey Thompson</a><br>"
     # When www.harthsw.com is live:
     #	<a href=\"http://harthsw.com\"/>Harth Software</a>
     
