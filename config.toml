@@ -47,10 +47,6 @@ paginate = 10
     license = ""
     powered = "Powered by [Hugo](http://gohugo.io) and [Harth Hugo Theme](https://github.com/harthsw/harth-hugo-theme)"
 
-    # Text for the top menu link, which goes the root URL for the site.
-    # Default (if omitted) is "Blog".
-    home = "Home"
-
     # Metadata used to drive integrations.
     googleAuthorship = ""
 #    googleAnalytics = "UA-71830715-2"    
@@ -82,10 +78,21 @@ paginate = 10
 #
 # Blog
 #
-# [[menu.main]]
-#   name = "Blog"
-#   identifier = "mn_blog"
-#   weight = 1
+[[menu.main]]
+  name = "Home"
+  identifier = "mn_home"
+  url = "/"
+  weight = 1
+  
+[[menu.main]]
+  name = "Blog"
+  identifier = "mn_blog"
+  weight = 2
+
+[[menu.main]]
+  name = "About"
+  identifier = "mn_about"
+  weight = 3
 
 # #
 # # Component projects is a menu for Registry/Notary etc.
@@ -102,14 +109,6 @@ paginate = 10
 #   name = "API reference"
 #   parent = "mn_components"
 #   weight = 90
-
-# #
-# # About
-# #
-# [[menu.main]]
-#   name = "About"
-#   identifier = "mn_about"
-#   weight = 9
 
 # #
 # # Version
