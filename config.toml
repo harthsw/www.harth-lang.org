@@ -44,6 +44,9 @@ paginate = 10
     # You can use markdown here.
     tagline = "<i>A reasonable programming language for a more enlightened age.</i>"
 
+    license = ""
+    powered = "Powered by [Hugo](http://gohugo.io) and [Harth Hugo Theme](https://github.com/harthsw/harth-hugo-theme)"
+
     # Text for the top menu link, which goes the root URL for the site.
     # Default (if omitted) is "Blog".
     home = "Home"
