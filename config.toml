@@ -1,17 +1,11 @@
 baseurl = "http://www.harth-lang.org/"
 languageCode = "en-us"
 title = "Harth Programming Language"
-disqusShortname = "610yesnolovely" # Optional, enable Disqus integration
+# disqusShortname = "610yesnolovely" # Optional, enable Disqus integration
 MetaDataFormat = "yaml"
 theme = "harth-hugo-theme"
 paginate = 10
 
-[author]
-    name = "Harvey Thompson"
-    html = "<a href=\"http://www.610yesnolovely.org\">Harvey Thompson</a><br>"
-    # When www.harthsw.com is live:
-    #	<a href=\"http://harthsw.com\"/>Harth Software</a>
-    
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.
     # The format shown here is the same one Jekyll/Octopress uses by default.
@@ -21,122 +15,9 @@ paginate = 10
     # Optional. Use if you want tags and lists.
     category = "categories"
 
-#
-# All parameters below here are optional and can be mixed and matched.
-#
 [params]
-    # If false display full article contents in blog index.
-    # Otherwise show description and 'read on' link to individual blog post page.
-    # Default (if omitted) is true.
-    truncate = true
-
-    # Used when a given page doesn't set its own.
-    defaultDescription = "Harth Programming Language development"
-    defaultKeywords = "harth,programming,language"
-
-    # Changes sidebar background and link/accent colours.
-    # See below for more colour options.
-    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
-    theme = "theme-base-08"
-
-    # Select a syntax highight.
-    # Check the static/css/highlight directory for options.
-    highlight = "solarized_light"
-
-    # Displays under the author name in the sidebar, keep it short.
-    # You can use markdown here.
-    tagline = "<i>A reasonable programming language for a more enlightened age.</i>"
-
-    license = ""
-    powered = "Powered by [Hugo](http://gohugo.io) and [Harth Hugo Theme](https://github.com/harthsw/harth-hugo-theme)"
-
-    # Metadata used to drive integrations.
-    googleAuthorship = ""
-#    googleAnalytics = "UA-71830715-2"    
-    googleAnalytics = ""
-#    gravatarHash = "fb160cfa1c54281837536ba596df5c31"
-    icon = "<span style=\"color:#fff;font-size: 200%;font-family: Orbitron\"><i style=\"font-size:130%\" class=\"fa fa-h-square fa-1x\"></i>arth<br>Programming<br>Language</span><br/><br/>"
-
-    # Sidebar social links, these must be full URLs.
-    github = "https://github.com/harthsw"
-    # bitbucket = "https://bitbucket.org/harthsw"
-    bitbucket = ""
-    stackOverflow = ""
-    # linkedin = "https://ca.linkedin.com/pub/harvey-thompson/1/852/b76"
-    linkedin = ""
-    googleplus = ""
-    facebook = ""
-    twitter = "https://twitter.com/harthsoftware"
-    youtube = ""
-    email = "harth-lang@harthsw.org"
-
-    # Other social-like sidebar links
-    rss = true  # switch to true to enable RSS icon link
-#    flattr = ""  # populate with your flattr uid
-
-# Menu configuration should come last in this file;
-# leave at least one blank line at the end
-#
-
-#
-# Blog
-#
-[[menu.main]]
-  name = "Home"
-  identifier = "mn_home"
-  url = "/"
-  weight = 1
-
-[[menu.main]]
-  name = "Language Reference"
-  identifier = "mn_ref"
-  weight = 2
-
-[[menu.main]]
-  name = "Language API"
-  identifier = "mn_api"
-  weight = 3
-
-[[menu.main]]
-  name = "Blog"
-  identifier = "mn_blog"
-  weight = 4
-
-# #
-# # Component projects is a menu for Registry/Notary etc.
-# #
-# [[menu.main]]
-#   name = "Component Projects"
-#   identifier = "mn_components"
-#   weight = 8
-
-# #
-# # Component projects is a menu for Registry/Notary etc.
-# #
-# [[menu.main]]
-#   name = "API reference"
-#   parent = "mn_components"
-#   weight = 90
-
-# #
-# # Version
-# #
-# [[menu.main]]
-#   name = "Docs archive"
-#   identifier = "mn_versions"
-#   weight = 10
-
-# [[menu.main]]
-#   name = "Version 1.9"
-#   identifier = "smn_nineteen"
-#   parent = "mn_versions"
-#   url = "http://docs.docker.com/v1.9/"
-#   weight = -1
-
-# [[menu.main]]
-#   name = "Version 1.8"
-#   identifier = "smn_eightteen"
-#   parent = "mn_versions"
-#   url = "http://docs.docker.com/v1.8/"
-#   weight = 1
+    description = "Harth Programming Language"
+    author = "Harvey Thompson"
+    generator = "Hugo 0.15"
+    title = "XXX"
 
