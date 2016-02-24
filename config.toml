@@ -7,7 +7,7 @@ theme = "harth-hugo-theme"
 paginate = 10
 
 [author]
-    name = "Harth Software"
+    name = "<a href=\"http://harthsw.com\"/>Harth Software</a><br>And <a href=\"http://www.610yesnolovely.org\">Harvey Thompson</a>"
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.
