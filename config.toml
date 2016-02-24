@@ -22,7 +22,55 @@ paginate = 10
 # All parameters below here are optional and can be mixed and matched.
 #
 [params]
+    # If false display full article contents in blog index.
+    # Otherwise show description and 'read on' link to individual blog post page.
+    # Default (if omitted) is true.
+    truncate = true
 
+    # Used when a given page doesn't set its own.
+    defaultDescription = "Harth Programming Language development"
+    defaultKeywords = "harth,programming,language"
+
+    # Changes sidebar background and link/accent colours.
+    # See below for more colour options.
+    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
+    theme = "theme-base-08"
+
+    # Select a syntax highight.
+    # Check the static/css/highlight directory for options.
+    highlight = "solarized_light"
+
+    # Displays under the author name in the sidebar, keep it short.
+    # You can use markdown here.
+    tagline = "<i>A reasonable programming language for a more enlightened age.</i>"
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is "Blog".
+    home = "Home"
+
+    # Metadata used to drive integrations.
+    googleAuthorship = ""
+#    googleAnalytics = "UA-71830715-2"    
+    googleAnalytics = ""
+#    gravatarHash = "fb160cfa1c54281837536ba596df5c31"
+    gravatarHash = ""
+
+    # Sidebar social links, these must be full URLs.
+    github = "https://github.com/harthsw"
+    # bitbucket = "https://bitbucket.org/harthsw"
+    bitbucket = ""
+    stackOverflow = ""
+    # linkedin = "https://ca.linkedin.com/pub/harvey-thompson/1/852/b76"
+    linkedin = ""
+    googleplus = ""
+    facebook = ""
+    twitter = "https://twitter.com/harthsoftware"
+    youtube = ""
+    email = "harth-lang@harthsw.org"
+
+    # Other social-like sidebar links
+    rss = true  # switch to true to enable RSS icon link
+#    flattr = ""  # populate with your flattr uid
 
 # Menu configuration should come last in this file;
 # leave at least one blank line at the end
@@ -31,53 +79,54 @@ paginate = 10
 #
 # Blog
 #
-[[menu.main]]
-  name = "Blog"
-  identifier = "mn_blog"
-  weight = 1
+# [[menu.main]]
+#   name = "Blog"
+#   identifier = "mn_blog"
+#   weight = 1
 
-#
-# Component projects is a menu for Registry/Notary etc.
-#
-[[menu.main]]
-  name = "Component Projects"
-  identifier = "mn_components"
-  weight = 8
+# #
+# # Component projects is a menu for Registry/Notary etc.
+# #
+# [[menu.main]]
+#   name = "Component Projects"
+#   identifier = "mn_components"
+#   weight = 8
 
-#
-# Component projects is a menu for Registry/Notary etc.
-#
-[[menu.main]]
-  name = "API reference"
-  parent = "mn_components"
-  weight = 90
+# #
+# # Component projects is a menu for Registry/Notary etc.
+# #
+# [[menu.main]]
+#   name = "API reference"
+#   parent = "mn_components"
+#   weight = 90
 
-#
-# About
-#
-[[menu.main]]
-  name = "About"
-  identifier = "mn_about"
-  weight = 9
+# #
+# # About
+# #
+# [[menu.main]]
+#   name = "About"
+#   identifier = "mn_about"
+#   weight = 9
 
-#
-# Version
-#
-[[menu.main]]
-  name = "Docs archive"
-  identifier = "mn_versions"
-  weight = 10
+# #
+# # Version
+# #
+# [[menu.main]]
+#   name = "Docs archive"
+#   identifier = "mn_versions"
+#   weight = 10
 
-[[menu.main]]
-  name = "Version 1.9"
-  identifier = "smn_nineteen"
-  parent = "mn_versions"
-  url = "http://docs.docker.com/v1.9/"
-  weight = -1
+# [[menu.main]]
+#   name = "Version 1.9"
+#   identifier = "smn_nineteen"
+#   parent = "mn_versions"
+#   url = "http://docs.docker.com/v1.9/"
+#   weight = -1
 
-[[menu.main]]
-  name = "Version 1.8"
-  identifier = "smn_eightteen"
-  parent = "mn_versions"
-  url = "http://docs.docker.com/v1.8/"
-  weight = 1
+# [[menu.main]]
+#   name = "Version 1.8"
+#   identifier = "smn_eightteen"
+#   parent = "mn_versions"
+#   url = "http://docs.docker.com/v1.8/"
+#   weight = 1
+
