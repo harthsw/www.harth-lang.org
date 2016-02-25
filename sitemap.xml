@@ -3,11 +3,13 @@
   
   <url>
     <loc>http://www.harth-lang.org/</loc>
+    <lastmod>2016-02-24T11:38:50-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.harth-lang.org/release-notes/</loc>
+    <loc>http://www.harth-lang.org/blog/2016/02/24/test-blog-page-1/</loc>
+    <lastmod>2016-02-24T11:38:50-08:00</lastmod>
   </url>
   
   <url>
@@ -19,15 +21,11 @@
   </url>
   
   <url>
-    <loc>http://www.harth-lang.org/test/</loc>
+    <loc>http://www.harth-lang.org/api/test3/</loc>
   </url>
   
   <url>
-    <loc>http://www.harth-lang.org/test2/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.harth-lang.org/test3/</loc>
+    <loc>http://www.harth-lang.org/ref/test2/</loc>
   </url>
   
 </urlset>

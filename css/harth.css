@@ -1,0 +1,171 @@
+/* H1 Page Title has larger font */
+h1.page-title {
+    font-size: 300%;
+}
+/* Page header has darker thicker dividing line */
+.page-header {
+    border-bottom: 2px solid #000;
+}
+.page-header h1 {
+    border-bottom: 0px;
+}
+
+.debug-border-red {
+/*
+    border: 1px solid #f00;
+*/
+}
+
+.debug-border-green {
+/*
+    border: 1px solid #0f0;
+*/
+}
+
+.debug-border-blue {
+/*
+    border: 1px solid #00f;
+*/
+}
+
+.debug-border-black {
+/*
+    border: 1px solid #000;
+*/
+}
+
+/* Global topbar */
+.harth-topbar-global {
+    background-color: #a00;
+    color: #ddd;
+}
+.harth-row-global {
+}
+
+/* Local topbar */
+.harth-topbar-local {
+    background-color: #a00;
+    color: #ddd;    
+}
+.harth-row-local {
+}
+
+/* Mid row (sidebar and content) */
+.harth-row-mid {
+}
+
+/* Sidebar */
+.harth-sidebar-top {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.harth-site-title {
+    color: #fff;
+    font-size: 200%;
+}
+.harth-site-author {
+    color: #ddd;
+    font-size: 110%;
+}
+.harth-sidebar {
+    color: #ddd;
+    background-color: #a00;
+}
+/* fixed sidebar at top, left, stretch sidebar to height of display */
+@media screen and (min-width: 768px) {
+    .harth-sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1000;
+	display: block;
+    }
+    .harth-content {
+	margin-left: 25%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .harth-content {
+    }
+}
+.harth-sidebar a {
+    color: #fff;    
+}
+.harth-sidebar li {
+    color: #aaa;
+}
+
+/* Content */
+.harth-content {
+}
+
+/* Headings are coloured red, h1 has underline */
+h1 {
+    border-bottom: 1px solid #ccc;
+}
+h1,h2,h3,h4,h5 {
+    color: #c00;
+}
+
+/* Labels */
+.harth-label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+a.harth-label:hover,
+a.harth-label:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.harth-label:empty {
+    display: none;
+}
+
+.harth-post-title,
+.harth-post-title a {
+    color: #303030;
+}
+.harth-post-title {
+    margin-top: 0;
+}
+
+.harth-post-date {
+    display: block;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+    color: #9a9a9a;
+}
+
+.harth-posts {
+    list-style: none;
+}
+
+.harth-posts li {
+    margin: 0 0 .5em 0;
+}
+
+.harth-label {
+    margin: 0 .25em;
+    background-color: #313131;
+}
+
+.harth-posts a.harth-label,
+.harth-post-date a.harth-label {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.harth-post a {
+    color: #c00;
+}
