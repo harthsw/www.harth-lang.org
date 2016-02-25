@@ -1,4 +1,5 @@
 ---
+type: "index"
 title: "Harth Programming Language"
 description: "Home page for the Harth Programming Language"
 keywords: 
