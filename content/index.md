@@ -24,7 +24,7 @@ in the home or blacksmith's; here food is cooked or new tools are forged.
 > *Andrew S. Tanenbaum*
 
 I've used many programming languages in my 30 years of
-programming. Each of these languages have some good and not-so good
+programming. Each of ttem have some good and not-so good
 parts. I've often wondered what would happen if you took all the
 reasonable bits of each and made a programming language from that. [Harth] is that
 experiment.
@@ -32,14 +32,13 @@ experiment.
 Hopefully [Harth] will not turn into a Jack-of-all-Trades (and master of none), nor a
 confusing Swiss-Army-Knife programming language (the sort you used if you can't find your professional toolbox).
 
-## Languages I Borrowed Ideas From
+## Programming Languages I Borrowed Ideas From
 
 In building [Harth] I'm borrowing some of the "good" ideas from
-various existing languages. Each of these languages are well worth
-learning and using in their own right.
-
-I acknowldge and are very grateful for the massive amount of work put
-in by all the clever people behind these programming languages.
+various existing programming languages. Each of them are well worth
+learning and using in their own right. I'm also very aware and am
+grateful for the massive amount of work put in by all the clever
+people behind each of these programming languages.
 
 Programming languages I've actually used:
 
