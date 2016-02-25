@@ -19,5 +19,32 @@ paginate = 10
     description = "Harth Programming Language"
     author = "Harvey Thompson"
     generator = "Hugo 0.15"
-    title = "XXX"
 
+[[menu.main]]
+  name = "Home"
+  identifier = "mn_home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Language Reference"
+  identifier = "mn_ref"
+  url = "/ref/"
+  weight = 2
+
+[[menu.main]]
+  name = "Language API"
+  identifier = "mn_api"
+  url = "/api/"
+  weight = 3
+
+[[menu.main]]
+  name = "Blog"
+  identifier = "mn_blog"
+  url = "/post/"
+  weight = 4
+
+[[menu.main]]
+  name = "License"
+  url = "/license/"
+  weight = 5
