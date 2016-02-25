@@ -10,10 +10,12 @@ keywords:
 
 ## Why The Name "Harth"?
 
-Harth is a contraction of **Har**vey **Th**ompson. That way people can be sure who the original author was.
+Harth is a contraction of **Har**vey **Th**ompson. That way people can
+be sure who the original author was.
 
-The name also evokes the idea of a "Hearth", a warm and cosy often industrial sized fire-place
-in the home or blacksmith's; here food is cooked or new tools are forged.
+The name also evokes the idea of a "Hearth", a warm and cosy often
+industrial sized fire-place in the home or blacksmith's; here food is
+cooked or new tools are forged.
 
 <img src="/img/hearth-blacksmith.jpg" alt="Hearth" style="width: 400px;"/>
 
@@ -24,13 +26,14 @@ in the home or blacksmith's; here food is cooked or new tools are forged.
 > *Andrew S. Tanenbaum*
 
 I've used many programming languages in my 30 years of
-programming. Each of ttem have some good and not-so good
-parts. I've often wondered what would happen if you took all the
-reasonable bits of each and made a programming language from that. [Harth] is that
+programming. Each of ttem have some good and not-so good parts. I've
+often wondered what would happen if you took all the reasonable bits
+of each and made a programming language from that. [Harth] is that
 experiment.
 
-Hopefully [Harth] will not turn into a Jack-of-all-Trades (and master of none), nor a
-confusing Swiss-Army-Knife programming language (the sort you used if you can't find your professional toolbox).
+Hopefully [Harth] will not turn into a Jack-of-all-Trades (and master
+of none), nor a confusing Swiss-Army-Knife programming language (the
+sort you use if you can't find your professional toolbox).
 
 ## Programming Languages I Borrowed Ideas From
 
@@ -49,7 +52,8 @@ Programming languages I've actually used:
 * [Lisp]
 * [Python]
 
-Programming languages I've not really used, but have read about interesting ideas worth borrowing:
+Programming languages I've not really used, but have read about
+interesting ideas worth borrowing:
 
 * [Ceylon]
 * [Erlang]
