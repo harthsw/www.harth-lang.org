@@ -51,7 +51,7 @@ Languages I've actually used:
 * [Lisp]
 * [Python]
 
-And from languages I've read about but not really used:
+Languages I've not really used, but have read about interesting ideas worth borrowing:
 
 * [Ceylon]
 * [Erlang]
@@ -60,8 +60,6 @@ And from languages I've read about but not really used:
 * [Ruby]
 * [Rust]
 * [Swift]
-
-And probably several other languages I've read about.
 
 [Harth]: http://www.harth-lang.org/
 [C]: https://en.wikipedia.org/wiki/C_(programming_language)
