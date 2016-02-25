@@ -26,12 +26,11 @@ in the home or blacksmith's; here food is cooked or new tools are forged.
 I've used many programming languages in my 30 years of
 programming. Each of these languages have some good and not-so good
 parts. I've often wondered what would happen if you took all the
-reasonable bits of each and made a language from that. [Harth] is that
+reasonable bits of each and made a programming language from that. [Harth] is that
 experiment.
 
-Hopefully it will not turn into a Jack-of-all-Trades (Master of None), nor a
-confusing Swiss-Army-Knife language (the sort you keep around if you
-can't find your professional toolbox).
+Hopefully [Harth] will not turn into a Jack-of-all-Trades (and master of none), nor a
+confusing Swiss-Army-Knife programming language (the sort you used if you can't find your professional toolbox).
 
 ## Languages I Borrowed Ideas From
 
@@ -40,9 +39,9 @@ various existing languages. Each of these languages are well worth
 learning and using in their own right.
 
 I acknowldge and are very grateful for the massive amount of work put
-in by all the clever people behind these projects.
+in by all the clever people behind these programming languages.
 
-Languages I've actually used:
+Programming languages I've actually used:
 
 * [C]
 * [C++]
@@ -51,7 +50,7 @@ Languages I've actually used:
 * [Lisp]
 * [Python]
 
-Languages I've not really used, but have read about interesting ideas worth borrowing:
+Programming languages I've not really used, but have read about interesting ideas worth borrowing:
 
 * [Ceylon]
 * [Erlang]
