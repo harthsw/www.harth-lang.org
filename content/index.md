@@ -6,18 +6,17 @@ keywords:
   - "harth"
 ---
 
-# Header 1
+# Welcome To The Harth Programming Language
 
-Example text.
+## Why The Name "Harth"?
 
-## Header 2
+Harth is a contraction of **Har**vey **Th**ompson.
 
-More example text.
+## Yet Another Programming Language?
 
-### Header 3
+Sure, one more can't hurt anybody!
 
-Even more example text.
-
+<!--
 # The Harth Programming Language
 
 Main Page Here
@@ -46,3 +45,4 @@ Main Page Here
 </div>
 
 
+-->

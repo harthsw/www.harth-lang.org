@@ -1,6 +1,7 @@
 baseurl = "http://www.harth-lang.org/"
 languageCode = "en-us"
 title = "Harth Programming Language"
+author = ["Harvey Thompson"]
 # disqusShortname = "610yesnolovely" # Optional, enable Disqus integration
 MetaDataFormat = "yaml"
 theme = "harth-hugo-theme"
@@ -16,6 +17,7 @@ paginate = 10
     category = "categories"
 
 [params]
+    title_html = "Harth<br>Programming<br>Language"
     description = "Harth Programming Language"
     author = "Harvey Thompson"
     generator = "Hugo 0.15"
