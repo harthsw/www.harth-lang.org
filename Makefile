@@ -7,4 +7,4 @@ deploy:
 
 preview:
 	rm -rf $(PREVIEW_PATH)
-	hugo server -d $(PREVIEW_PATH) --renderToDisk=true --watch=true --verbose
+	hugo server -d $(PREVIEW_PATH) --renderToDisk=true --watch=true
