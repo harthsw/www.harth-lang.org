@@ -1,7 +1,7 @@
 ---
 date: "2016-02-24T11:38:50-08:00"
-title: "Test Blog Page 1"
-description: "Test Blog Page 1"
+title: "Test Blog Page"
+description: "Test Blog Page"
 keywords:
   - "harth"
   - "blog"
@@ -10,44 +10,83 @@ menu:
     parent: "mn_blog"
 ---
 
-# Section 1
+# Reason
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+This blog is a test page. It's meant to test the [Harth-Hugo-Theme].
 
-```java
-int x = func.CallFunc(1, 2);
-```
+## Highlight Shortcode
 
-## Section 1.1
+Example code block:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+{{< highlight cpp >}}
+#include <iostream>
+#define IABS(x) ((x) < 0 ? -(x) : (x))
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+int main(int argc, char *argv[]) {
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+  /* An annoying "Hello World" example */
+  for (auto i = 0; i < 0xFFFF; i++)
+    cout << "Hello, World!" << endl;
 
-## Section 1.2
+  char c = '\n';
+  unordered_map <string, vector<string> > m;
+  m["key"] = "\\\\"; // this is an error
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+  return -2e3 + 12l;
+}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+class Thing
+{
+public:
+    Thing();
+    int CallFunc(int x, int y);
+};
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+try
+{
+    Thing t;
+    int x = t.CallFunc(1, 2);
+	if (x < 10)
+	    throw new Exception("oops");
+}
+catch (Exception &e)
+{
+    printf("Error: %s\n", e.ToString());
+}
+{{< /highlight >}}
 
-# Section 2
+## Inline Code
 
-## Section 2.1
+Calling the function `CallFunc()`.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+## Inline Key Press
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+Press the following keys to quit: {{< key Cmd Q >}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+## Sample Console Output
 
-## Section 2.2
+{{< console >}}
+Sample console output
+Stuff
+********************************************************************************
+End
+{{< /console >}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+## Various Panels
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+* Success {{< success title="It worked!" body="Which is nice." >}}
+* Info {{< info "Remember to add this." >}}
+* Warning {{< warning "Do not do this." >}}
+* Error - {{< error "Oh dear" >}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.
+## TODO
+
+* TODO {{< todo "Remember to add a thing." >}}
+
+## TODO List
+
+{{% todo-list %}}
+* Thing
+{{% /todo-list %}}
+
+[Harth-Hugo-Theme]: https://github.com/harthsw/harth-hugo-theme

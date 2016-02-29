@@ -6,6 +6,7 @@ disqusShortname = "610yesnolovely"
 MetaDataFormat = "yaml"
 theme = "harth-hugo-theme"
 paginate = 10
+pygmentsCodeFences = true
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.
