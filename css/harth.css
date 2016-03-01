@@ -171,7 +171,11 @@ a.harth-label:focus {
     margin-bottom: 1rem;
     color: #9a9a9a;
 }
-
+.harth-post {
+    margin: 0em;
+    padding-top: 1em;
+    padding-bottom: 1em;    
+}
 .harth-posts {
     list-style: none;
 }
@@ -242,22 +246,73 @@ a.harth-label:focus {
 /* Highlighted code output */
 div.highlight {
     display: block;
-    padding: 0;
-    margin: 0;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;    
+    padding-bottom: 0.5em;
+    line-height: 1.2em;
+    margin: 1em;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #000;
+    font-size: 1em;    
 }
 pre {
-    padding: 1em;
+    padding-top: 0em;
+    padding-bottom: 0em;
     margin: 0em;
-    line-height: 1.2;
+    line-height: 1.1em;
     border-style: solid;
     border-width: 3px;
     border-radius: 3px;
-    border-color: #333;
+    border-color: #002b36;
     background-color: inherit;
     color: inherit;    
     font-family: "Inconsolata", "monospace";
     font-size: 1em;
 }
+.highlight .hll {
+    line-height: 1.2em;
+    background-color: #003b46;
+    padding-top: 0;
+    padding-bottom: 0;    
+    padding-left: 0.5em;
+    padding-right: 0em;
+    margin-top: 0;
+    margin-bottom: 0em;    
+    margin-left: -0.5em;
+    margin-right: 0em;
+    border-top: 0;
+    border-bottom: 0;    
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: #ff5b56;
+    background-color: #105060;
+    font-size: 1em;    
+}
+.highlight .lineno {
+    line-height: 1.2em;
+    color: #ccc;
+    padding-top: 0;
+    padding-bottom: 0;    
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 0;
+    margin-bottom: 0em;    
+    margin-left: 0em;
+    margin-right: 0em;
+    line-height: 1em;
+    border-top: 0;
+    border-bottom: 0;    
+    border-left: 1em;
+    border-right: 0.5em;
+    border-style: solid;
+    border-color: #002b36;
+    background-color: #003b46;
+    font-size: 1em;
+}
+
 <!-- Highlight using Javascript -->
 /*
 .harth-code-panel {
