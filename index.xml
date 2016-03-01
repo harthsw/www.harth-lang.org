@@ -674,6 +674,10 @@ sort you use if you can&amp;rsquo;t find your professional toolbox).&lt;/p&gt;
 
 &lt;p&gt;See also Mike Taylor&amp;rsquo;s: &amp;ldquo;What is your &lt;a href=&#34;https://reprog.wordpress.com/2010/03/18/so-what-actually-is-my-favourite-programming-language/&#34;&gt;Favourite Programming Language&lt;/a&gt;?&amp;rdquo;&lt;/p&gt;
 
+&lt;p&gt;Mine would probably be Emacs. Wait, Waaa? Emacs is actually a Lisp Programming Language runtime disguised as an extremely customizable editor.&lt;/p&gt;
+
+&lt;p&gt;Vi-Schmi. Visual Whatevers.&lt;/p&gt;
+
 &lt;h2 id=&#34;programming-languages-i-borrowed-ideas-from:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Programming Languages I Borrowed Ideas From&lt;/h2&gt;
 
 &lt;p&gt;In building &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; I&amp;rsquo;m borrowing some of the &amp;ldquo;good&amp;rdquo; ideas from
@@ -845,7 +849,7 @@ try something a little different.&lt;/p&gt;
 &lt;li&gt;Optionally talk about types as much as possible:
 
 &lt;ul&gt;
-&lt;li&gt;Mostly static, with a dash of dynamic.&lt;/li&gt;
+&lt;li&gt;Mostly static, or inferred static, with a dash of dynamic if you wants it.&lt;/li&gt;
 &lt;li&gt;Types are inferred if you assign something that&amp;rsquo;s of a known type.&lt;/li&gt;
 &lt;li&gt;Infer return type.&lt;/li&gt;
 &lt;li&gt;Infer generic types.&lt;/li&gt;
