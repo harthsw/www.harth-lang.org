@@ -6,6 +6,7 @@ disqusShortname = "610yesnolovely"
 MetaDataFormat = "yaml"
 theme = "harth-hugo-theme"
 paginate = 10
+pygmentsUseClasses = true
 pygmentsCodeFences = true
 GoogleAnalytics = "UA-71830715-3"
 
