@@ -6,4 +6,4 @@
 	url = git@github.com:harthsw/harth-hugo-theme.git
 	vcs = git
 	branch = refs/heads/master
-	commit = 3fe82ae00214f7d47965de479337b7fcf4a920d8
+	commit = ec40e138add29508ed624e108528ec8f1b2ebd1c
