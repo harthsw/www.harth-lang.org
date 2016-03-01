@@ -40,6 +40,10 @@ sort you use if you can't find your professional toolbox).
 
 See also Mike Taylor's: "What is your [Favourite Programming Language]?"
 
+Mine would probably be Emacs. Wait, Waaa? Emacs is actually a Lisp Programming Language runtime disguised as an extremely customizable editor.
+
+Vi-Schmi. Visual Whatevers.
+
 ## Programming Languages I Borrowed Ideas From
 
 In building [Harth] I'm borrowing some of the "good" ideas from
@@ -176,7 +180,7 @@ try something a little different.
 For example:
 
 * Optionally talk about types as much as possible:
-  * Mostly static, with a dash of dynamic.
+  * Mostly static, or inferred static, with a dash of dynamic if you wants it.
   * Types are inferred if you assign something that's of a known type.
   * Infer return type.
   * Infer generic types.
