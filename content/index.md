@@ -29,7 +29,7 @@ cooked or new tools are forged.
 > *Andrew S. Tanenbaum*
 
 I've used many programming languages in my 30 years of
-programming. Each of ttem have some good and not-so good parts. I've
+programming. Each of them have some good and not-so good parts. I've
 often wondered what would happen if you took all the reasonable bits
 of each and made a programming language from that. [Harth] is that
 experiment.
@@ -37,6 +37,8 @@ experiment.
 Hopefully [Harth] will not turn into a Jack-of-all-Trades (and master
 of none), nor a confusing Swiss-Army-Knife programming language (the
 sort you use if you can't find your professional toolbox).
+
+See also Mike Taylor's: "What is your [Favourite Programming Language]?"
 
 ## Programming Languages I Borrowed Ideas From
 
@@ -93,8 +95,7 @@ exist in in the code editor, or may find found in a separate tool.
 
 Some of the tools or features a programmer needs are;
 
-* Syntax Highlighting - The text is styled and coloured to highlight
-  important information: much like headings in documents.
+* Find Documentation - Less of the "ARGH Help How do I? Sheesh, Where is the help?"
 * Find Definition - The programmer can look up definitions of
   particular piece of code, much like a dictionary or thesaurus.
 * Find References - The programmer can find all the references to a
@@ -115,6 +116,8 @@ Some of the tools or features a programmer needs are;
   what’s going on (debugging); often this is needed because the
   programmer has made a logical mistake that the computer cannot
   possibly detect.
+* Syntax Highlighting - The text is styled and coloured to highlight
+  important information: much like headings in documents.
 * Interactive Session - The programmer can type additional pieces of
   code and perhaps modify the code while it’s running, to help correct
   problems (bugs) in their code.
@@ -172,10 +175,29 @@ try something a little different.
 
 For example:
 
+* Optionally talk about types as much as possible:
+  * Mostly static, with a dash of dynamic.
+  * Types are inferred if you assign something that's of a known type.
+  * Infer return type.
+  * Infer generic types.
+  * Closures types are inferred most of the time.
+  * Infer argument types (that can be hard, but use generics?)
+  * If you "do not care yet", use `dynamic` which essentially says
+    "call method/function dynamically with cache runtime checks, your
+    code may crash".
+  * Dynamic is in [C#] and a few other Net based languages you know!
+  * See Mike Taylor's [Static And Dynamic Typing]
 * What if we didn’t write code as text saved to a text file?
+  * Well that's not good for things like git, diff, emacs, vi and a billion other text processors!
 * What if code was stored in a database like system?
+  * SQL and anything like that actually is too much.
+  * What is the fundamental thing that they actually provide. Only have that thing.
+  * Hint: Probably Guids (Globally unique IDs, that is keys) for names.
+  * Hint: Possibly a way to link things in relationships (definition/use etc).
 * What if code was more like the internet, a data rich, textual,
   graphical mixture?
+  * HTML links in your code. What nonsense.
+  * Autobuilt links like you get on some web based source databases.
 * What if the programming ecosystem itself fully understood itself?
 * This idea has been around since the 1960’s, but most languages only
   go so far; providing access to understanding only the high level
@@ -212,6 +234,19 @@ These include:
   * No null pointer exceptions - “The Billion Dollar Mistake” has
     plagued us for too long, and most more modern languages are
     solving this quite neatly.
+  * Some people don't see this as a big deal. Sure:
+    * If you check all your pointers in Java, C#, C++.
+    * Or you use references (in C++) or stack values.
+    * Or you remember to anotate them with @null and @notnull (or whatever).
+    * Pointers, who needs 'em.
+    * Optionality is useful for saying "Zero or One of X".
+	  Example "`ParseInt(String) -> Int?` either returns the integer or null meaning you lose).
+      Think of it as a soft-error return.
+    * The static type system encodes the optionality in the type, and
+      you can't get round it without being explicit (ie. I "assert" it
+      cannot be null).
+    * Programs always can crash :-(
+    * See [Error 1] [Error 2].
   * Non-exceptional run-time error handling - the programmer must
     explicitly and consciously handle the problems user’s might face
     as close to the source as possible.
@@ -334,7 +369,7 @@ The long term plan (subject to changing my mind on a whime) is:
 * I'm well aware that the likelihood of this leading to success is minimal.
   * Failing this, I'll go get a normal job making software controlled widgets for space drones.
 
-# Source and Binrary Products
+# Source and Binary Products
 
 Currently the prototype(s) are closed source, the code and built
 products are internal prototypes for research and development.
@@ -414,3 +449,7 @@ component.
 [Atlassian Jira]: https://www.atlassian.com/purchase/product/jira-software
 [Kickstarter]: https://www.kickstarter.com
 [Patreon]: https://www.patreon.com
+[Favourite Programming Language]: https://reprog.wordpress.com/2010/03/18/so-what-actually-is-my-favourite-programming-language/
+[Static And Dynamic Typing]: https://reprog.wordpress.com/2010/06/05/we-cant-afford-to-write-safe-software/
+[Error 1]: http://www.610yesnolovely.org/blog/2015/02/07/houston-we-have-an-error/
+[Error 2]: http://www.610yesnolovely.org/blog/2015/02/16/houston-we-have-an-error-part-2/
