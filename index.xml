@@ -704,6 +704,34 @@ interesting ideas worth borrowing:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h1 id=&#34;find-out-more:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Find Out More&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Read the rest of this page.&lt;/li&gt;
+&lt;li&gt;Read the &lt;a href=&#34;http://www.harth-lang.org/post/&#34;&gt;Blog&lt;/a&gt; posts.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&#34;panel panel-danger&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        TODO
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&#34;panel-body&#34;&gt;
+      Implement these later as auto-builds from markdown docs and Doxygen code from source.
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Read the [Language Reference] - uses Markdown/Hugo.&lt;/li&gt;
+&lt;li&gt;Read The [Language API] - uses Doxygen.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h1 id=&#34;project-background-september-14-2015:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Project Background (September 14 2015)&lt;/h1&gt;
 
 &lt;p&gt;The high level vision for the project is to:&lt;/p&gt;
