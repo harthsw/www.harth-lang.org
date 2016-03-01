@@ -18,7 +18,7 @@ This blog is a test page. It's meant to test the [Harth-Hugo-Theme].
 
 Example code block:
 
-{{< highlight cpp >}}
+{{< highlight cpp foo >}}
 #include <iostream>
 #define IABS(x) ((x) < 0 ? -(x) : (x))
 
