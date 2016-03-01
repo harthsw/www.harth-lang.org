@@ -14,11 +14,11 @@ menu:
 
 This blog is a test page. It's meant to test the [Harth-Hugo-Theme].
 
-## Highlight Shortcode
+## Code Shortcode
 
 Example code block:
 
-{{< highlight cpp foo >}}
+```cpp
 #include <iostream>
 #define IABS(x) ((x) < 0 ? -(x) : (x))
 
@@ -53,7 +53,21 @@ catch (Exception &e)
 {
     printf("Error: %s\n", e.ToString());
 }
-{{< /highlight >}}
+```
+
+## Code Shortcode 2
+
+```cpp
+import thing
+
+class That
+{
+    function XXX(x : Int) -> Int
+    {
+        printf("%s\n", x)
+    }
+}
+```
 
 ## Inline Code
 
