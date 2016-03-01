@@ -19,10 +19,27 @@ GoogleAnalytics = "UA-71830715-3"
     category = "categories"
 
 [params]
+    # If false display full article contents in blog index.
+    # Otherwise show description and 'read on' link to individual blog post page.
+    # Default (if omitted) is true.
+    truncate = true
+
     title_html = "Harth<br>Programming<br>Language"
     description = "Harth Programming Language"
     author = "Harvey Thompson"
     generator = "Hugo 0.15"
+
+    # Sidebar-bot.html social links, full URLs!
+    twitter = "https://twitter.com/610yesnolovely"
+    github = "https://github.com/harthsw"
+    bitbucket = "https://bitbucket.org/harthsw"
+    email = "harth-lang@harthsw.com"
+    rss = true
+    # stackOverflow = "..."
+    # linkedin = "..."
+    # googleplus = "..."
+    # facebook = "..."
+    # youtube = "..."
 
 [[menu.main]]
   name = "Home"
