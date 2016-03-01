@@ -6,8 +6,484 @@
     <description>Recent content on Harth Programming Language</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Feb 2016 11:38:50 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Feb 2016 19:00:00 -0800</lastBuildDate>
     <atom:link href="http://www.harth-lang.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Harth Programming Language</title>
+      <link>http://www.harth-lang.org/</link>
+      <pubDate>Mon, 29 Feb 2016 19:00:00 -0800</pubDate>
+      
+      <guid>http://www.harth-lang.org/</guid>
+      <description>
+
+&lt;h1 id=&#34;the-harth-programming-language:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;The Harth Programming Language&lt;/h1&gt;
+
+
+&lt;p&gt;Last Update: February 29, 2016&lt;/p&gt;
+
+
+&lt;h2 id=&#34;why-the-name-harth:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Why The Name &amp;ldquo;Harth&amp;rdquo;?&lt;/h2&gt;
+
+&lt;p&gt;Harth is a contraction of &lt;strong&gt;Har&lt;/strong&gt;vey &lt;strong&gt;Th&lt;/strong&gt;ompson. That way people can
+be sure who the original author was.&lt;/p&gt;
+
+&lt;p&gt;The name also evokes the idea of a &amp;ldquo;Hearth&amp;rdquo;, a warm and cosy often
+industrial sized fire-place in the home or blacksmith&amp;rsquo;s; here food is
+cooked or new tools are forged.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.harth-lang.org/img/hearth-blacksmith.jpg&#34; alt=&#34;Hearth&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;yet-another-programming-language:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Yet Another Programming Language?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The nice thing about standards is that there are so many of them to choose from.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Andrew S. Tanenbaum&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I&amp;rsquo;ve used many programming languages in my 30 years of
+programming. Each of ttem have some good and not-so good parts. I&amp;rsquo;ve
+often wondered what would happen if you took all the reasonable bits
+of each and made a programming language from that. &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; is that
+experiment.&lt;/p&gt;
+
+&lt;p&gt;Hopefully &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; will not turn into a Jack-of-all-Trades (and master
+of none), nor a confusing Swiss-Army-Knife programming language (the
+sort you use if you can&amp;rsquo;t find your professional toolbox).&lt;/p&gt;
+
+&lt;h2 id=&#34;programming-languages-i-borrowed-ideas-from:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Programming Languages I Borrowed Ideas From&lt;/h2&gt;
+
+&lt;p&gt;In building &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; I&amp;rsquo;m borrowing some of the &amp;ldquo;good&amp;rdquo; ideas from
+various existing programming languages. Each of them are well worth
+learning and using in their own right. I&amp;rsquo;m also very aware and am
+grateful for the massive amount of work put in by all the clever
+people behind each of these programming languages.&lt;/p&gt;
+
+&lt;p&gt;Programming languages I&amp;rsquo;ve actually used:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/C_(programming_language)&#34;&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language&#34;&gt;C++&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/C_Sharp_(programming_language)&#34;&gt;C#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Java_(programming_language)&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Lisp_(programming_language)&#34;&gt;Lisp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.python.org/&#34;&gt;Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Programming languages I&amp;rsquo;ve not really used, but have read about
+interesting ideas worth borrowing:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ceylon-lang.org/&#34;&gt;Ceylon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.erlang.org/&#34;&gt;Erlang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.julialang.org/&#34;&gt;Julia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.kotlinlang.org/&#34;&gt;Kotlin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ruby-lang.org/&#34;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rust-lang.org/&#34;&gt;Rust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;project-background-september-14-2015:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Project Background (September 14 2015)&lt;/h1&gt;
+
+&lt;p&gt;The high level vision for the project is to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Help software engineers make great tools for themselves and other software engineers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Software Engineers (programmers) use many tools, the most important of
+which is essentially a high tech type-writer; the code editor. This is
+something like Word (or Notepad), and they write text (code) which is
+saved in text files. There are many other tools which provide some
+additional functions that help programmers. These features may already
+exist in in the code editor, or may find found in a separate tool.&lt;/p&gt;
+
+&lt;h2 id=&#34;other-programmer-tools:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Other Programmer Tools&lt;/h2&gt;
+
+&lt;p&gt;Some of the tools or features a programmer needs are;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Syntax Highlighting - The text is styled and coloured to highlight
+important information: much like headings in documents.&lt;/li&gt;
+&lt;li&gt;Find Definition - The programmer can look up definitions of
+particular piece of code, much like a dictionary or thesaurus.&lt;/li&gt;
+&lt;li&gt;Find References - The programmer can find all the references to a
+particular piece of code, much like an index or table of contents.&lt;/li&gt;
+&lt;li&gt;Search/Replace &amp;amp; Refactoring - The programmer can ask the computer
+to make specific global changes to the code. For example:
+
+&lt;ul&gt;
+&lt;li&gt;Changing the name of something everywhere.&lt;/li&gt;
+&lt;li&gt;Moving some code to somewhere else.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Auto Complete - The programmer can type short cuts and expand them,
+like auto-complete on phones.&lt;/li&gt;
+&lt;li&gt;Error Highlighting - The programmer can see errors in their code
+almost immediately, like the red squiggly lines in Word that show
+spelling mistakes.&lt;/li&gt;
+&lt;li&gt;Compilation - The programmer can compile the program into code, and
+at this point will be told about more problems in what they have
+written (like a human editor would for a book or news story).&lt;/li&gt;
+&lt;li&gt;Debugger - The programmer can run their program step by step and see
+what’s going on (debugging); often this is needed because the
+programmer has made a logical mistake that the computer cannot
+possibly detect.&lt;/li&gt;
+&lt;li&gt;Interactive Session - The programmer can type additional pieces of
+code and perhaps modify the code while it’s running, to help correct
+problems (bugs) in their code.&lt;/li&gt;
+&lt;li&gt;Unit Tests - The programmer can write extra “test” code that checks
+what they have written; this can be run automatically to catch
+problems which are introduced as they change their program.&lt;/li&gt;
+&lt;li&gt;Quality Tests - The programmer can use some automated code to
+evaluate code quality, for example;
+
+&lt;ul&gt;
+&lt;li&gt;How much of the code has tests.&lt;/li&gt;
+&lt;li&gt;How much of the code is documented for programmers.&lt;/li&gt;
+&lt;li&gt;How complex the code is.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Issue Tracking - The programmer can create “To-Do” lists of things
+they need to do later; building software is like growing a city -
+you start with a one house, but very quickly there’s 1001 buildings,
+each with 1001 different problems to solve.&lt;/li&gt;
+&lt;li&gt;Change Management - The programmer can save versions of code, both
+locally and on the web, and use this this to collaborate with others.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;woah-too-much:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Woah, Too Much!&lt;/h2&gt;
+
+&lt;p&gt;There is an almost endless list of tools a programmer might
+need. Consider Home Depot and how many hammers, drills, spanners,
+screwdrivers, rulers, saws might be needed to build and maintain a
+house. Likewise there are 1001 tools a programmer might need to use to
+build good software. Not all the tools exist in one place, and not all
+the tools are as good as they could be, or easily available, or cheap.&lt;/p&gt;
+
+&lt;p&gt;My aim is not to provide all 1001 tools. That task is far too big for
+one person to achieve.&lt;/p&gt;
+
+&lt;p&gt;But we have to start somewhere.&lt;/p&gt;
+
+&lt;h2 id=&#34;long-term-aims:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Long Term Aims&lt;/h2&gt;
+
+&lt;p&gt;So a more realistic aim for this project is to:&lt;/p&gt;
+
+&lt;p&gt;Provide a great foundation for many programmers to write and share
+good tools a little easier, as and when they need them.&lt;/p&gt;
+
+&lt;p&gt;Currently there has been an explosion in software developers creating
+new programming languages out of the desire to solve the cohesive lack
+of good tools. “Yet Another Programming Language” is announced, but
+most software developers groan at each solution, but can’t quite
+understand why. A few have discovered that we’re often repeating the
+same patterns and even mistakes. We have to try to think a little
+differently, dig for the hidden gems of ideas that a few smart people
+have discovered, some of these could make a big difference.&lt;/p&gt;
+
+&lt;h2 id=&#34;medium-term-aims:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Medium Term Aims&lt;/h2&gt;
+
+&lt;p&gt;So the more focused aim of this project is to:&lt;/p&gt;
+
+&lt;p&gt;Try to collect the most modern and alternative ideas in one place, to
+try something a little different.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What if we didn’t write code as text saved to a text file?&lt;/li&gt;
+&lt;li&gt;What if code was stored in a database like system?&lt;/li&gt;
+&lt;li&gt;What if code was more like the internet, a data rich, textual,
+graphical mixture?&lt;/li&gt;
+&lt;li&gt;What if the programming ecosystem itself fully understood itself?&lt;/li&gt;
+&lt;li&gt;This idea has been around since the 1960’s, but most languages only
+go so far; providing access to understanding only the high level
+constructs.&lt;/li&gt;
+&lt;li&gt;Provide full 100% understanding of all code as a library (Microsoft
+are doing this with something called Roysln, which is part of their
+next Visual Studio 2015 release).&lt;/li&gt;
+&lt;li&gt;Provide full 100% ability to convert text to executable code, and
+debug as a library (Apple use something called LLVM which does this
+at a lower level as part of their XCode development system).&lt;/li&gt;
+&lt;li&gt;What if the programming ecosystem ditched manual processes that just
+make the human’s life harder and more miserable?&lt;/li&gt;
+&lt;li&gt;What if the programming ecosystem automated more processes so that
+the human can concentrate on the creative side more?&lt;/li&gt;
+&lt;li&gt;What if the programming ecosystem helped the human as much as possible to read and write good code in the first place?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Still this is a quite a lot of work, so we need a more realistic shorter term aims for this project.&lt;/p&gt;
+
+&lt;h2 id=&#34;goals-for-2015:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Goals For 2015&lt;/h2&gt;
+
+&lt;p&gt;The goal for the end of year 2015 is to:&lt;/p&gt;
+
+&lt;p&gt;Build a new prototype programming environment based on more new and
+modern ideas learned from experience and academia.&lt;/p&gt;
+
+&lt;p&gt;These include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Familiar programming language - a programming language that will be
+fimiliar to most people; built on top of C++, but with ideas taken
+from Java, C#, Swift, Erlang, Scala, Lisp, Smalltalk, &amp;hellip;&lt;/li&gt;
+&lt;li&gt;Static type system - the programmer must be clear and explicit about
+what the program is doing.&lt;/li&gt;
+&lt;li&gt;Use the static type system to solve more problems:
+
+&lt;ul&gt;
+&lt;li&gt;No null pointer exceptions - “The Billion Dollar Mistake” has
+plagued us for too long, and most more modern languages are
+solving this quite neatly.&lt;/li&gt;
+&lt;li&gt;Non-exceptional run-time error handling - the programmer must
+explicitly and consciously handle the problems user’s might face
+as close to the source as possible.&lt;/li&gt;
+&lt;li&gt;Exceptions were initially thought of as a good solution, but have proven to be a “bad” idea, though many people havn’t realized or agree on this yet.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Garbage collection - the programmer is absolved from worrying about
+memory management, computers are much better at doing this labor
+intensive task without error. This is contentious with some
+programmers; the answer to that is you shouldn’t do this for low
+level programming, but we’re not dealing in this area, so it’s good
+and right to do so.&lt;/li&gt;
+&lt;li&gt;Concurrency - modern computers have multiple processors, to use
+these effectively the programmer needs an easy way to use the CPUs
+effectively.&lt;/li&gt;
+&lt;li&gt;Use task/actor systems that share only immutable data, no locking
+and no mutation means the programmer can more easily understand how
+to do this well and without bugs.&lt;/li&gt;
+&lt;li&gt;Self awareness - The programming language provides a library to
+understand itself fully:
+
+&lt;ul&gt;
+&lt;li&gt;Convert text to an in-memory editable data structure.&lt;/li&gt;
+&lt;li&gt;Convert this in-memory structure back to text.&lt;/li&gt;
+&lt;li&gt;Analyze these data structures for full meaning, cross referencing,
+and compile time (programmer) errors.&lt;/li&gt;
+&lt;li&gt;Provide layers on top for editors, scripting, compilation,
+debugging and interactive features that are commonly needed.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Prototype - showing some of the basic required features listed in
+Background earlier, showing how easy such tools are to build given
+the foundation:
+
+&lt;ul&gt;
+&lt;li&gt;Find Definition&lt;/li&gt;
+&lt;li&gt;Find Reference&lt;/li&gt;
+&lt;li&gt;Auto Complete&lt;/li&gt;
+&lt;li&gt;Error Highlighting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Prototype stretch - show some cool and mandatory but important
+features to prove it really can work:
+
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Google Maps” Code View - this is an “exciter” in that I’ve not
+seen it done in many products, only hinted at in research.&lt;/li&gt;
+&lt;li&gt;Exporter&lt;/li&gt;
+&lt;li&gt;Compilation&lt;/li&gt;
+&lt;li&gt;Interactive Session&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;status:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Status&lt;/h1&gt;
+
+&lt;h1 id=&#34;on-september-14-2015:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;On September 14, 2015&lt;/h1&gt;
+
+&lt;p&gt;Rough completion for this years goal (not for a full final
+implementation) from the above list:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Familiar programming language - done&lt;/li&gt;
+&lt;li&gt;Static type system - done&lt;/li&gt;
+&lt;li&gt;No null pointer exceptions - done&lt;/li&gt;
+&lt;li&gt;Non-exception run-time error handling - done&lt;/li&gt;
+&lt;li&gt;Garbage collection - 80%&lt;/li&gt;
+&lt;li&gt;Concurrency - Deferred; this problem is complex to implement, not
+required to progress, and has already been proven to work very well
+on other projects.&lt;/li&gt;
+&lt;li&gt;Self-awareness - 50%&lt;/li&gt;
+&lt;li&gt;Prototype - 0%&lt;/li&gt;
+&lt;li&gt;Prototype stretch - 0%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some stats, which if you’re aware of programmer productivity is very
+high. However I’ve been careful to work only about 8 hours for 6 days
+of the week to avoid burn out.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lines of code written to date (from Jan 1st): 145,000&lt;/li&gt;
+&lt;li&gt;Average daily line count: 650&lt;/li&gt;
+&lt;li&gt;Number of code files: 25300&lt;/li&gt;
+&lt;li&gt;Total committed changes: 2670&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;on-october-27-2015:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;On October 27, 2015&lt;/h1&gt;
+
+&lt;p&gt;I’ve completed the Prototype goals already two months ahead of
+schedule! :-D&lt;/p&gt;
+
+&lt;div class=&#34;panel panel-info&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        Info
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&#34;panel-body&#34;&gt;
+      Though not the stretch ones though, they were optional; they’ll eventually get done when it makes sense.
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;The plan was to finish the prototype in November and December, but
+though it’s taken nine months to program the “brains” of the project,
+once that was done it took only two weeks to implement the prototype
+features as extensions for an existing editor (Emacs).&lt;/p&gt;
+
+&lt;h1 id=&#34;on-feb-29-2016:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;On Feb 29, 2016&lt;/h1&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; website goes live.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Initially just the home page.
+
+&lt;ul&gt;
+&lt;li&gt;Static web site built with &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Uses &lt;a href=&#34;https://github.com/harthsw/harth-hugo-theme&#34;&gt;Harth-Hugo-Theme&lt;/a&gt;, &lt;a href=&#34;http://getbootstrap.com&#34;&gt;Bootstrap&lt;/a&gt;, &lt;a href=&#34;http://pygments.org&#34;&gt;Pygments&lt;/a&gt; and some other CSS/Javascript.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Eventually will host Harth blog.
+
+&lt;ul&gt;
+&lt;li&gt;Organized by date.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Eventually will host Harth Technical Reference and API documentation.
+
+&lt;ul&gt;
+&lt;li&gt;Organized by language and version.&lt;/li&gt;
+&lt;li&gt;Automatically built from Harth code itself.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;financing-and-business-plan:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Financing and Business Plan&lt;/h1&gt;
+
+&lt;p&gt;This project is &lt;strong&gt;NOT&lt;/strong&gt; a business. Essentially I&amp;rsquo;m on sabbatical from
+work and doing research and development using some savings.&lt;/p&gt;
+
+&lt;p&gt;This project is entirely self funded. I&amp;rsquo;ll run out of money sometime in &lt;sup&gt;2016&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2017&lt;/sub&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have some ideas on a business plan; for now I only need money to live and eat.&lt;/p&gt;
+
+&lt;p&gt;The short term plan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set up a simple business.&lt;/li&gt;
+&lt;li&gt;Get some financing probably &lt;a href=&#34;https://www.kickstarter.com&#34;&gt;Kickstarter&lt;/a&gt; or &lt;a href=&#34;https://www.patreon.com&#34;&gt;Patreon&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The long term plan (subject to changing my mind on a whime) is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The product will should hopefully &amp;ldquo;almost&amp;rdquo; free, as in peanuts.
+
+&lt;ul&gt;
+&lt;li&gt;Probably a yearly subscription.&lt;/li&gt;
+&lt;li&gt;Think &lt;a href=&#34;https://www.atlassian.com/purchase/product/jira-software&#34;&gt;Atlassian Jira&lt;/a&gt; &amp;ldquo;free&amp;rdquo; model.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;It will remain under my control (which means you can give me lots of
+cash, I just get to keep 51%).&lt;/li&gt;
+&lt;li&gt;I reserve the right to sell it to whoever I like for one
+trillion-billion whatevers. I&amp;rsquo;m not greedy however and thus:
+
+&lt;ul&gt;
+&lt;li&gt;Head towards inverse tithing (I keep 10%, give away 90% to worthy causes/endeavours).&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;d probably only buy a reasonable house and car.&lt;/li&gt;
+&lt;li&gt;Do lots of cool things for education, software and charity.&lt;/li&gt;
+&lt;li&gt;I may occasionally splash out on a nice holiday or a first class plane ticket.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m well aware that the likelihood of this leading to success is minimal.
+
+&lt;ul&gt;
+&lt;li&gt;Failing this, I&amp;rsquo;ll go get a normal job making software controlled widgets for space drones.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;source-and-binrary-products:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Source and Binrary Products&lt;/h1&gt;
+
+&lt;p&gt;Currently the prototype(s) are closed source, the code and built
+products are internal prototypes for research and development.&lt;/p&gt;
+
+&lt;p&gt;The projection for first usable alpha is roughly somewhere within 2016
+to 2017 (plus or minus as many years as required). Translation: I have
+no idea really, other than that&amp;rsquo;s a huge undertaking.&lt;/p&gt;
+
+&lt;p&gt;Obviously if a few people help out (especially full time), this might
+be reduced very slightly.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-does-the-prototype-v0-2-demonstrate:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;What Does The Prototype (V0.2) Demonstrate?&lt;/h2&gt;
+
+&lt;p&gt;This has essentially demonstrated one of the ideas; by providing the
+“brains” as components, programmers can write better tools.&lt;/p&gt;
+
+&lt;p&gt;I can demonstrate editing a very simple program with the following
+features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Syntax error checking as you type;
+
+&lt;ul&gt;
+&lt;li&gt;Editor puts red squiggly lines on erroneous text, with explanations of errors on popups.&lt;/li&gt;
+&lt;li&gt;(For prototype only updates on save).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Find definition;
+
+&lt;ul&gt;
+&lt;li&gt;editor jumps to definition of type.&lt;/li&gt;
+&lt;li&gt;(For prototype, works only on types).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Find references;
+
+&lt;ul&gt;
+&lt;li&gt;editor can cycle through all references to type.&lt;/li&gt;
+&lt;li&gt;(For prototype, works only on types).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Auto-complete names;
+
+&lt;ul&gt;
+&lt;li&gt;editor either completes unique name or gives pop-up list of possible completions to select.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that the features adapt to changes in the program as you edit
+it - the “brains” re-analyses the whole program as it’s been written.&lt;/p&gt;
+
+&lt;h2 id=&#34;technical-details-v0-2:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Technical Details (V0.2)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a standalone “server” process which reads, parses and
+analyses a whole project from disk.&lt;/li&gt;
+&lt;li&gt;By connecting over TCP and sending commands, the “server” responds
+to requests for information about the project.&lt;/li&gt;
+&lt;li&gt;The “server” can update (reload at the moment, eventually
+incremental updates) the analysis of the whole project files.&lt;/li&gt;
+&lt;li&gt;Extended Emacs (a standard well known programmable editor) to talk
+to this server process.&lt;/li&gt;
+&lt;li&gt;Extended and adapted existing Emacs packages (flycheck, ggtags,
+company) which provide the front-end/UI/Emacs for virtually “free”.
+(No point reinventing the wheel here).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not everyone uses Emacs as a program editor, but it would be fairly
+easy to write plugins for other editors; most of the work is done in
+the server process (for example: you can simply use telnet or netcat
+to talk to the server, it’s just a TCP text service like a web
+server). The “server” should really also provide information to
+format/colour/indent code - and/or possibly provide standard editor
+component.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Test Blog Page</title>
@@ -212,79 +688,6 @@ End
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Harth Programming Language</title>
-      <link>http://www.harth-lang.org/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.harth-lang.org/</guid>
-      <description>
-
-&lt;h1 id=&#34;the-harth-programming-language:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;The Harth Programming Language&lt;/h1&gt;
-
-&lt;h2 id=&#34;why-the-name-harth:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Why The Name &amp;ldquo;Harth&amp;rdquo;?&lt;/h2&gt;
-
-&lt;p&gt;Harth is a contraction of &lt;strong&gt;Har&lt;/strong&gt;vey &lt;strong&gt;Th&lt;/strong&gt;ompson. That way people can
-be sure who the original author was.&lt;/p&gt;
-
-&lt;p&gt;The name also evokes the idea of a &amp;ldquo;Hearth&amp;rdquo;, a warm and cosy often
-industrial sized fire-place in the home or blacksmith&amp;rsquo;s; here food is
-cooked or new tools are forged.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.harth-lang.org/img/hearth-blacksmith.jpg&#34; alt=&#34;Hearth&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;yet-another-programming-language:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Yet Another Programming Language?&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The nice thing about standards is that there are so many of them to choose from.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Andrew S. Tanenbaum&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I&amp;rsquo;ve used many programming languages in my 30 years of
-programming. Each of ttem have some good and not-so good parts. I&amp;rsquo;ve
-often wondered what would happen if you took all the reasonable bits
-of each and made a programming language from that. &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; is that
-experiment.&lt;/p&gt;
-
-&lt;p&gt;Hopefully &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; will not turn into a Jack-of-all-Trades (and master
-of none), nor a confusing Swiss-Army-Knife programming language (the
-sort you use if you can&amp;rsquo;t find your professional toolbox).&lt;/p&gt;
-
-&lt;h2 id=&#34;programming-languages-i-borrowed-ideas-from:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Programming Languages I Borrowed Ideas From&lt;/h2&gt;
-
-&lt;p&gt;In building &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; I&amp;rsquo;m borrowing some of the &amp;ldquo;good&amp;rdquo; ideas from
-various existing programming languages. Each of them are well worth
-learning and using in their own right. I&amp;rsquo;m also very aware and am
-grateful for the massive amount of work put in by all the clever
-people behind each of these programming languages.&lt;/p&gt;
-
-&lt;p&gt;Programming languages I&amp;rsquo;ve actually used:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/C_(programming_language)&#34;&gt;C&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language&#34;&gt;C++&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/C_Sharp_(programming_language)&#34;&gt;C#&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Java_(programming_language)&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Lisp_(programming_language)&#34;&gt;Lisp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.python.org/&#34;&gt;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Programming languages I&amp;rsquo;ve not really used, but have read about
-interesting ideas worth borrowing:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ceylon-lang.org/&#34;&gt;Ceylon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.erlang.org/&#34;&gt;Erlang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.julialang.org/&#34;&gt;Julia&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.kotlinlang.org/&#34;&gt;Kotlin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ruby-lang.org/&#34;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rust-lang.org/&#34;&gt;Rust&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

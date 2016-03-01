@@ -99,11 +99,13 @@
 
 
   
-
-  
     
 
 <h1 id="the-harth-programming-language:d680e8a854a7cbad6d490c445cba2eba">The Harth Programming Language</h1>
+
+
+<p>Last Update: February 29, 2016</p>
+
 
 <h2 id="why-the-name-harth:d680e8a854a7cbad6d490c445cba2eba">Why The Name &ldquo;Harth&rdquo;?</h2>
 
@@ -165,6 +167,407 @@ interesting ideas worth borrowing:</p>
 <li><a href="http://www.rust-lang.org/">Rust</a></li>
 <li><a href="https://developer.apple.com/swift/">Swift</a></li>
 </ul>
+
+<h1 id="project-background-september-14-2015:d680e8a854a7cbad6d490c445cba2eba">Project Background (September 14 2015)</h1>
+
+<p>The high level vision for the project is to:</p>
+
+<ul>
+<li>Help software engineers make great tools for themselves and other software engineers.</li>
+</ul>
+
+<p>Software Engineers (programmers) use many tools, the most important of
+which is essentially a high tech type-writer; the code editor. This is
+something like Word (or Notepad), and they write text (code) which is
+saved in text files. There are many other tools which provide some
+additional functions that help programmers. These features may already
+exist in in the code editor, or may find found in a separate tool.</p>
+
+<h2 id="other-programmer-tools:d680e8a854a7cbad6d490c445cba2eba">Other Programmer Tools</h2>
+
+<p>Some of the tools or features a programmer needs are;</p>
+
+<ul>
+<li>Syntax Highlighting - The text is styled and coloured to highlight
+important information: much like headings in documents.</li>
+<li>Find Definition - The programmer can look up definitions of
+particular piece of code, much like a dictionary or thesaurus.</li>
+<li>Find References - The programmer can find all the references to a
+particular piece of code, much like an index or table of contents.</li>
+<li>Search/Replace &amp; Refactoring - The programmer can ask the computer
+to make specific global changes to the code. For example:
+
+<ul>
+<li>Changing the name of something everywhere.</li>
+<li>Moving some code to somewhere else.</li>
+</ul></li>
+<li>Auto Complete - The programmer can type short cuts and expand them,
+like auto-complete on phones.</li>
+<li>Error Highlighting - The programmer can see errors in their code
+almost immediately, like the red squiggly lines in Word that show
+spelling mistakes.</li>
+<li>Compilation - The programmer can compile the program into code, and
+at this point will be told about more problems in what they have
+written (like a human editor would for a book or news story).</li>
+<li>Debugger - The programmer can run their program step by step and see
+what’s going on (debugging); often this is needed because the
+programmer has made a logical mistake that the computer cannot
+possibly detect.</li>
+<li>Interactive Session - The programmer can type additional pieces of
+code and perhaps modify the code while it’s running, to help correct
+problems (bugs) in their code.</li>
+<li>Unit Tests - The programmer can write extra “test” code that checks
+what they have written; this can be run automatically to catch
+problems which are introduced as they change their program.</li>
+<li>Quality Tests - The programmer can use some automated code to
+evaluate code quality, for example;
+
+<ul>
+<li>How much of the code has tests.</li>
+<li>How much of the code is documented for programmers.</li>
+<li>How complex the code is.</li>
+</ul></li>
+<li>Issue Tracking - The programmer can create “To-Do” lists of things
+they need to do later; building software is like growing a city -
+you start with a one house, but very quickly there’s 1001 buildings,
+each with 1001 different problems to solve.</li>
+<li>Change Management - The programmer can save versions of code, both
+locally and on the web, and use this this to collaborate with others.</li>
+</ul>
+
+<h2 id="woah-too-much:d680e8a854a7cbad6d490c445cba2eba">Woah, Too Much!</h2>
+
+<p>There is an almost endless list of tools a programmer might
+need. Consider Home Depot and how many hammers, drills, spanners,
+screwdrivers, rulers, saws might be needed to build and maintain a
+house. Likewise there are 1001 tools a programmer might need to use to
+build good software. Not all the tools exist in one place, and not all
+the tools are as good as they could be, or easily available, or cheap.</p>
+
+<p>My aim is not to provide all 1001 tools. That task is far too big for
+one person to achieve.</p>
+
+<p>But we have to start somewhere.</p>
+
+<h2 id="long-term-aims:d680e8a854a7cbad6d490c445cba2eba">Long Term Aims</h2>
+
+<p>So a more realistic aim for this project is to:</p>
+
+<p>Provide a great foundation for many programmers to write and share
+good tools a little easier, as and when they need them.</p>
+
+<p>Currently there has been an explosion in software developers creating
+new programming languages out of the desire to solve the cohesive lack
+of good tools. “Yet Another Programming Language” is announced, but
+most software developers groan at each solution, but can’t quite
+understand why. A few have discovered that we’re often repeating the
+same patterns and even mistakes. We have to try to think a little
+differently, dig for the hidden gems of ideas that a few smart people
+have discovered, some of these could make a big difference.</p>
+
+<h2 id="medium-term-aims:d680e8a854a7cbad6d490c445cba2eba">Medium Term Aims</h2>
+
+<p>So the more focused aim of this project is to:</p>
+
+<p>Try to collect the most modern and alternative ideas in one place, to
+try something a little different.</p>
+
+<p>For example:</p>
+
+<ul>
+<li>What if we didn’t write code as text saved to a text file?</li>
+<li>What if code was stored in a database like system?</li>
+<li>What if code was more like the internet, a data rich, textual,
+graphical mixture?</li>
+<li>What if the programming ecosystem itself fully understood itself?</li>
+<li>This idea has been around since the 1960’s, but most languages only
+go so far; providing access to understanding only the high level
+constructs.</li>
+<li>Provide full 100% understanding of all code as a library (Microsoft
+are doing this with something called Roysln, which is part of their
+next Visual Studio 2015 release).</li>
+<li>Provide full 100% ability to convert text to executable code, and
+debug as a library (Apple use something called LLVM which does this
+at a lower level as part of their XCode development system).</li>
+<li>What if the programming ecosystem ditched manual processes that just
+make the human’s life harder and more miserable?</li>
+<li>What if the programming ecosystem automated more processes so that
+the human can concentrate on the creative side more?</li>
+<li>What if the programming ecosystem helped the human as much as possible to read and write good code in the first place?</li>
+</ul>
+
+<p>Still this is a quite a lot of work, so we need a more realistic shorter term aims for this project.</p>
+
+<h2 id="goals-for-2015:d680e8a854a7cbad6d490c445cba2eba">Goals For 2015</h2>
+
+<p>The goal for the end of year 2015 is to:</p>
+
+<p>Build a new prototype programming environment based on more new and
+modern ideas learned from experience and academia.</p>
+
+<p>These include:</p>
+
+<ul>
+<li>Familiar programming language - a programming language that will be
+fimiliar to most people; built on top of C++, but with ideas taken
+from Java, C#, Swift, Erlang, Scala, Lisp, Smalltalk, &hellip;</li>
+<li>Static type system - the programmer must be clear and explicit about
+what the program is doing.</li>
+<li>Use the static type system to solve more problems:
+
+<ul>
+<li>No null pointer exceptions - “The Billion Dollar Mistake” has
+plagued us for too long, and most more modern languages are
+solving this quite neatly.</li>
+<li>Non-exceptional run-time error handling - the programmer must
+explicitly and consciously handle the problems user’s might face
+as close to the source as possible.</li>
+<li>Exceptions were initially thought of as a good solution, but have proven to be a “bad” idea, though many people havn’t realized or agree on this yet.</li>
+</ul></li>
+<li>Garbage collection - the programmer is absolved from worrying about
+memory management, computers are much better at doing this labor
+intensive task without error. This is contentious with some
+programmers; the answer to that is you shouldn’t do this for low
+level programming, but we’re not dealing in this area, so it’s good
+and right to do so.</li>
+<li>Concurrency - modern computers have multiple processors, to use
+these effectively the programmer needs an easy way to use the CPUs
+effectively.</li>
+<li>Use task/actor systems that share only immutable data, no locking
+and no mutation means the programmer can more easily understand how
+to do this well and without bugs.</li>
+<li>Self awareness - The programming language provides a library to
+understand itself fully:
+
+<ul>
+<li>Convert text to an in-memory editable data structure.</li>
+<li>Convert this in-memory structure back to text.</li>
+<li>Analyze these data structures for full meaning, cross referencing,
+and compile time (programmer) errors.</li>
+<li>Provide layers on top for editors, scripting, compilation,
+debugging and interactive features that are commonly needed.</li>
+</ul></li>
+<li>Prototype - showing some of the basic required features listed in
+Background earlier, showing how easy such tools are to build given
+the foundation:
+
+<ul>
+<li>Find Definition</li>
+<li>Find Reference</li>
+<li>Auto Complete</li>
+<li>Error Highlighting</li>
+</ul></li>
+<li>Prototype stretch - show some cool and mandatory but important
+features to prove it really can work:
+
+<ul>
+<li>&ldquo;Google Maps” Code View - this is an “exciter” in that I’ve not
+seen it done in many products, only hinted at in research.</li>
+<li>Exporter</li>
+<li>Compilation</li>
+<li>Interactive Session</li>
+</ul></li>
+</ul>
+
+<h1 id="status:d680e8a854a7cbad6d490c445cba2eba">Status</h1>
+
+<h1 id="on-september-14-2015:d680e8a854a7cbad6d490c445cba2eba">On September 14, 2015</h1>
+
+<p>Rough completion for this years goal (not for a full final
+implementation) from the above list:</p>
+
+<ul>
+<li>Familiar programming language - done</li>
+<li>Static type system - done</li>
+<li>No null pointer exceptions - done</li>
+<li>Non-exception run-time error handling - done</li>
+<li>Garbage collection - 80%</li>
+<li>Concurrency - Deferred; this problem is complex to implement, not
+required to progress, and has already been proven to work very well
+on other projects.</li>
+<li>Self-awareness - 50%</li>
+<li>Prototype - 0%</li>
+<li>Prototype stretch - 0%</li>
+</ul>
+
+<p>Some stats, which if you’re aware of programmer productivity is very
+high. However I’ve been careful to work only about 8 hours for 6 days
+of the week to avoid burn out.</p>
+
+<ul>
+<li>Lines of code written to date (from Jan 1st): 145,000</li>
+<li>Average daily line count: 650</li>
+<li>Number of code files: 25300</li>
+<li>Total committed changes: 2670</li>
+</ul>
+
+<h1 id="on-october-27-2015:d680e8a854a7cbad6d490c445cba2eba">On October 27, 2015</h1>
+
+<p>I’ve completed the Prototype goals already two months ahead of
+schedule! :-D</p>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        Info
+      
+    </h3>
+  </div>
+  
+    <div class="panel-body">
+      Though not the stretch ones though, they were optional; they’ll eventually get done when it makes sense.
+    </div>
+  
+</div>
+
+
+<p>The plan was to finish the prototype in November and December, but
+though it’s taken nine months to program the “brains” of the project,
+once that was done it took only two weeks to implement the prototype
+features as extensions for an existing editor (Emacs).</p>
+
+<h1 id="on-feb-29-2016:d680e8a854a7cbad6d490c445cba2eba">On Feb 29, 2016</h1>
+
+<p>The <a href="http://www.harth-lang.org/">Harth</a> website goes live.</p>
+
+<ul>
+<li>Initially just the home page.
+
+<ul>
+<li>Static web site built with <a href="http://gohugo.io/">Hugo</a>.</li>
+<li>Uses <a href="https://github.com/harthsw/harth-hugo-theme">Harth-Hugo-Theme</a>, <a href="http://getbootstrap.com">Bootstrap</a>, <a href="http://pygments.org">Pygments</a> and some other CSS/Javascript.</li>
+</ul></li>
+<li>Eventually will host Harth blog.
+
+<ul>
+<li>Organized by date.</li>
+</ul></li>
+<li>Eventually will host Harth Technical Reference and API documentation.
+
+<ul>
+<li>Organized by language and version.</li>
+<li>Automatically built from Harth code itself.</li>
+</ul></li>
+</ul>
+
+<h1 id="financing-and-business-plan:d680e8a854a7cbad6d490c445cba2eba">Financing and Business Plan</h1>
+
+<p>This project is <strong>NOT</strong> a business. Essentially I&rsquo;m on sabbatical from
+work and doing research and development using some savings.</p>
+
+<p>This project is entirely self funded. I&rsquo;ll run out of money sometime in <sup>2016</sup>&frasl;<sub>2017</sub>.</p>
+
+<p>I have some ideas on a business plan; for now I only need money to live and eat.</p>
+
+<p>The short term plan:</p>
+
+<ul>
+<li>Set up a simple business.</li>
+<li>Get some financing probably <a href="https://www.kickstarter.com">Kickstarter</a> or <a href="https://www.patreon.com">Patreon</a>.</li>
+</ul>
+
+<p>The long term plan (subject to changing my mind on a whime) is:</p>
+
+<ul>
+<li>The product will should hopefully &ldquo;almost&rdquo; free, as in peanuts.
+
+<ul>
+<li>Probably a yearly subscription.</li>
+<li>Think <a href="https://www.atlassian.com/purchase/product/jira-software">Atlassian Jira</a> &ldquo;free&rdquo; model.</li>
+</ul></li>
+<li>It will remain under my control (which means you can give me lots of
+cash, I just get to keep 51%).</li>
+<li>I reserve the right to sell it to whoever I like for one
+trillion-billion whatevers. I&rsquo;m not greedy however and thus:
+
+<ul>
+<li>Head towards inverse tithing (I keep 10%, give away 90% to worthy causes/endeavours).</li>
+<li>I&rsquo;d probably only buy a reasonable house and car.</li>
+<li>Do lots of cool things for education, software and charity.</li>
+<li>I may occasionally splash out on a nice holiday or a first class plane ticket.</li>
+</ul></li>
+<li>I&rsquo;m well aware that the likelihood of this leading to success is minimal.
+
+<ul>
+<li>Failing this, I&rsquo;ll go get a normal job making software controlled widgets for space drones.</li>
+</ul></li>
+</ul>
+
+<h1 id="source-and-binrary-products:d680e8a854a7cbad6d490c445cba2eba">Source and Binrary Products</h1>
+
+<p>Currently the prototype(s) are closed source, the code and built
+products are internal prototypes for research and development.</p>
+
+<p>The projection for first usable alpha is roughly somewhere within 2016
+to 2017 (plus or minus as many years as required). Translation: I have
+no idea really, other than that&rsquo;s a huge undertaking.</p>
+
+<p>Obviously if a few people help out (especially full time), this might
+be reduced very slightly.</p>
+
+<h2 id="what-does-the-prototype-v0-2-demonstrate:d680e8a854a7cbad6d490c445cba2eba">What Does The Prototype (V0.2) Demonstrate?</h2>
+
+<p>This has essentially demonstrated one of the ideas; by providing the
+“brains” as components, programmers can write better tools.</p>
+
+<p>I can demonstrate editing a very simple program with the following
+features:</p>
+
+<ul>
+<li>Syntax error checking as you type;
+
+<ul>
+<li>Editor puts red squiggly lines on erroneous text, with explanations of errors on popups.</li>
+<li>(For prototype only updates on save).</li>
+</ul></li>
+<li>Find definition;
+
+<ul>
+<li>editor jumps to definition of type.</li>
+<li>(For prototype, works only on types).</li>
+</ul></li>
+<li>Find references;
+
+<ul>
+<li>editor can cycle through all references to type.</li>
+<li>(For prototype, works only on types).</li>
+</ul></li>
+<li>Auto-complete names;
+
+<ul>
+<li>editor either completes unique name or gives pop-up list of possible completions to select.</li>
+</ul></li>
+</ul>
+
+<p>Note that the features adapt to changes in the program as you edit
+it - the “brains” re-analyses the whole program as it’s been written.</p>
+
+<h2 id="technical-details-v0-2:d680e8a854a7cbad6d490c445cba2eba">Technical Details (V0.2)</h2>
+
+<ul>
+<li>Create a standalone “server” process which reads, parses and
+analyses a whole project from disk.</li>
+<li>By connecting over TCP and sending commands, the “server” responds
+to requests for information about the project.</li>
+<li>The “server” can update (reload at the moment, eventually
+incremental updates) the analysis of the whole project files.</li>
+<li>Extended Emacs (a standard well known programmable editor) to talk
+to this server process.</li>
+<li>Extended and adapted existing Emacs packages (flycheck, ggtags,
+company) which provide the front-end/UI/Emacs for virtually “free”.
+(No point reinventing the wheel here).</li>
+</ul>
+
+<p>Not everyone uses Emacs as a program editor, but it would be fairly
+easy to write plugins for other editors; most of the work is done in
+the server process (for example: you can simply use telnet or netcat
+to talk to the server, it’s just a TCP text service like a web
+server). The “server” should really also provide information to
+format/colour/indent code - and/or possibly provide standard editor
+component.</p>
+
+  
 
   
 
