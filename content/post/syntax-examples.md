@@ -3,7 +3,7 @@ date: 2016-03-01T11:57:19-08:00
 title: "Syntax Ideas and Prototype Examples"
 ---
 
-# Familiarity with Fully Reified, Immutable, and Homoiconic.
+# Familiar Programming Language with Fully Reified, Immutable, and Homoiconic code/data.
 
 ## Familiar
 
