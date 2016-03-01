@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!-- BEGIN partials/header.html -->
+<html>
+  <head>
+    <!-- BEGIN partials/header-device.html -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- END partials/header-device.html -->
+    
+    <!-- BEGIN partials/header-page.html -->
+    <title>Test Blog Page &middot; Harth Programming Language</title>    
+    <meta name="description" content="Harth Programming Language">
+    <meta name="author" content="Harvey Thompson">
+    <meta name="generator" content="Hugo 0.15" />
+<!-- END partials/header-page.html -->
+
+    <!-- BEGIN partials/header-bootstrap.html -->
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    
+    
+    
+     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="/css/pygment-solarized-dark.css">
+    
+    
+    <link rel="stylesheet" href="/css/simple-sidebar.css">
+        
+    <link rel="stylesheet" href="/css/harth.css">
+    
+<!-- END partials/header-bootstrap.html -->
+
+  </head>
+<!-- END partials/header.html -->
+
+<!-- BEGIN partials/post-single.html -->
+<!-- BEGIN partials/body-begin.html -->
+<body>
+  <div class="container-fluid debug-border-red">
+    <!-- BEGIN partials/topbar-global.html -->
+
+<div class="row debug-border-black harth-topbar-global harth-row-global">
+
+</div>
+
+<!-- END partials/topbar-global.html -->
+
+    <!-- BEGIN partials/topbar-local.html -->
+
+<div class="row debug-border-black harth-topbar-local harth-row-local">
+
+</div>
+
+<!-- END partials/topbar-local.html -->
+
+    <div class="row debug-border-green harth-row-mid">
+      <!-- BEGIN partials/sidebar.html -->
+
+<div class="col-sm-3 debug-border-blue harth-sidebar">
+  <div class="harth-sidebar-top">
+    <div class="harth-site-title">
+      Harth<br>Programming<br>Language
+    </div>
+    <div class="harth-site-author">
+      By Harvey Thompson    
+    </div>
+  </div>
+  <!-- BEGIN partials/sidebar-nav.html -->
+
+<ul>
+  
+    <li><a href="/">Home</a></li>
+  
+    <li><a href="/ref/">Language Reference</a></li>
+  
+    <li><a href="/api/">Language API</a></li>
+  
+    <li><a href="/post/">Blog</a></li>
+  
+    <li><a href="/license/">License</a></li>
+  
+</ul>
+<!-- END partials/sidebar-nav.html -->
+
+</div>
+
+<!-- END partials/sidebar.html -->
+
+      <div class="col-sm-9 debug-border-blue harth-content">
+<!-- END partials/body-begin.html -->
+
+
+<div class="page-header">
+  <h1 class="page-title">Test Blog Page</h1>
+</div>
+
+
+<h1 id="reason:f7973322a3a603033225704c216a4c0b">Reason</h1>
+
+<p>This blog is a test page. It&rsquo;s meant to test the <a href="https://github.com/harthsw/harth-hugo-theme">Harth-Hugo-Theme</a>.</p>
+
+<h2 id="code-shortcode:f7973322a3a603033225704c216a4c0b">Code Shortcode</h2>
+
+<p>Example code block:</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">#include</span> <span style="color: #75715e">&lt;iostream&gt;</span>
+<span style="color: #75715e">#define IABS(x) ((x) &lt; 0 ? -(x) : (x))</span>
+
+<span style="color: #66d9ef">int</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">argc,</span> <span style="color: #66d9ef">char</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">argv[])</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #75715e">/* An annoying &quot;Hello World&quot; example */</span>
+  <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">auto</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">0xFFFF</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Hello, World!&quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+
+  <span style="color: #66d9ef">char</span> <span style="color: #f8f8f2">c</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;\n&#39;</span><span style="color: #f8f8f2">;</span>
+  <span style="color: #f8f8f2">unordered_map</span> <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">string,</span> <span style="color: #f8f8f2">vector</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">string</span><span style="color: #f92672">&gt;</span> <span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">m;</span>
+  <span style="color: #f8f8f2">m[</span><span style="color: #e6db74">&quot;key&quot;</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\\\\</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span> <span style="color: #75715e">// this is an error</span>
+
+  <span style="color: #66d9ef">return</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">2e3</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">12l</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Thing</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #66d9ef">public</span><span style="color: #f92672">:</span>
+    <span style="color: #f8f8f2">Thing();</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #a6e22e">CallFunc</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">x,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">y);</span>
+<span style="color: #f8f8f2">};</span>
+
+<span style="color: #66d9ef">try</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">Thing</span> <span style="color: #f8f8f2">t;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">t.CallFunc(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">);</span>
+	<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(x</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
+	    <span style="color: #66d9ef">throw</span> <span style="color: #66d9ef">new</span> <span style="color: #f8f8f2">Exception(</span><span style="color: #e6db74">&quot;oops&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">catch</span> <span style="color: #f8f8f2">(Exception</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">e)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">printf(</span><span style="color: #e6db74">&quot;Error: %s</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">e.ToString());</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="code-shortcode-2:f7973322a3a603033225704c216a4c0b">Code Shortcode 2</h2>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">thing</span>
+
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">That</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">function</span> <span style="color: #f8f8f2">XXX(x</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">Int)</span> <span style="color: #f92672">-&gt;</span> <span style="color: #f8f8f2">Int</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">printf(</span><span style="color: #e6db74">&quot;%s</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">x)</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="inline-code:f7973322a3a603033225704c216a4c0b">Inline Code</h2>
+
+<p>Calling the function <code>CallFunc()</code>.</p>
+
+<h2 id="inline-key-press:f7973322a3a603033225704c216a4c0b">Inline Key Press</h2>
+
+<p>Press the following keys to quit: 
+  
+  
+    <span class="harth-key">&#8984</span>
+  
+    
+
+  
+  +
+  
+  
+    <span class="harth-key">Q</span>
+  
+    
+
+</p>
+
+<h2 id="sample-console-output:f7973322a3a603033225704c216a4c0b">Sample Console Output</h2>
+
+<div class="harth-console-panel">
+  <pre class="harth-console">
+Sample console output
+Stuff
+********************************************************************************
+End
+</pre>
+</div>
+
+
+<h2 id="various-panels:f7973322a3a603033225704c216a4c0b">Various Panels</h2>
+
+<ul>
+<li>Success <div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        It worked!
+      
+    </h3>
+  </div>
+  
+    
+      <div class="panel-body">
+	Which is nice.
+      </div>
+    
+  
+</div>
+</li>
+<li>Info <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        Info
+      
+    </h3>
+  </div>
+  
+    <div class="panel-body">
+      Remember to add this.
+    </div>
+  
+</div>
+</li>
+<li>Warning <div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        Warning
+      
+    </h3>
+  </div>
+  
+    <div class="panel-body">
+      Do not do this.
+    </div>
+  
+</div>
+</li>
+<li>Error - <div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        Error
+      
+    </h3>
+  </div>
+  
+    <div class="panel-body">
+      Oh dear
+    </div>
+  
+</div>
+</li>
+</ul>
+
+<h2 id="todo:f7973322a3a603033225704c216a4c0b">TODO</h2>
+
+<ul>
+<li>TODO <div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        TODO
+      
+    </h3>
+  </div>
+  
+    <div class="panel-body">
+      Remember to add a thing.
+    </div>
+  
+</div>
+</li>
+</ul>
+
+<h2 id="todo-list:f7973322a3a603033225704c216a4c0b">TODO List</h2>
+
+<p><div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        TODO
+      
+    </h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+<li>Thing</li>
+</ul>
+
+  </div>
+</div>
+</p>
+
+
+<!-- BEGIN partials/disqus-comment.html -->
+
+
+  <div class="harth-comment"></div>
+  <div id="disqus_thread"></div>
+
+  
+
+  <script type="text/javascript">
+  var disqus_shortname = "610yesnolovely";
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered
+    by Disqus.</a>
+  </noscript>
+
+
+<!-- END partials/disqus-comment.html -->
+
+<!-- BEGIN partials/body-end.html -->
+      </div>
+    </div>
+  </div>
+</body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+    
+
+<!-- END partials/body-end.html -->
+    
+<!-- END partials/post-single.html -->
+
+<!-- BEGIN partials/footer.html -->
+</html>
+<!-- END partials/footer.html -->
+

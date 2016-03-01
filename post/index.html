@@ -16,14 +16,23 @@
 <!-- END partials/header-page.html -->
 
     <!-- BEGIN partials/header-bootstrap.html -->
+
     
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/bootstrap-theme.css">
     
     
     
-
+     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="/css/pygment-solarized-dark.css">
+    
+    
     <link rel="stylesheet" href="/css/simple-sidebar.css">
+        
     <link rel="stylesheet" href="/css/harth.css">
     
 <!-- END partials/header-bootstrap.html -->
@@ -36,19 +45,24 @@
 <body>
   <div class="container-fluid debug-border-red">
     <!-- BEGIN partials/topbar-global.html -->
+
 <div class="row debug-border-black harth-topbar-global harth-row-global">
 
 </div>
+
 <!-- END partials/topbar-global.html -->
 
     <!-- BEGIN partials/topbar-local.html -->
+
 <div class="row debug-border-black harth-topbar-local harth-row-local">
 
 </div>
+
 <!-- END partials/topbar-local.html -->
 
     <div class="row debug-border-green harth-row-mid">
       <!-- BEGIN partials/sidebar.html -->
+
 <div class="col-sm-3 debug-border-blue harth-sidebar">
   <div class="harth-sidebar-top">
     <div class="harth-site-title">
@@ -59,20 +73,20 @@
     </div>
   </div>
   <!-- BEGIN partials/sidebar-nav.html -->
+
+<ul>
   
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/ref/">Language Reference</a></li>
-    
-      <li><a href="/api/">Language API</a></li>
-    
-      <li><a href="/post/">Blog</a></li>
-    
-      <li><a href="/license/">License</a></li>
-    
-  </ul>
+    <li><a href="/">Home</a></li>
+  
+    <li><a href="/ref/">Language Reference</a></li>
+  
+    <li><a href="/api/">Language API</a></li>
+  
+    <li><a href="/post/">Blog</a></li>
+  
+    <li><a href="/license/">License</a></li>
+  
+</ul>
 <!-- END partials/sidebar-nav.html -->
 
 </div>
@@ -81,7 +95,6 @@
 
       <div class="col-sm-9 debug-border-blue harth-content">
 <!-- END partials/body-begin.html -->
-
 
 
 <div class="page-header">
@@ -93,20 +106,36 @@
   
   <div class="harth-post">
     <h1 class="harth-post-title">
-      <a href="http://www.harth-lang.org/blog/2016/02/24/test-blog-page-1/">Test Blog Page 1</a>
+      <a href="http://www.harth-lang.org/blog/2016/02/24/test-blog-page/">Test Blog Page</a>
     </h1>
     <span class="harth-post-date">
-      Feb 24, 2016 &middot; 4 minute read
-      
+      Feb 24, 2016 &middot; 1 minute read
+       &middot; <a href="http://www.harth-lang.org/blog/2016/02/24/test-blog-page/#disqus_thread">Comments</a>
       
     </span>
     
-      <p>Test Blog Page 1</p>
-      <a href="http://www.harth-lang.org/blog/2016/02/24/test-blog-page-1/">Read On &rarr;</a>
+      <p>Test Blog Page, shows result of basic Markdown and Hugo templates with styles.</p>
+      <a href="http://www.harth-lang.org/blog/2016/02/24/test-blog-page/">Read On &rarr;</a>
     
   </div>
   
 </div>
+
+<!-- END partials/disqus-count.html -->
+
+
+  <script type="text/javascript">
+    var disqus_shortname = "610yesnolovely";
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>
+
+
+<!-- END partials/disqus-count.html -->
 
 <!-- BEGIN partials/body-end.html -->
       </div>
@@ -124,6 +153,8 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+    
+    
 
 <!-- END partials/body-end.html -->
 

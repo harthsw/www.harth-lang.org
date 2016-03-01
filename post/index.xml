@@ -10,53 +10,208 @@
     <atom:link href="http://www.harth-lang.org/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Test Blog Page 1</title>
-      <link>http://www.harth-lang.org/blog/2016/02/24/test-blog-page-1/</link>
+      <title>Test Blog Page</title>
+      <link>http://www.harth-lang.org/blog/2016/02/24/test-blog-page/</link>
       <pubDate>Wed, 24 Feb 2016 11:38:50 -0800</pubDate>
       
-      <guid>http://www.harth-lang.org/blog/2016/02/24/test-blog-page-1/</guid>
+      <guid>http://www.harth-lang.org/blog/2016/02/24/test-blog-page/</guid>
       <description>
 
-&lt;h1 id=&#34;section-1:f7973322a3a603033225704c216a4c0b&#34;&gt;Section 1&lt;/h1&gt;
+&lt;h1 id=&#34;reason:f7973322a3a603033225704c216a4c0b&#34;&gt;Reason&lt;/h1&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;p&gt;This blog is a test page. It&amp;rsquo;s meant to test the &lt;a href=&#34;https://github.com/harthsw/harth-hugo-theme&#34;&gt;Harth-Hugo-Theme&lt;/a&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;int x = func.CallFunc(1, 2);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;code-shortcode:f7973322a3a603033225704c216a4c0b&#34;&gt;Code Shortcode&lt;/h2&gt;
 
-&lt;h2 id=&#34;section-1-1:f7973322a3a603033225704c216a4c0b&#34;&gt;Section 1.1&lt;/h2&gt;
+&lt;p&gt;Example code block:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;#define IABS(x) ((x) &amp;lt; 0 ? -(x) : (x))&lt;/span&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;argc,&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;argv[])&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+  &lt;span style=&#34;color: #75715e&#34;&gt;/* An annoying &amp;quot;Hello World&amp;quot; example */&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;auto&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0xFFFF&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;++&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;cout&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;endl;&lt;/span&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;unordered_map&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;string,&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;vector&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;m;&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;m[&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;key&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;\\\\&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;// this is an error&lt;/span&gt;
 
-&lt;h2 id=&#34;section-1-2:f7973322a3a603033225704c216a4c0b&#34;&gt;Section 1.2&lt;/h2&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;2e3&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;12l&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;Thing&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;:&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;Thing();&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;CallFunc&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x,&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;y);&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;};&lt;/span&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;try&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;Thing&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;t;&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;t.CallFunc(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+	&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+	    &lt;span style=&#34;color: #66d9ef&#34;&gt;throw&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Exception(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;oops&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(Exception&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;e)&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Error: %s&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;e.ToString());&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;h2 id=&#34;code-shortcode-2:f7973322a3a603033225704c216a4c0b&#34;&gt;Code Shortcode 2&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;thing&lt;/span&gt;
 
-&lt;h1 id=&#34;section-2:f7973322a3a603033225704c216a4c0b&#34;&gt;Section 2&lt;/h1&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;That&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;XXX(x&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Int)&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Int&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%s&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;x)&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;section-2-1:f7973322a3a603033225704c216a4c0b&#34;&gt;Section 2.1&lt;/h2&gt;
+&lt;h2 id=&#34;inline-code:f7973322a3a603033225704c216a4c0b&#34;&gt;Inline Code&lt;/h2&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;p&gt;Calling the function &lt;code&gt;CallFunc()&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;h2 id=&#34;inline-key-press:f7973322a3a603033225704c216a4c0b&#34;&gt;Inline Key Press&lt;/h2&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;p&gt;Press the following keys to quit: 
+  
+  
+    &lt;span class=&#34;harth-key&#34;&gt;&amp;#8984&lt;/span&gt;
+  
+    
 
-&lt;h2 id=&#34;section-2-2:f7973322a3a603033225704c216a4c0b&#34;&gt;Section 2.2&lt;/h2&gt;
+  
+  +
+  
+  
+    &lt;span class=&#34;harth-key&#34;&gt;Q&lt;/span&gt;
+  
+    
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;h2 id=&#34;sample-console-output:f7973322a3a603033225704c216a4c0b&#34;&gt;Sample Console Output&lt;/h2&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a lorem et urna dictum faucibus. Morbi a nunc consequat neque feugiat commodo. Donec placerat sit amet eros at luctus. Sed non elementum lectus. Nunc lacus neque, dignissim in nunc eu, sollicitudin congue leo. Proin tempus metus ac lacinia viverra. Aenean tortor neque, egestas a nisl tempus, tempus gravida eros.&lt;/p&gt;
+&lt;div class=&#34;harth-console-panel&#34;&gt;
+  &lt;pre class=&#34;harth-console&#34;&gt;
+Sample console output
+Stuff
+********************************************************************************
+End
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;various-panels:f7973322a3a603033225704c216a4c0b&#34;&gt;Various Panels&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Success &lt;div class=&#34;panel panel-success&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        It worked!
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  
+    
+      &lt;div class=&#34;panel-body&#34;&gt;
+	Which is nice.
+      &lt;/div&gt;
+    
+  
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Info &lt;div class=&#34;panel panel-info&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        Info
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&#34;panel-body&#34;&gt;
+      Remember to add this.
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Warning &lt;div class=&#34;panel panel-warning&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        Warning
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&#34;panel-body&#34;&gt;
+      Do not do this.
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Error - &lt;div class=&#34;panel panel-danger&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        Error
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&#34;panel-body&#34;&gt;
+      Oh dear
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;todo:f7973322a3a603033225704c216a4c0b&#34;&gt;TODO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TODO &lt;div class=&#34;panel panel-danger&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        TODO
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  
+    &lt;div class=&#34;panel-body&#34;&gt;
+      Remember to add a thing.
+    &lt;/div&gt;
+  
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;todo-list:f7973322a3a603033225704c216a4c0b&#34;&gt;TODO List&lt;/h2&gt;
+
+&lt;p&gt;&lt;div class=&#34;panel panel-danger&#34;&gt;
+  &lt;div class=&#34;panel-heading&#34;&gt;
+    &lt;h3 class=&#34;panel-title&#34;&gt;
+      
+        TODO
+      
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;panel-body&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;Thing&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

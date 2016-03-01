@@ -36,7 +36,7 @@ h1.page-title {
 
 /* Global topbar */
 .harth-topbar-global {
-    background-color: #a00;
+    background-color: #990d0d;
     color: #ddd;
 }
 .harth-row-global {
@@ -44,7 +44,7 @@ h1.page-title {
 
 /* Local topbar */
 .harth-topbar-local {
-    background-color: #a00;
+    background-color: #990d0d;
     color: #ddd;    
 }
 .harth-row-local {
@@ -69,7 +69,7 @@ h1.page-title {
 }
 .harth-sidebar {
     color: #ddd;
-    background-color: #a00;
+    background-color: #990d0d;
 }
 /* fixed sidebar at top, left, stretch sidebar to height of display */
 @media screen and (min-width: 768px) {
@@ -169,3 +169,120 @@ a.harth-label:focus {
 .harth-post a {
     color: #c00;
 }
+
+.harth-comment {
+    margin-top: 5em;
+    margin-bottom: 0em;
+    border-top: 2px solid #000;
+}
+
+/* Keyboard input */
+.harth-key {
+    padding: 2px 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #777;
+    font-size: 90%;
+    color: #000;
+    background-color: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 -2px 0 #ccc;
+    box-shadow: inset 0 -2px 0 #ccc;
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 1em;
+}
+
+/* Console output */
+.harth-console-panel {
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 1em;    
+    margin: 0px;
+}
+.harth-console {
+    padding: 8px;
+    margin: 0;
+    line-height: 1.2;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #333;
+    border-radius: 3px;    
+    background-color: #444;
+    color: #0c0;
+    font-family: "Inconsolata", "monospace";
+    font-size: 1em;
+}
+
+/* Highlighted code output */
+div.highlight {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+pre {
+    padding: 1em;
+    margin: 0em;
+    line-height: 1.2;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 3px;
+    border-color: #333;
+    background-color: inherit;
+    color: inherit;    
+    font-family: "Inconsolata", "monospace";
+    font-size: 1em;
+}
+<!-- Highlight using Javascript -->
+/*
+.harth-code-panel {
+    display: block;    
+    padding-top: 1em;
+    padding-bottom: 1em;    
+    margin: 0;
+    border: 0;
+}
+.harth-code-panel-inner {
+    display: block;    
+    padding-top: 0;
+    padding-bottom: 0;    
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-radius: 5px;
+}
+.harth-code-panel-heading {
+    padding-left: 11px;        
+    padding-top: 3px;
+    padding-bottom: 3px;    
+    margin:  3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    background-color: #fff;
+}
+.harth-code-panel-body {
+    padding: 0;
+    margin: 3px;
+    border-width: 0;    
+}    
+.harth-code-pre {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+}
+.harth-code:first-line {
+    line-height: 0;
+}
+.harth-code {
+    padding: 8px;
+    margin: 0;
+    line-height: 1.2;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #000;
+    border-radius: 0;
+    font-size: 1em;
+}
+*/
