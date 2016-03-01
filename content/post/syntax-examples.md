@@ -208,7 +208,7 @@ function main(args : String*)
     {
     case Int: return(_)
     case Error: abort(_)
-    case Anything: printf("%O\n", result); exit(0);
+    case Anything: printf("%O\n", result); exit(0)
     }
 }
 ```
@@ -368,6 +368,165 @@ Hello World!\n
 Harth>
 {{< /console >}}
 
+### Example 4: The /Harth/Lang/Collection/Sequence class
+
+```C++
+harth 0.1
+package /Harth/Lang/Collection
+import /Harth/Lang/Core
+
+/**
+ * A Sequence is an abstract finite stream of elements which can be counted, accessed by index.
+ * 
+ * New sequences can be created using Builder, Append(), Prepend() and similar functions.
+ * 
+ * Operations performance may vary from O(1) to O(n) or more. LinearSequence and IndexedSequence
+ * provide tighter bounds on performance order.
+ * 
+ * Typically most classes should internally use concrete types such as List<T> or Array<T>, but
+ * should return or accept Sequence<T> from methods for maximum usefulness.
+ */
+@const
+class Sequence<out T> extends Stream<T>
+{
+    @abstract
+    property ReverseIterator : Iterator<T>
+
+    @abstract
+    property Builder : Builder<T>
+
+    @abstract
+    property Size : Int32
+
+    @abstract
+    method Get(i : Int32) -> T%
+
+    @abstract @covariant
+    property First : T%
+
+    @abstract @covariant
+    property Rest : Sequence<T>%
+
+    @abstract
+    property Last : T%
+
+    @abstract @covariant
+    method MakeEmpty() -> Sequence<T>
+
+    @abstract @covariant
+    method Append(item : T) -> Sequence<T>
+
+    @abstract @covariant
+    method AppendAll(items : Iterable<T>) -> Sequence<T>
+
+    @abstract @covariant
+    method Prepend(item : T) -> Sequence<T>
+
+    @abstract @covariant
+    method PrependAll(items : Iterable<T>) -> Sequence<T>
+
+    @abstract @covariant
+    method Reverse() -> Sequence<T>
+
+    @abstract @covariant
+    method Drop(n : Int32) -> Sequence<T>%
+}
+```
+
+Some things to note:
+
+* Most non-builtin keywords are attributes of the form `@name`.
+* A `class` can be generic in any number of types, with covariance and contravariance.
+* A `class` can extend any one other `class` (and/or zero or more `types`).
+* An `@abstract` attribute means this class only provides an interface (might turn info a type?)
+* The `T%` type means essentially "returns either the generic parameter type `T` or an `Error`. 
+* Doxygen tags and comments are supported in some form.
+
+Non-obvious:
+
+* Lack of semi-colons.
+  * I think Rust or Julia or some other modern language gets this
+    pretty close to correct, the semi-colon is essentially only needed
+    to seperate expressions in a `{ a; b; }` style block.
+  * A newline outside of any expression, but in a block is
+    semantically taken to mean virtual "semicolon".
+  * Blocks allow leading/trailing/multiple newlines (and thus
+    semicolons) inside, they're the equivalent of "an expression that
+    doesn't actually exist".
+* Hey, where's the body?
+
+### Example 4: The /Harth/Lang/Collection/BaseSequence class
+
+```C++
+harth 0.1
+package /Harth/Lang/Collection
+import /Harth/Lang/Core
+
+/**
+ * BaseSequence provides basic implementation of Sequence using some concrete SeqT type.
+ * Sub-classes are LinearSequence and IndexedSequence which provide different performance
+ * properties for methods; for example Get() and Size() are O(n) and O(1) respectively.
+ * 
+ * Sub-classes must at minimum must provide:
+ * - Iterator or ReverseIterator (the opposite has a default implementation)
+ * - Builder
+ * 
+ * Default implementations are provided for all other operations, though these may have terrible
+ * performance up to O(n^2). Sub-classes should really override with better performance
+ * implementations were possible.
+ */
+@const
+class BaseSequence<out T, out SeqT> extends Sequence<T>
+{
+    @override
+    property Iterator : Iterator<T>
+    {
+        get { return Reverse().ReverseIterator;}
+    }
+
+    @override
+    property ReverseIterator : Iterator<T>
+    {
+        get { return Reverse().Iterator }
+    }
+
+    @override
+    property Size : Int32
+    {
+        get
+        {
+            var s = 0
+            for (_ in self)
+                s++
+            return s
+        }
+    }
+    /* ... */
+}
+```
+
+* Note property and method overrides.
+* Note crazy generics: means derived classes can control return type.
+  * Probably will change as type system improves?
+  * Possibly more type inference too?
+* Syntax and semantics should always remain:
+  * Flexible
+  * Concise
+  * Unabiguous.
+* Fortunately any decent editor running the full lexical to semantic
+  analysis would be able to display lexical, semantic feed back, possibly on-the
+  fly (highlighting) and provide errors and documentation as required.
+  * See [Emacs FlyCheck] for an example of this working in other languages pretty well.
+  * Emacs basically requires a very good text to reflection system
+    underneath the hood. Languages such as Python and C# tend to
+    provide this these days. Therefore [Harth] must and will, builtin, free, easy.
+
+{{< info "The TODO notes and some semi-colons have been removed from the source. Hey it's a prototype. Whatevers." >}}
+
+# Warning
+
+{{< warning "All the syntax and semantics discussed here are simplified, reality is likely to be more complex, different and changing." >}}
+
 [Types]: TODO
 [Harth]: http://www.harth-lang.org/
 [Homogeneous AST]: https://www.safaribooksonline.com/library/view/language-implementation-patterns/9781680500097/f_0045.html
@@ -375,6 +534,7 @@ Harth>
 [Reified]: https://en.wikipedia.org/wiki/Reification_(computer_science)
 [Immutable]: https://en.wikipedia.org/wiki/Immutable_object
 [Homoiconic]: https://en.wikipedia.org/wiki/Homoiconicity
+[Emacs FlyCheck]: http://www.flycheck.org
 
 <!-- Local Variables: -->
 <!-- indent-tabs-mode: nil -->
