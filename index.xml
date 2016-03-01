@@ -663,7 +663,7 @@ cooked or new tools are forged.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;I&amp;rsquo;ve used many programming languages in my 30 years of
-programming. Each of ttem have some good and not-so good parts. I&amp;rsquo;ve
+programming. Each of them have some good and not-so good parts. I&amp;rsquo;ve
 often wondered what would happen if you took all the reasonable bits
 of each and made a programming language from that. &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; is that
 experiment.&lt;/p&gt;
@@ -671,6 +671,8 @@ experiment.&lt;/p&gt;
 &lt;p&gt;Hopefully &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt; will not turn into a Jack-of-all-Trades (and master
 of none), nor a confusing Swiss-Army-Knife programming language (the
 sort you use if you can&amp;rsquo;t find your professional toolbox).&lt;/p&gt;
+
+&lt;p&gt;See also Mike Taylor&amp;rsquo;s: &amp;ldquo;What is your &lt;a href=&#34;https://reprog.wordpress.com/2010/03/18/so-what-actually-is-my-favourite-programming-language/&#34;&gt;Favourite Programming Language&lt;/a&gt;?&amp;rdquo;&lt;/p&gt;
 
 &lt;h2 id=&#34;programming-languages-i-borrowed-ideas-from:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Programming Languages I Borrowed Ideas From&lt;/h2&gt;
 
@@ -752,8 +754,7 @@ exist in in the code editor, or may find found in a separate tool.&lt;/p&gt;
 &lt;p&gt;Some of the tools or features a programmer needs are;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Syntax Highlighting - The text is styled and coloured to highlight
-important information: much like headings in documents.&lt;/li&gt;
+&lt;li&gt;Find Documentation - Less of the &amp;ldquo;ARGH Help How do I? Sheesh, Where is the help?&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;Find Definition - The programmer can look up definitions of
 particular piece of code, much like a dictionary or thesaurus.&lt;/li&gt;
 &lt;li&gt;Find References - The programmer can find all the references to a
@@ -777,6 +778,8 @@ written (like a human editor would for a book or news story).&lt;/li&gt;
 what’s going on (debugging); often this is needed because the
 programmer has made a logical mistake that the computer cannot
 possibly detect.&lt;/li&gt;
+&lt;li&gt;Syntax Highlighting - The text is styled and coloured to highlight
+important information: much like headings in documents.&lt;/li&gt;
 &lt;li&gt;Interactive Session - The programmer can type additional pieces of
 code and perhaps modify the code while it’s running, to help correct
 problems (bugs) in their code.&lt;/li&gt;
@@ -839,10 +842,41 @@ try something a little different.&lt;/p&gt;
 &lt;p&gt;For example:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;What if we didn’t write code as text saved to a text file?&lt;/li&gt;
-&lt;li&gt;What if code was stored in a database like system?&lt;/li&gt;
+&lt;li&gt;Optionally talk about types as much as possible:
+
+&lt;ul&gt;
+&lt;li&gt;Mostly static, with a dash of dynamic.&lt;/li&gt;
+&lt;li&gt;Types are inferred if you assign something that&amp;rsquo;s of a known type.&lt;/li&gt;
+&lt;li&gt;Infer return type.&lt;/li&gt;
+&lt;li&gt;Infer generic types.&lt;/li&gt;
+&lt;li&gt;Closures types are inferred most of the time.&lt;/li&gt;
+&lt;li&gt;Infer argument types (that can be hard, but use generics?)&lt;/li&gt;
+&lt;li&gt;If you &amp;ldquo;do not care yet&amp;rdquo;, use &lt;code&gt;dynamic&lt;/code&gt; which essentially says
+&amp;ldquo;call method/function dynamically with cache runtime checks, your
+code may crash&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Dynamic is in &lt;a href=&#34;https://en.wikipedia.org/wiki/C_Sharp_(programming_language)&#34;&gt;C#&lt;/a&gt; and a few other Net based languages you know!&lt;/li&gt;
+&lt;li&gt;See Mike Taylor&amp;rsquo;s &lt;a href=&#34;https://reprog.wordpress.com/2010/06/05/we-cant-afford-to-write-safe-software/&#34;&gt;Static And Dynamic Typing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What if we didn’t write code as text saved to a text file?
+
+&lt;ul&gt;
+&lt;li&gt;Well that&amp;rsquo;s not good for things like git, diff, emacs, vi and a billion other text processors!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What if code was stored in a database like system?
+
+&lt;ul&gt;
+&lt;li&gt;SQL and anything like that actually is too much.&lt;/li&gt;
+&lt;li&gt;What is the fundamental thing that they actually provide. Only have that thing.&lt;/li&gt;
+&lt;li&gt;Hint: Probably Guids (Globally unique IDs, that is keys) for names.&lt;/li&gt;
+&lt;li&gt;Hint: Possibly a way to link things in relationships (definition/use etc).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;What if code was more like the internet, a data rich, textual,
-graphical mixture?&lt;/li&gt;
+graphical mixture?
+
+&lt;ul&gt;
+&lt;li&gt;HTML links in your code. What nonsense.&lt;/li&gt;
+&lt;li&gt;Autobuilt links like you get on some web based source databases.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;What if the programming ecosystem itself fully understood itself?&lt;/li&gt;
 &lt;li&gt;This idea has been around since the 1960’s, but most languages only
 go so far; providing access to understanding only the high level
@@ -883,6 +917,19 @@ what the program is doing.&lt;/li&gt;
 &lt;li&gt;No null pointer exceptions - “The Billion Dollar Mistake” has
 plagued us for too long, and most more modern languages are
 solving this quite neatly.&lt;/li&gt;
+&lt;li&gt;Some people don&amp;rsquo;t see this as a big deal. Sure:&lt;/li&gt;
+&lt;li&gt;If you check all your pointers in Java, C#, C++.&lt;/li&gt;
+&lt;li&gt;Or you use references (in C++) or stack values.&lt;/li&gt;
+&lt;li&gt;Or you remember to anotate them with @null and @notnull (or whatever).&lt;/li&gt;
+&lt;li&gt;Pointers, who needs &amp;lsquo;em.&lt;/li&gt;
+&lt;li&gt;Optionality is useful for saying &amp;ldquo;Zero or One of X&amp;rdquo;.
+Example &amp;ldquo;&lt;code&gt;ParseInt(String) -&amp;gt; Int?&lt;/code&gt; either returns the integer or null meaning you lose).
+Think of it as a soft-error return.&lt;/li&gt;
+&lt;li&gt;The static type system encodes the optionality in the type, and
+you can&amp;rsquo;t get round it without being explicit (ie. I &amp;ldquo;assert&amp;rdquo; it
+cannot be null).&lt;/li&gt;
+&lt;li&gt;Programs always can crash :-(&lt;/li&gt;
+&lt;li&gt;See &lt;a href=&#34;http://www.610yesnolovely.org/blog/2015/02/16/houston-we-have-an-error-part-2/&#34;&gt;Error 1&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Non-exceptional run-time error handling - the programmer must
 explicitly and consciously handle the problems user’s might face
 as close to the source as possible.&lt;/li&gt;
@@ -1058,7 +1105,7 @@ trillion-billion whatevers. I&amp;rsquo;m not greedy however and thus:
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;source-and-binrary-products:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Source and Binrary Products&lt;/h1&gt;
+&lt;h1 id=&#34;source-and-binary-products:d680e8a854a7cbad6d490c445cba2eba&#34;&gt;Source and Binary Products&lt;/h1&gt;
 
 &lt;p&gt;Currently the prototype(s) are closed source, the code and built
 products are internal prototypes for research and development.&lt;/p&gt;

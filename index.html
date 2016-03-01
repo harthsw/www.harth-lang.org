@@ -154,7 +154,7 @@ cooked or new tools are forged.</p>
 </blockquote>
 
 <p>I&rsquo;ve used many programming languages in my 30 years of
-programming. Each of ttem have some good and not-so good parts. I&rsquo;ve
+programming. Each of them have some good and not-so good parts. I&rsquo;ve
 often wondered what would happen if you took all the reasonable bits
 of each and made a programming language from that. <a href="http://www.harth-lang.org/">Harth</a> is that
 experiment.</p>
@@ -162,6 +162,8 @@ experiment.</p>
 <p>Hopefully <a href="http://www.harth-lang.org/">Harth</a> will not turn into a Jack-of-all-Trades (and master
 of none), nor a confusing Swiss-Army-Knife programming language (the
 sort you use if you can&rsquo;t find your professional toolbox).</p>
+
+<p>See also Mike Taylor&rsquo;s: &ldquo;What is your <a href="https://reprog.wordpress.com/2010/03/18/so-what-actually-is-my-favourite-programming-language/">Favourite Programming Language</a>?&rdquo;</p>
 
 <h2 id="programming-languages-i-borrowed-ideas-from:d680e8a854a7cbad6d490c445cba2eba">Programming Languages I Borrowed Ideas From</h2>
 
@@ -243,8 +245,7 @@ exist in in the code editor, or may find found in a separate tool.</p>
 <p>Some of the tools or features a programmer needs are;</p>
 
 <ul>
-<li>Syntax Highlighting - The text is styled and coloured to highlight
-important information: much like headings in documents.</li>
+<li>Find Documentation - Less of the &ldquo;ARGH Help How do I? Sheesh, Where is the help?&rdquo;</li>
 <li>Find Definition - The programmer can look up definitions of
 particular piece of code, much like a dictionary or thesaurus.</li>
 <li>Find References - The programmer can find all the references to a
@@ -268,6 +269,8 @@ written (like a human editor would for a book or news story).</li>
 what’s going on (debugging); often this is needed because the
 programmer has made a logical mistake that the computer cannot
 possibly detect.</li>
+<li>Syntax Highlighting - The text is styled and coloured to highlight
+important information: much like headings in documents.</li>
 <li>Interactive Session - The programmer can type additional pieces of
 code and perhaps modify the code while it’s running, to help correct
 problems (bugs) in their code.</li>
@@ -330,10 +333,41 @@ try something a little different.</p>
 <p>For example:</p>
 
 <ul>
-<li>What if we didn’t write code as text saved to a text file?</li>
-<li>What if code was stored in a database like system?</li>
+<li>Optionally talk about types as much as possible:
+
+<ul>
+<li>Mostly static, with a dash of dynamic.</li>
+<li>Types are inferred if you assign something that&rsquo;s of a known type.</li>
+<li>Infer return type.</li>
+<li>Infer generic types.</li>
+<li>Closures types are inferred most of the time.</li>
+<li>Infer argument types (that can be hard, but use generics?)</li>
+<li>If you &ldquo;do not care yet&rdquo;, use <code>dynamic</code> which essentially says
+&ldquo;call method/function dynamically with cache runtime checks, your
+code may crash&rdquo;.</li>
+<li>Dynamic is in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a> and a few other Net based languages you know!</li>
+<li>See Mike Taylor&rsquo;s <a href="https://reprog.wordpress.com/2010/06/05/we-cant-afford-to-write-safe-software/">Static And Dynamic Typing</a></li>
+</ul></li>
+<li>What if we didn’t write code as text saved to a text file?
+
+<ul>
+<li>Well that&rsquo;s not good for things like git, diff, emacs, vi and a billion other text processors!</li>
+</ul></li>
+<li>What if code was stored in a database like system?
+
+<ul>
+<li>SQL and anything like that actually is too much.</li>
+<li>What is the fundamental thing that they actually provide. Only have that thing.</li>
+<li>Hint: Probably Guids (Globally unique IDs, that is keys) for names.</li>
+<li>Hint: Possibly a way to link things in relationships (definition/use etc).</li>
+</ul></li>
 <li>What if code was more like the internet, a data rich, textual,
-graphical mixture?</li>
+graphical mixture?
+
+<ul>
+<li>HTML links in your code. What nonsense.</li>
+<li>Autobuilt links like you get on some web based source databases.</li>
+</ul></li>
 <li>What if the programming ecosystem itself fully understood itself?</li>
 <li>This idea has been around since the 1960’s, but most languages only
 go so far; providing access to understanding only the high level
@@ -374,6 +408,19 @@ what the program is doing.</li>
 <li>No null pointer exceptions - “The Billion Dollar Mistake” has
 plagued us for too long, and most more modern languages are
 solving this quite neatly.</li>
+<li>Some people don&rsquo;t see this as a big deal. Sure:</li>
+<li>If you check all your pointers in Java, C#, C++.</li>
+<li>Or you use references (in C++) or stack values.</li>
+<li>Or you remember to anotate them with @null and @notnull (or whatever).</li>
+<li>Pointers, who needs &lsquo;em.</li>
+<li>Optionality is useful for saying &ldquo;Zero or One of X&rdquo;.
+Example &ldquo;<code>ParseInt(String) -&gt; Int?</code> either returns the integer or null meaning you lose).
+Think of it as a soft-error return.</li>
+<li>The static type system encodes the optionality in the type, and
+you can&rsquo;t get round it without being explicit (ie. I &ldquo;assert&rdquo; it
+cannot be null).</li>
+<li>Programs always can crash :-(</li>
+<li>See <a href="http://www.610yesnolovely.org/blog/2015/02/16/houston-we-have-an-error-part-2/">Error 1</a>.</li>
 <li>Non-exceptional run-time error handling - the programmer must
 explicitly and consciously handle the problems user’s might face
 as close to the source as possible.</li>
@@ -549,7 +596,7 @@ trillion-billion whatevers. I&rsquo;m not greedy however and thus:
 </ul></li>
 </ul>
 
-<h1 id="source-and-binrary-products:d680e8a854a7cbad6d490c445cba2eba">Source and Binrary Products</h1>
+<h1 id="source-and-binary-products:d680e8a854a7cbad6d490c445cba2eba">Source and Binary Products</h1>
 
 <p>Currently the prototype(s) are closed source, the code and built
 products are internal prototypes for research and development.</p>
