@@ -66,6 +66,16 @@ interesting ideas worth borrowing:
 * [Rust]
 * [Swift]
 
+# Find Out More
+
+* Read the rest of this page.
+* Read the [Blog] posts.
+
+{{< todo "Implement these later as auto-builds from markdown docs and Doxygen code from source." >}}
+
+* Read the [Language Reference] - uses Markdown/Hugo.
+* Read The [Language API] - uses Doxygen.
+
 # Project Background (September 14 2015)
 
 The high level vision for the project is to:
@@ -382,6 +392,7 @@ format/colour/indent code - and/or possibly provide standard editor
 component.
 
 [Harth]: http://www.harth-lang.org/
+[blog]: http://www.harth-lang.org/post/
 [C]: https://en.wikipedia.org/wiki/C_(programming_language)
 [C++]: https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language
 [C#]: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
