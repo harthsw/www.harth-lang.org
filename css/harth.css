@@ -67,6 +67,32 @@ h1.page-title {
     color: #ddd;
     font-size: 110%;
 }
+.harth-site-author a:link,
+.harth-site-author a:visited {
+    color: #ddd;
+}
+
+.harth-sidebar-nav {
+}
+.harth-sidebar-bot {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    position: fixed;
+    left: 0px;
+    bottom: 70px;
+    display: block;
+}
+.harth-sidebar-bot > .sidebar-nav li a {
+    display: inline;
+    text-indent: 0px;
+    line-height: 0px;
+    color: #fff;
+}
+.harth-sidebar-bot > .sidebar-nav-button li a {
+    color: #00f;
+    background-color: #0f0;
+}
 .harth-sidebar {
     color: #ddd;
     background-color: #990d0d;
