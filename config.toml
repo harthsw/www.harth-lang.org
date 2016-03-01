@@ -27,6 +27,7 @@ GoogleAnalytics = "UA-71830715-3"
     title_html = "Harth<br>Programming<br>Language"
     description = "Harth Programming Language"
     author = "Harvey Thompson"
+    author_url = "http://www.610yesnolovely.org"
     generator = "Hugo 0.15"
 
     # Sidebar-bot.html social links, full URLs!
