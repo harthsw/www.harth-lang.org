@@ -6,8 +6,96 @@
     <description>Recent content in Posts on Harth Programming Language</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Mar 2016 11:57:19 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Mar 2016 12:09:53 -0800</lastBuildDate>
     <atom:link href="http://www.harth-lang.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Build Bridges, Not Walls</title>
+      <link>http://www.harth-lang.org/blog/2016/03/02/build-bridges-not-walls/</link>
+      <pubDate>Wed, 02 Mar 2016 12:09:53 -0800</pubDate>
+      
+      <guid>http://www.harth-lang.org/blog/2016/03/02/build-bridges-not-walls/</guid>
+      <description>
+
+&lt;h1 id=&#34;architecture:f4ea7c33036e76036c1190ce73e84816&#34;&gt;Architecture&lt;/h1&gt;
+
+&lt;p&gt;Often in software archictecure you have a few large components that
+need to connect. In real-life this might be analagous to two different
+cities seperated by a river. Almost certainly we would have already
+have built a bridge between them to cross this natural boundary.&lt;/p&gt;
+
+&lt;p&gt;Fearful or foolish people might have built walls between them, but we&amp;rsquo;re not foolish.&lt;/p&gt;
+
+&lt;h1 id=&#34;bridges-in-real-life:f4ea7c33036e76036c1190ce73e84816&#34;&gt;Bridges In Real Life&lt;/h1&gt;
+
+&lt;p&gt;The city of Vancouver in British Columbia (where I live), there&amp;rsquo;s the
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Port_Mann_Bridge&#34;&gt;Port Mann Bridge&lt;/a&gt; that connects Vancouver with the city of Surrey to
+the south.&lt;/p&gt;
+
+&lt;p&gt;Highway 1 connects these two major cities, many people live in Surrey
+and work in Vancouver. The &lt;a href=&#34;http://www.pmh1project.com/Pages/default.aspx&#34;&gt;Port Mann Highway 1 Project&lt;/a&gt; aimed to
+upgrade the old bridge to increase capacity.&lt;/p&gt;
+
+&lt;h2 id=&#34;port-mann-bridge-before:f4ea7c33036e76036c1190ce73e84816&#34;&gt;Port Mann Bridge Before&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.harth-lang.org/img/bridge-before.jpg&#34; alt=&#34;before&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Built in 1964, the old 5 lane bridge was often congested at rush hour.&lt;/p&gt;
+
+&lt;h2 id=&#34;port-mann-bridge-during-construction:f4ea7c33036e76036c1190ce73e84816&#34;&gt;Port Mann Bridge During Construction&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.harth-lang.org/img/bridge-during.jpg&#34; alt=&#34;during&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&#34;http://aerialphotoimage.com/360/Vancouver/PortMannBridgeAerial.html&#34;&gt;Cool 360 View&lt;/a&gt; show construction in progress.&lt;/p&gt;
+
+&lt;h2 id=&#34;port-mann-bridge-after:f4ea7c33036e76036c1190ce73e84816&#34;&gt;Port Mann Bridge After&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.harth-lang.org/img/bridge-after.jpg&#34; alt=&#34;after&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Opened in 2012, this is a major 10 lane (5 each way) bridge, and
+certainly has capacity even at rush hour. It&amp;rsquo;s of course had a few
+issues, but has improved the commute:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Travel time surveys have confirmed drivers have cut their commutes
+by as much as half, saving some commuters up to an hour a day.&lt;/em&gt;
+- &lt;a href=&#34;http://www.pmh1project.com/Pages/default.aspx&#34;&gt;Port Mann Highway 1 Project&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;bridges-in-software-archiecture:f4ea7c33036e76036c1190ce73e84816&#34;&gt;Bridges in Software Archiecture&lt;/h1&gt;
+
+&lt;p&gt;Back to software, and often we have two or more components in a
+project which have different sources (or locations) and
+architecture. One might be your web browser, written in C or C++. The
+other a webserver running on a machine in &amp;ldquo;The Cloud&amp;rdquo;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In order for these components to work together in &amp;ldquo;community&amp;rdquo;, with
+easy traffic (date) flow we should have a good bridge.&lt;/li&gt;
+&lt;li&gt;Like in real life, we should &lt;em&gt;Build Bridges, Not Walls&lt;/em&gt; to ensure
+disparate architecural components can communicate to build a thriving
+community.&lt;/li&gt;
+&lt;li&gt;Careful attention to the architecture of the Bridge itself can really
+help to increase traffic flow, reduce congestion, dramatically reduce the need
+to convert data (take a bus, walk across the bridge, take a taxi).
+
+&lt;ul&gt;
+&lt;li&gt;In this case &lt;a href=&#34;https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol&#34;&gt;HTTP&lt;/a&gt;
+which is 21 years old,&lt;/li&gt;
+&lt;li&gt;And &lt;a href=&#34;https://en.wikipedia.org/wiki/Internet_protocol_suite&#34;&gt;TCP/IP&lt;/a&gt; which
+is 42 years old are great examples of a fantastic bridge.&lt;/li&gt;
+&lt;li&gt;Though not without some minor design issues, see Mike Taylor&amp;rsquo;s &lt;a href=&#34;https://reprog.wordpress.com/2016/02/17/the-worst-decision-in-the-design-of-the-internet/&#34;&gt;The worst decision in the design of the Internet&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If we didn&amp;rsquo;t have the Internet, we&amp;rsquo;d have essentially a wall, and
+there would be no Google, Wikipedia, Facebook or Twitter. You could of
+course build a really badly designed bridge, such as
+&lt;a href=&#34;https://tools.ietf.org/html/rfc2549&#34;&gt;Avian Carriers - RFC 2549&lt;/a&gt; to
+send messages over low bandwidth, long latency connections? &lt;strong&gt;NO&lt;/strong&gt;
+That would be &lt;em&gt;very&lt;/em&gt; silly (it was indeed an April Fools).&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Syntax Ideas and Prototype Examples</title>
