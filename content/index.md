@@ -40,7 +40,7 @@ sort you use if you can't find your professional toolbox).
 
 See also Mike Taylor's: "What is your [Favourite Programming Language]?"
 
-Mine would probably be Emacs. Wait, Waaa? Emacs is actually a Lisp Programming Language runtime disguised as an extremely customizable editor.
+Mine would probably be Emacs. Wait, Waaa? [Emacs] is actually a [Lisp] Programming Language runtime disguised as an extremely customizable editor.
 
 Vi-Schmi. Visual Whatevers.
 
@@ -472,14 +472,15 @@ component.
 [C#]: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
 [Java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [Lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
+[Emacs]: https://www.gnu.org/software/emacs/
 [Python]: http://www.python.org/
 [D]: http://www.dlang.org/
-[Ruby]: http://www.ruby-lang.org/
-[Erlang]: http://www.erlang.org/
-[Rust]: http://www.rust-lang.org/
 [Ceylon]: http://www.ceylon-lang.org/
-[Kotlin]: http://www.kotlinlang.org/
+[Erlang]: http://www.erlang.org/
 [Julia]: http://www.julialang.org/
+[Kotlin]: http://kotlinlang.org/
+[Ruby]: http://www.ruby-lang.org/
+[Rust]: http://www.rust-lang.org/
 [Swift]: https://developer.apple.com/swift/
 [Hugo]: http://gohugo.io/
 [Harth-Hugo-Theme]: https://github.com/harthsw/harth-hugo-theme
