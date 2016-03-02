@@ -387,6 +387,71 @@ make the human’s life harder and more miserable?</li>
 <li>What if the programming ecosystem automated more processes so that
 the human can concentrate on the creative side more?</li>
 <li>What if the programming ecosystem helped the human as much as possible to read and write good code in the first place?</li>
+<li>Code completion should eventually mean you actually type less.
+
+<ul>
+<li>Code completer could insert &ldquo;sensed&rdquo; meaning, eg. inferred types.</li>
+<li>Code completer means this:</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">function</span> <span class="nf">DoubleInt</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">function</span> <span class="nf">PairDouble</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">DoubleInt</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">DoubleInt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><p>Roughly: 8 Lines of 24 words, of 145 keystores.</p></li>
+
+<li><p>Might only be typed as (where space is also auto-complete):</p></li>
+</ul>
+<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">fun</span> <span class="n">DoubleInt</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">I</span><span class="p">)</span> <span class="o">-</span> <span class="n">I</span> <span class="n">ret</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">fun</span> <span class="n">PairDouble</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">I</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">I</span><span class="p">)</span> <span class="n">ret</span> <span class="p">(</span> <span class="n">di</span> <span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">di</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div>
+
+<ul>
+<li>Roughly: 2 Lines of 24 words of 90 keystokes.</li>
+
+<li><p>That&rsquo;s roughly only 62% of the characters.</p>
+
+<ul>
+<li>Longer names are only required in full to stop ambiguities.</li>
+<li>Fuzzy matching, and case-insentive camelCase splitting matching at work.</li>
+<li>Example typing 
+  
+  
+    <span class="harth-key">d</span>
+  
+    
+
+  
+  +
+  
+  
+    <span class="harth-key">i</span>
+  
+    
+
+ completes to <code>DoubleInt</code> after first defining it.</li>
+
+<li><p>The fuzzy match 
+  
+  
+    <span class="harth-key">dulbin</span>
+  
+    
+
+ would also match <code>DoubleInt</code>
+since its the only thing that uniquely contains those characters
+in roughly the right order.</p></li>
+
+<li><p>Ambiguities should provide a text-sensitive helper pop-up in
+GUIs. Much like most decent editors.</p></li>
+</ul></li>
 </ul>
 
 <p>Still this is a quite a lot of work, so we need a more realistic shorter term aims for this project.</p>

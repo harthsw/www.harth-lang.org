@@ -896,6 +896,71 @@ make the human’s life harder and more miserable?&lt;/li&gt;
 &lt;li&gt;What if the programming ecosystem automated more processes so that
 the human can concentrate on the creative side more?&lt;/li&gt;
 &lt;li&gt;What if the programming ecosystem helped the human as much as possible to read and write good code in the first place?&lt;/li&gt;
+&lt;li&gt;Code completion should eventually mean you actually type less.
+
+&lt;ul&gt;
+&lt;li&gt;Code completer could insert &amp;ldquo;sensed&amp;rdquo; meaning, eg. inferred types.&lt;/li&gt;
+&lt;li&gt;Code completer means this:&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;DoubleInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;PairDouble&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DoubleInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DoubleInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Roughly: 8 Lines of 24 words, of 145 keystores.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Might only be typed as (where space is also auto-complete):&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DoubleInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ret&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PairDouble&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ret&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;di&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;di&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Roughly: 2 Lines of 24 words of 90 keystokes.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;That&amp;rsquo;s roughly only 62% of the characters.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Longer names are only required in full to stop ambiguities.&lt;/li&gt;
+&lt;li&gt;Fuzzy matching, and case-insentive camelCase splitting matching at work.&lt;/li&gt;
+&lt;li&gt;Example typing 
+  
+  
+    &lt;span class=&#34;harth-key&#34;&gt;d&lt;/span&gt;
+  
+    
+
+  
+  +
+  
+  
+    &lt;span class=&#34;harth-key&#34;&gt;i&lt;/span&gt;
+  
+    
+
+ completes to &lt;code&gt;DoubleInt&lt;/code&gt; after first defining it.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The fuzzy match 
+  
+  
+    &lt;span class=&#34;harth-key&#34;&gt;dulbin&lt;/span&gt;
+  
+    
+
+ would also match &lt;code&gt;DoubleInt&lt;/code&gt;
+since its the only thing that uniquely contains those characters
+in roughly the right order.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ambiguities should provide a text-sensitive helper pop-up in
+GUIs. Much like most decent editors.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Still this is a quite a lot of work, so we need a more realistic shorter term aims for this project.&lt;/p&gt;
