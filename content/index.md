@@ -217,6 +217,41 @@ For example:
 * What if the programming ecosystem automated more processes so that
   the human can concentrate on the creative side more?
 * What if the programming ecosystem helped the human as much as possible to read and write good code in the first place?
+* Code completion should eventually mean you actually type less.
+  * Code completer could insert "sensed" meaning, eg. inferred types.
+  * Code completer means this:
+
+```C++
+function DoubleInt(x : Int) -> Int
+{
+    return (x * 2)
+}
+function PairDouble(x : Int) -> (Int, Int)
+{
+    return (DoubleInt(x), DoubleInt(x))
+}
+```
+
+  * Roughly: 8 Lines of 24 words, of 145 keystores.
+
+* Might only be typed as (where space is also auto-complete):
+
+```C++
+fun DoubleInt(x : I) - I ret x * 2
+fun PairDouble(x : I) -> (I, I) ret ( di (x), di (x) )
+```
+
+  * Roughly: 2 Lines of 24 words of 90 keystokes.
+  * That's roughly only 62% of the characters.
+    * Longer names are only required in full to stop ambiguities.
+    * Fuzzy matching, and case-insentive camelCase splitting matching at work.
+    * Example typing {{< key d i >}} completes to `DoubleInt` after first defining it.
+    * The fuzzy match {{< key dulbin >}} would also match `DoubleInt`
+      since its the only thing that uniquely contains those characters
+      in roughly the right order.
+
+    * Ambiguities should provide a text-sensitive helper pop-up in
+      GUIs. Much like most decent editors.
 
 Still this is a quite a lot of work, so we need a more realistic shorter term aims for this project.
 
