@@ -38,7 +38,7 @@ variables, function parameters. For example the `x` local variable defined below
 var x : Int = 1
 ```
 
-The `Name` type therefore::
+The `Name` type therefore:
 
 * Represents a simple UN-scoped named definition (here `x`).
 * Is represented by a `String`; the name of the definition (here `"x"`).
@@ -64,16 +64,11 @@ class MyType
 }
 ```
 
-Here the class `MyType` has a `Path` representing
-`"/MyPackage/MyType"`, which is the fully qualified "path", much like
-an absolute UNIX path to the definition from the root package
-(namespace).
+Here the class `MyType`;
 
-The `Path` type will have an optional `Parent` path (in our example
-`/MyPackage` is the parent path).
-
-It also contains the final `Name` instance; the simple local
-name. Similar to the base name of a UNIX path.
+* has a `Path` representing`"/MyPackage/MyType"`,
+* which is the fully qualified "path",
+* is similar to an absolute UNIX path.
 
 ```C++
 class Path
@@ -82,6 +77,11 @@ class Path
     property Name : Name
 }
 ```
+
+The `Path` type:
+
+* Has an optional `Parent` path (in our example `/MyPackage` is the parent path).
+* Contains the final `Name` instance; the simple local name.
 
 ## URL
 
