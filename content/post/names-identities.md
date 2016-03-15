@@ -42,7 +42,7 @@ var x : Int = 1
 
 The `Name` type therefore::
 
-* Represents a simple unscoped named definition (here `x`).
+* Represents a simple UN-scoped named definition (here `x`).
 * Is represented by a `String`; the name of the definition (here `"x"`).
 
 ```C++
@@ -75,7 +75,7 @@ The `Path` type will have an optional `Parent` path (in our example
 `/MyPackage` is the parent path).
 
 It also contains the final `Name` instance; the simple local
-name. Similar to the basename of a UNIX path.
+name. Similar to the base name of a UNIX path.
 
 ```C++
 class Path
@@ -94,7 +94,7 @@ URLs and other similar resources later on.
 
 Identities are used more by the language itself to represent:
 
-* The unique identity of something (eg. like a social insurance card or Passport number).
+* The unique identity of something (like a social insurance card or Passport number).
 * The immutable identify of something (that is, your name may change,
   but your identity does not).
 
@@ -105,13 +105,13 @@ something using human textual names. Much like our own name, we could
 add more (aliases) or change them (deprecate, rename). This is more
 useful to the human.
 
-An `Identity` is more useful as a unique indentity which is
+An `Identity` is more useful as a unique identity which is
 immutable; whatever that something is always has the same unchanging
-indentity. This is more useful to the computer.
+identity. This is more useful to the computer.
 
 ## GUID or UUID
 
-For `Indentity` we could use a [GUID] (*G*lobally *U*nique
+For `Identity` we could use a [GUID] (*G*lobally *U*nique
 *ID*entifier) or [UUID] (*U*niversal *U*nique *ID*entifier).
 
 I think initally it would be best that `Identity` composes and hides
@@ -178,7 +178,7 @@ during the Semantic Analysis of the compiler.
 
 # Scope
 
-The `Scope` of a "Binding" would need to be modelled. The semantic
+The `Scope` of a "Binding" would need to be modeled. The semantic
 analysis phase would need to build the definition scopes (packages,
 classes, functions) during analysis.
 
@@ -202,5 +202,3 @@ A `Scope` has:
 [Harth Programming Language]: /
 [GUID]: https://en.wikipedia.org/wiki/Globally_unique_identifier
 [UUID]: https://en.wikipedia.org/wiki/Universally_unique_identifier
-
-
