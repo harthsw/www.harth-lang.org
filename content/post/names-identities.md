@@ -12,9 +12,7 @@ keywords:
   - "scope"
 ---
 
-# Names And Identities
-
-## Introduction
+# Introduction
 
 An important aspect of new programming languages and their design is _Naming and Identities_.
 
@@ -109,7 +107,7 @@ An `Identity` is more useful as a unique identity which is
 immutable; whatever that something is always has the same unchanging
 identity. This is more useful to the computer.
 
-## GUID or UUID
+## Identity
 
 For `Identity` we could use a [GUID] (*G*lobally *U*nique
 *ID*entifier) or [UUID] (*U*niversal *U*nique *ID*entifier).
@@ -130,7 +128,12 @@ class Identity
 The `Identity` has a `Value` (initially an 128-bit integer), and
 internally we would use a standard [GUID] or [UUID] type.
 
-# Definitions
+# Definitions and References
+
+We will also need `Definition` and `Reference` types to represent
+definitions and references to class et. al.
+
+## Definition
 
 All definitions such as classes, functions, local variables and
 parameters would be sub-types of `Definition`:
@@ -152,7 +155,7 @@ A definition would have:
 * Zero or more `Aliases`; any other known (or deprecated) names.
 * Zero or more `References`; any known references to this definition.
 
-# References
+## References
 
 All references to classes, functions, local variables and
 parameters would be sub-types of `Reference`:
@@ -170,13 +173,20 @@ A `Reference` has:
 * A `Path`; the current primary path (or name) of this reference.
 * An optional `Definition`; the currently "bound" definition with the given `Path`.
 
-# Binding
+# Semantic Analysis Types
+
+During the Semantic Analysis phase of compilation, we will also need
+"Binding" and `Scope` processes and types to manage linking
+`Definition` and `Reference` instances (class definitions and class
+references by name for example).
+
+## Binding
 
 The process of "Binding" is where all `Reference` instances are bound
 by name to their respective `Definition`. Typically binding is done
 during the Semantic Analysis of the compiler.
 
-# Scope
+## Scope
 
 The `Scope` of a "Binding" would need to be modeled. The semantic
 analysis phase would need to build the definition scopes (packages,
@@ -198,6 +208,26 @@ A `Scope` has:
 * An `Owner`; the owner definition of this scope.
 * Zero or more `Definitions`; any known definitions in this scope.
 * Zero or more `References`; any known references to this definitions in this scope.
+
+# Conclusion
+
+Not much new here, if you are very familiar with semantic analysis, names and types.
+
+Some differences;
+
+* the language reflection is explicitly modeled by types,
+* the definitions have mutable `Path` or `Name` to allow for renaming.
+* the definitions are uniquely identified using `Identity` (guids).
+
+Some thoughts:
+
+* Using `Identity` allows for definitions to be stored in databases.
+* Harth itself will almost certainly not use SQL or no-SQL directly.
+* The most often used refactoring "Rename" should be a little easier to implement;
+  * require changing the name/path of all known and bound `Reference` and `Definition` instances,
+  * require the binding process to have completed successfully,
+  * have the invariant that the bindings remain immutable (the same) once renaming is complete.
+  * should therefore be both global and stable.
 
 [Harth Programming Language]: /
 [GUID]: https://en.wikipedia.org/wiki/Globally_unique_identifier
