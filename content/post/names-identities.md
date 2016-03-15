@@ -155,7 +155,7 @@ A definition would have:
 * Zero or more `Aliases`; any other known (or deprecated) names.
 * Zero or more `References`; any known references to this definition.
 
-## References
+## Reference
 
 All references to classes, functions, local variables and
 parameters would be sub-types of `Reference`:
