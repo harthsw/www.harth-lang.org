@@ -6,8 +6,242 @@
     <description>Recent content in Posts on Harth Programming Language</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Mar 2016 12:09:53 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Mar 2016 10:50:43 -0700</lastBuildDate>
     <atom:link href="http://www.harth-lang.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Names and Identities</title>
+      <link>http://www.harth-lang.org/blog/2016/03/15/names-and-identities/</link>
+      <pubDate>Tue, 15 Mar 2016 10:50:43 -0700</pubDate>
+      
+      <guid>http://www.harth-lang.org/blog/2016/03/15/names-and-identities/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction:144e4496109b69e469539e03deb99a58&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;An important aspect of new programming languages and their design is &lt;em&gt;Naming and Identities&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Essentially:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How do we name our new language&amp;rsquo;s definitions (classes, functions, etc).&lt;/li&gt;
+&lt;li&gt;How does the language uniquely identify these same things (classes, functions, etc).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;names:144e4496109b69e469539e03deb99a58&#34;&gt;Names&lt;/h1&gt;
+
+&lt;p&gt;Software Engineers, usually English speaking, typically use easy to
+remember and descriptive names for classes, functions and
+similar. There is a lot of variance in style and length, so our new
+language has to cope with this.&lt;/p&gt;
+
+&lt;h2 id=&#34;name:144e4496109b69e469539e03deb99a58&#34;&gt;Name&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth Programming Language&lt;/a&gt; will have a &lt;code&gt;Name&lt;/code&gt; type to represent
+the simplest name. This is typically used to represent local
+variables, function parameters. For example the &lt;code&gt;x&lt;/code&gt; local variable defined below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;Name&lt;/code&gt; type therefore:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Represents a simple UN-scoped named definition (here &lt;code&gt;x&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Is represented by a &lt;code&gt;String&lt;/code&gt;; the name of the definition (here &lt;code&gt;&amp;quot;x&amp;quot;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Name&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Text&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; 
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;path:144e4496109b69e469539e03deb99a58&#34;&gt;Path&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;Path&lt;/code&gt; type will represent more complex names. This is typically
+used to represent classes, functions and other definitions which have
+non-local scope. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MyPackage&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyType&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here the class &lt;code&gt;MyType&lt;/code&gt;;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;has a &lt;code&gt;Path&lt;/code&gt; representing&lt;code&gt;&amp;quot;/MyPackage/MyType&amp;quot;&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;which is the fully qualified &amp;ldquo;path&amp;rdquo;,&lt;/li&gt;
+&lt;li&gt;is similar to an absolute UNIX path.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Path&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Parent&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Name&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;Path&lt;/code&gt; type:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Has an optional &lt;code&gt;Parent&lt;/code&gt; path (in our example &lt;code&gt;/MyPackage&lt;/code&gt; is the parent path).&lt;/li&gt;
+&lt;li&gt;Contains the final &lt;code&gt;Name&lt;/code&gt; instance; the simple local name.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;url:144e4496109b69e469539e03deb99a58&#34;&gt;URL&lt;/h2&gt;
+
+&lt;p&gt;We could also derive a &lt;code&gt;URL&lt;/code&gt; type to represent paths for naming files,
+URLs and other similar resources later on.&lt;/p&gt;
+
+&lt;h1 id=&#34;identities:144e4496109b69e469539e03deb99a58&#34;&gt;Identities&lt;/h1&gt;
+
+&lt;p&gt;Identities are used more by the language itself to represent:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The unique identity of something (like a social insurance card or Passport number).&lt;/li&gt;
+&lt;li&gt;The immutable identify of something (that is, your name may change,
+but your identity does not).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;names-vs-identities:144e4496109b69e469539e03deb99a58&#34;&gt;Names vs Identities&lt;/h2&gt;
+
+&lt;p&gt;A &lt;code&gt;Name&lt;/code&gt; or &lt;code&gt;Path&lt;/code&gt; is more useful as a label to define or refer to
+something using human textual names. Much like our own name, we could
+add more (aliases) or change them (deprecate, rename). This is more
+useful to the human.&lt;/p&gt;
+
+&lt;p&gt;An &lt;code&gt;Identity&lt;/code&gt; is more useful as a unique identity which is
+immutable; whatever that something is always has the same unchanging
+identity. This is more useful to the computer.&lt;/p&gt;
+
+&lt;h2 id=&#34;identity:144e4496109b69e469539e03deb99a58&#34;&gt;Identity&lt;/h2&gt;
+
+&lt;p&gt;For &lt;code&gt;Identity&lt;/code&gt; we could use a &lt;a href=&#34;*G*lobally *U*nique
+*ID*entifier&#34;&gt;GUID&lt;/a&gt; or &lt;a href=&#34;*U*niversal *U*nique *ID*entifier&#34;&gt;UUID&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I think initally it would be best that &lt;code&gt;Identity&lt;/code&gt; composes and hides
+this decision as much as possible:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Identity&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Value&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int128&lt;/span&gt;
+
+    &lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;ID&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GUID&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;Identity&lt;/code&gt; has a &lt;code&gt;Value&lt;/code&gt; (initially an 128-bit integer), and
+internally we would use a standard &lt;a href=&#34;https://en.wikipedia.org/wiki/Globally_unique_identifier&#34;&gt;GUID&lt;/a&gt; or &lt;a href=&#34;https://en.wikipedia.org/wiki/Universally_unique_identifier&#34;&gt;UUID&lt;/a&gt; type.&lt;/p&gt;
+
+&lt;h1 id=&#34;definitions-and-references:144e4496109b69e469539e03deb99a58&#34;&gt;Definitions and References&lt;/h1&gt;
+
+&lt;p&gt;We will also need &lt;code&gt;Definition&lt;/code&gt; and &lt;code&gt;Reference&lt;/code&gt; types to represent
+definitions and references to class et. al.&lt;/p&gt;
+
+&lt;h2 id=&#34;definition:144e4496109b69e469539e03deb99a58&#34;&gt;Definition&lt;/h2&gt;
+
+&lt;p&gt;All definitions such as classes, functions, local variables and
+parameters would be sub-types of &lt;code&gt;Definition&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Definition&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;ID&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Identity&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Path&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt; 
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Aliases&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;References&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Reference&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A definition would have:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;An &lt;code&gt;ID&lt;/code&gt;; the unique identity of this definition.&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;Path&lt;/code&gt;; the current primary path (full name) of this definition.&lt;/li&gt;
+&lt;li&gt;Zero or more &lt;code&gt;Aliases&lt;/code&gt;; any other known (or deprecated) names.&lt;/li&gt;
+&lt;li&gt;Zero or more &lt;code&gt;References&lt;/code&gt;; any known references to this definition.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;reference:144e4496109b69e469539e03deb99a58&#34;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;All references to classes, functions, local variables and
+parameters would be sub-types of &lt;code&gt;Reference&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Reference&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Path&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt; 
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Definition&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Definition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A &lt;code&gt;Reference&lt;/code&gt; has:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A &lt;code&gt;Path&lt;/code&gt;; the current primary path (or name) of this reference.&lt;/li&gt;
+&lt;li&gt;An optional &lt;code&gt;Definition&lt;/code&gt;; the currently &amp;ldquo;bound&amp;rdquo; definition with the given &lt;code&gt;Path&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;semantic-analysis-types:144e4496109b69e469539e03deb99a58&#34;&gt;Semantic Analysis Types&lt;/h1&gt;
+
+&lt;p&gt;During the Semantic Analysis phase of compilation, we will also need
+&amp;ldquo;Binding&amp;rdquo; and &lt;code&gt;Scope&lt;/code&gt; processes and types to manage linking
+&lt;code&gt;Definition&lt;/code&gt; and &lt;code&gt;Reference&lt;/code&gt; instances (class definitions and class
+references by name for example).&lt;/p&gt;
+
+&lt;h2 id=&#34;binding:144e4496109b69e469539e03deb99a58&#34;&gt;Binding&lt;/h2&gt;
+
+&lt;p&gt;The process of &amp;ldquo;Binding&amp;rdquo; is where all &lt;code&gt;Reference&lt;/code&gt; instances are bound
+by name to their respective &lt;code&gt;Definition&lt;/code&gt;. Typically binding is done
+during the Semantic Analysis of the compiler.&lt;/p&gt;
+
+&lt;h2 id=&#34;scope:144e4496109b69e469539e03deb99a58&#34;&gt;Scope&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;Scope&lt;/code&gt; of a &amp;ldquo;Binding&amp;rdquo; would need to be modeled. The semantic
+analysis phase would need to build the definition scopes (packages,
+classes, functions) during analysis.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Scope&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Parent&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Scope&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Owner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Definition&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Definitions&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Definition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;References&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Reference&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A &lt;code&gt;Scope&lt;/code&gt; has:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;An optional &lt;code&gt;Parent&lt;/code&gt;; the parent scope which contains this scope.&lt;/li&gt;
+&lt;li&gt;An &lt;code&gt;Owner&lt;/code&gt;; the owner definition of this scope.&lt;/li&gt;
+&lt;li&gt;Zero or more &lt;code&gt;Definitions&lt;/code&gt;; any known definitions in this scope.&lt;/li&gt;
+&lt;li&gt;Zero or more &lt;code&gt;References&lt;/code&gt;; any known references to this definitions in this scope.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;conclusion:144e4496109b69e469539e03deb99a58&#34;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Not much new here, if you are very familiar with semantic analysis, names and types.&lt;/p&gt;
+
+&lt;p&gt;Some differences;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the language reflection is explicitly modeled by types,&lt;/li&gt;
+&lt;li&gt;the definitions have mutable &lt;code&gt;Path&lt;/code&gt; or &lt;code&gt;Name&lt;/code&gt; to allow for renaming.&lt;/li&gt;
+&lt;li&gt;the definitions are uniquely identified using &lt;code&gt;Identity&lt;/code&gt; (guids).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some thoughts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using &lt;code&gt;Identity&lt;/code&gt; allows for definitions to be stored in databases.&lt;/li&gt;
+&lt;li&gt;Harth itself will almost certainly not use SQL or no-SQL directly.&lt;/li&gt;
+&lt;li&gt;The most often used refactoring &amp;ldquo;Rename&amp;rdquo; should be a little easier to implement;
+
+&lt;ul&gt;
+&lt;li&gt;require changing the name/path of all known and bound &lt;code&gt;Reference&lt;/code&gt; and &lt;code&gt;Definition&lt;/code&gt; instances,&lt;/li&gt;
+&lt;li&gt;require the binding process to have completed successfully,&lt;/li&gt;
+&lt;li&gt;have the invariant that the bindings remain immutable (the same) once renaming is complete.&lt;/li&gt;
+&lt;li&gt;should therefore be both global and stable.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Build Bridges, Not Walls</title>
