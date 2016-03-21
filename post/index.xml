@@ -6,8 +6,299 @@
     <description>Recent content in Posts on Harth Programming Language</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Mar 2016 10:50:43 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 21 Mar 2016 08:51:00 -0700</lastBuildDate>
     <atom:link href="http://www.harth-lang.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Types, Traits and Classes</title>
+      <link>http://www.harth-lang.org/blog/2016/03/21/types-traits-and-classes/</link>
+      <pubDate>Mon, 21 Mar 2016 08:51:00 -0700</pubDate>
+      
+      <guid>http://www.harth-lang.org/blog/2016/03/21/types-traits-and-classes/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction:42043369b3550d6d63dd7f447b398d27&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Programming languages typically categorize data using the concept of
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Data_type&#34;&gt;Type&lt;/a&gt;. Even if a language has dynamic types or even a few simple data
+structures.&lt;/p&gt;
+
+&lt;p&gt;In this blog we&amp;rsquo;ll look at the probable design of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Type_system&#34;&gt;Type System&lt;/a&gt; for &lt;a href=&#34;http://www.harth-lang.org/&#34;&gt;Harth&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Data_type&#34;&gt;Type&lt;/a&gt; - which describe the relationships between types (sub-typing)
+and sets of functions that types allow.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Trait_(computer_programming)&#34;&gt;Trait&lt;/a&gt; - which usually provide function, method and property implementations, but no state.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Class_(computer_programming)&#34;&gt;Class&lt;/a&gt; - which typically can generate actual instances, and have state.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;type-theory:42043369b3550d6d63dd7f447b398d27&#34;&gt;Type Theory&lt;/h1&gt;
+
+&lt;p&gt;For programming languages, &lt;a href=&#34;https://en.wikipedia.org/wiki/Type_theory&#34;&gt;Type Theory&lt;/a&gt; is the study the rules used
+to build a solid and consistent type system. My recommended source,
+which probably requires a Master&amp;rsquo;s level or equivalent experience to
+read in-depth is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pierce, Benjamin C. (2002). Types and Programming Languages. MIT Press. ISBN &lt;a href=&#34;https://en.wikipedia.org/wiki/Special:BookSources/978-0-262-16209-8&#34;&gt;978-0-262-16209-8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See the Wikipedia article &lt;a href=&#34;https://en.wikipedia.org/wiki/Type_system&#34;&gt;Type System&lt;/a&gt; for more information on the subject.&lt;/p&gt;
+
+&lt;p&gt;For the purposes of Harth&amp;rsquo;s type system, we will attempt to follow
+the guiding principles from this book as closely as possible. However
+much of the complexity should either be familiar or hidden at first
+glance.&lt;/p&gt;
+
+&lt;p&gt;My &lt;em&gt;feeling&lt;/em&gt; is that if you get the Type System right, it&amp;rsquo;s very
+orthogonal and helps you express some things in a much more intuitive
+manner. We shall see.&lt;/p&gt;
+
+&lt;h1 id=&#34;types-traits-and-classes:42043369b3550d6d63dd7f447b398d27&#34;&gt;Types, Traits and Classes&lt;/h1&gt;
+
+&lt;h2 id=&#34;type:42043369b3550d6d63dd7f447b398d27&#34;&gt;Type&lt;/h2&gt;
+
+&lt;p&gt;There are many definitions of what &lt;a href=&#34;https://en.wikipedia.org/wiki/Data_type&#34;&gt;Type&lt;/a&gt; could be, and Wikipedia
+tries hard to explain them in various places. In programming
+languages, people often confuse
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Class_(computer_programming)#Class_vs._type&#34;&gt;Class vs. Type&lt;/a&gt;
+for example.&lt;/p&gt;
+
+&lt;p&gt;For Harth I&amp;rsquo;m going with the notion that a Type provides a few major concepts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Describes the set of functions, methods and properties that are valid.&lt;/li&gt;
+&lt;li&gt;Describes how types relate to each other; sub-typing, equivalence, etc.&lt;/li&gt;
+&lt;li&gt;Usually supplies a &lt;a href=&#34;http://www.harth-lang.org/post/names-identities.md&#34;&gt;Name&lt;/a&gt;, Path and Identity for that type.&lt;/li&gt;
+&lt;li&gt;May have zero or more parent super-types; that is Type supports multiple-inheritance.
+
+&lt;ul&gt;
+&lt;li&gt;Multiple-inheritance of Type is &lt;em&gt;not&lt;/em&gt; as dangerous as you might fear.&lt;/li&gt;
+&lt;li&gt;It is very useful when you introduce the Trait concept as shown below.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In Harth note that a Type is &lt;em&gt;not&lt;/em&gt; the same as a Class; it does
+not provide state or a way to generate instances. However, Class
+does sub-type Type, but provides state and usually a way to generate
+instances.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the above example &lt;code&gt;Int&lt;/code&gt; is the name of a Type (actually a Class); the expression says
+&amp;ldquo;variable &lt;code&gt;x&lt;/code&gt; has type &lt;code&gt;Int&lt;/code&gt; and is assigned the value 1&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Type&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Functions&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Function&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;SuperTypes&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Path&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IsSuperType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;other&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IsSubType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;other&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bool&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There would probably be many other methods and properties on a
+Type. For Harth two types are reference equivalent only if they are
+the exact same type. Two different types may be structurally
+equivalent however.&lt;/p&gt;
+
+&lt;h2 id=&#34;trait:42043369b3550d6d63dd7f447b398d27&#34;&gt;Trait&lt;/h2&gt;
+
+&lt;p&gt;In essence for Harth, a &lt;a href=&#34;https://en.wikipedia.org/wiki/Trait_(computer_programming)&#34;&gt;Trait&lt;/a&gt; is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A specialized Type which may provide function, method or property implementations.&lt;/li&gt;
+&lt;li&gt;Does not provide state; properties (and their accessor and/or settor methods) are used instead.&lt;/li&gt;
+&lt;li&gt;May have zero or more parent traits (multiple inheritance).&lt;/li&gt;
+&lt;li&gt;May be composed with other traits via various operations (described below or later).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The key here is that Trait provides composable implementations of
+Type interfaces, but without any state. Multiple inheritance of
+functionality is easier to implement using virtual functions and
+lookup tables; state is very tricky to do well (see C++).&lt;/p&gt;
+
+&lt;p&gt;A papers I&amp;rsquo;ve read on Traits is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://scg.unibe.ch/archive/papers/Scha03aTraits.pdf&#34;&gt;Traits: Composable Units of Behaviour&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Wikipedia &lt;a href=&#34;https://en.wikipedia.org/wiki/Trait_(computer_programming)&#34;&gt;Trait&lt;/a&gt; link contains many other references and details.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Trait&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;FunctionDefinitions&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FunctionDefinition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;class:42043369b3550d6d63dd7f447b398d27&#34;&gt;Class&lt;/h2&gt;
+
+&lt;p&gt;In essence for Harth, a &lt;a href=&#34;https://en.wikipedia.org/wiki/Class_(computer_programming)&#34;&gt;Class&lt;/a&gt; is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A specialized Type which has one super-classes (single inheritance)&lt;/li&gt;
+&lt;li&gt;Composed with zero or more Traits (multiple inheritance)&lt;/li&gt;
+&lt;li&gt;Typically provides state to back any properties.&lt;/li&gt;
+&lt;li&gt;Typically provides constructors to initialize properties and state.&lt;/li&gt;
+&lt;li&gt;Typically provides a way to allocate and free instances of the class.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Class&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;SuperClass&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Class&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Traits&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Trait&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;States&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;State&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;property&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;Constructors&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Sequence&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ConstructorDefinition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Allocate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Free&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;special-types:42043369b3550d6d63dd7f447b398d27&#34;&gt;Special Types&lt;/h1&gt;
+
+&lt;p&gt;For the Harth type system, there are a few particularly interesting
+Types (or Classes) described below.&lt;/p&gt;
+
+&lt;h2 id=&#34;anything-top:42043369b3550d6d63dd7f447b398d27&#34;&gt;Anything (Top)&lt;/h2&gt;
+
+&lt;p&gt;Usuaully a well formed Type System will have a
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Top_type&#34;&gt;Top&lt;/a&gt; type which represents
+the super-type of all types.&lt;/p&gt;
+
+&lt;p&gt;In Harth this is called &lt;code&gt;Anything&lt;/code&gt; (rather than the less obvious
+&lt;code&gt;Top&lt;/code&gt;, although that may be an alias). All Types are sub-types of
+&lt;code&gt;Anything&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A few, possibly, non-obvious uses for &lt;code&gt;Anything&lt;/code&gt; are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Every instance is of type &lt;code&gt;Anything&lt;/code&gt; (since it is a super-type of all types).&lt;/li&gt;
+&lt;li&gt;Used as the return type on a function means &amp;ldquo;this function can return anything&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;The union of &lt;code&gt;Anything&lt;/code&gt; with any type &lt;code&gt;T&lt;/code&gt; is simply the type &lt;code&gt;Anything&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;nothing-bottom:42043369b3550d6d63dd7f447b398d27&#34;&gt;Nothing (Bottom)&lt;/h2&gt;
+
+&lt;p&gt;Similarly a well formed Type System will have a
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Bottom_type&#34;&gt;Bottom&lt;/a&gt; type which represents
+the sub-type of all types.&lt;/p&gt;
+
+&lt;p&gt;In Harth this is called &lt;code&gt;Nothing&lt;/code&gt; (rather than the less obvious
+&lt;code&gt;Bottom&lt;/code&gt;, although that may be an alias). All Types are super-types of
+&lt;code&gt;Nothing&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A few, possibly, non-obvious uses for &lt;code&gt;Nothing&lt;/code&gt; are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There can be no instances of &lt;code&gt;Nothing&lt;/code&gt; (since it is a sub-type of all types).&lt;/li&gt;
+&lt;li&gt;Used as the return type on a function means &amp;ldquo;this function cannot return&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;The union of &lt;code&gt;Nothing&lt;/code&gt; with any type &lt;code&gt;T&lt;/code&gt; is simply the type &lt;code&gt;T&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;null:42043369b3550d6d63dd7f447b398d27&#34;&gt;Null&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;Null&lt;/code&gt; type has only one value &lt;code&gt;null&lt;/code&gt;, which represents the null
+pointer or reference from most languages. This type is further
+explained below.&lt;/p&gt;
+
+&lt;h2 id=&#34;unit:42043369b3550d6d63dd7f447b398d27&#34;&gt;Unit&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;Unit&lt;/code&gt; type has only one value &lt;code&gt;unit&lt;/code&gt;, which represents the empty
+tuple &amp;lsquo;()&amp;rsquo;. This is usually the return value for any method or
+function that has no useful result (ie. is a procedure, and/or has
+side-effects only).&lt;/p&gt;
+
+&lt;p&gt;Many programming languages call this &lt;code&gt;void&lt;/code&gt;, but it is often
+overloaded to mean &amp;ldquo;does not return&amp;rdquo;. See C and C++.&lt;/p&gt;
+
+&lt;h2 id=&#34;error:42043369b3550d6d63dd7f447b398d27&#34;&gt;Error&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;Error&lt;/code&gt; type is used as the base class of any error condition. In
+Harth there will be no exceptions for good reasons (see &lt;a href=&#34;http://www.610yesnolovely.org/blog/2015/02/07/houston-we-have-an-error/&#34;&gt;Houston We Have An Error&lt;/a&gt; and &lt;a href=&#34;http://www.610yesnolovely.org/blog/2015/02/16/houston-we-have-an-error-part-2/&#34;&gt;Houston We Have An Error Part 2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;s-t-union-or-or-type-constructor:42043369b3550d6d63dd7f447b398d27&#34;&gt;&lt;code&gt;S|T&lt;/code&gt; (Union or Or Type Constructor)&lt;/h2&gt;
+
+&lt;p&gt;The type syntax &lt;code&gt;S|T&lt;/code&gt; means &amp;ldquo;the type &lt;code&gt;S&lt;/code&gt; &lt;em&gt;or&lt;/em&gt; the type &lt;code&gt;T&lt;/code&gt;&amp;rdquo; and is
+essentially a type theoretic union of each type. Initially this may
+not seem that useful, but it allows us to compose &lt;code&gt;Null&lt;/code&gt; and &lt;code&gt;Error&lt;/code&gt;
+and other types to express some useful concepts.&lt;/p&gt;
+
+&lt;h2 id=&#34;t-optional:42043369b3550d6d63dd7f447b398d27&#34;&gt;&lt;code&gt;T?&lt;/code&gt; (Optional)&lt;/h2&gt;
+
+&lt;p&gt;The short hand &lt;code&gt;T?&lt;/code&gt; is the equivalent to &lt;code&gt;T|Null&lt;/code&gt;; that is &amp;ldquo;the type
+&lt;code&gt;T&lt;/code&gt; &lt;em&gt;or&lt;/em&gt; &lt;code&gt;Null&lt;/code&gt;. For example, when used as a method return type it
+signifies that the result is optionally of type &lt;code&gt;T&lt;/code&gt; or &lt;code&gt;null&lt;/code&gt;, and is
+a type-safe way of expressing nullability of values.&lt;/p&gt;
+
+&lt;p&gt;Most languages allow the value &amp;ldquo;null&amp;rdquo; to be assigned to any type, by
+extracting this notion into the type system we can use &lt;code&gt;T&lt;/code&gt; to mean
+&amp;ldquo;definitely never null&amp;rdquo;, and &lt;code&gt;T?&lt;/code&gt; to mean &amp;ldquo;may be null&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;t-error:42043369b3550d6d63dd7f447b398d27&#34;&gt;&lt;code&gt;T%&lt;/code&gt; (Error)&lt;/h2&gt;
+
+&lt;p&gt;The short hand &lt;code&gt;T%&lt;/code&gt; is the equivalent to &lt;code&gt;T|Error&lt;/code&gt;; that is &amp;ldquo;the type
+&lt;code&gt;T&lt;/code&gt; &lt;em&gt;or&lt;/em&gt; &lt;code&gt;Error&lt;/code&gt;. For example, when used as a method return type it
+signifies that the result is either type &lt;code&gt;T&lt;/code&gt; or some &lt;code&gt;Error&lt;/code&gt;, and is
+a type-safe way of expressing functions that may return errors.&lt;/p&gt;
+
+&lt;p&gt;Most languages provide &amp;ldquo;Exceptions&amp;rdquo; as a way to handle errors, but
+this has proven to be somewhat of a disaster. In Harth, errors are handled as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;By returning an optional value: &lt;code&gt;T?&lt;/code&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;Use if not finding the result is typical or correct.&lt;/li&gt;
+&lt;li&gt;The calling function must handle or pass on the null.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;By returning an error value: &lt;code&gt;T%&lt;/code&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;Use if some non-fatal error occurs.&lt;/li&gt;
+&lt;li&gt;The calling function must handle or pass on the error.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;By calling &lt;code&gt;abort()&lt;/code&gt; to terminate the thread, task, or process.
+
+&lt;ul&gt;
+&lt;li&gt;Use as a last resort, when all else fails.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;conclusion:42043369b3550d6d63dd7f447b398d27&#34;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Again, not much new here, if you are very familiar with type systems and theory.&lt;/p&gt;
+
+&lt;p&gt;Some differences:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The type system is used to represent errors.&lt;/li&gt;
+&lt;li&gt;Functional composition and handling of errors as values turns out to
+be very powerful.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s also very familiar; just return &lt;code&gt;null&lt;/code&gt; or the &lt;code&gt;Error&lt;/code&gt; as required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some thoughts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;There are other type constructors that may be useful
+&amp;ldquo;under-the-hood&amp;rdquo; in implementing various features. However I doubt
+people would use these in day-to-day programming in Harth:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Intersection &lt;code&gt;A&amp;amp;B&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Difference &lt;code&gt;A\B&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Note that complement &lt;code&gt;~B&lt;/code&gt; is essentially &lt;code&gt;Anything\B&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Multiple inheritance isn&amp;rsquo;t all bad.&lt;/li&gt;
+&lt;li&gt;Exceptions are mostly bad.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I&amp;rsquo;m probably stepping on a few toes, but that&amp;rsquo;s the beauty of
+designing your own language. I may change my mind if you can persuade
+me with good arguments, theory and practice.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Names and Identities</title>
