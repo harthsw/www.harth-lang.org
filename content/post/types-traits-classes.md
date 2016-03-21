@@ -234,6 +234,33 @@ this has proven to be somewhat of a disaster. In Harth, errors are handled as fo
 * By calling `abort()` to terminate the thread, task, or process.
   * Use as a last resort, when all else fails.
 
+# Conclusion
+
+Again, not much new here, if you are very familiar with type systems and theory.
+
+Some differences:
+
+* The type system is used to represent errors.
+* Functional composition and handling of errors as values turns out to
+  be very powerful.
+* It's also very familiar; just return `null` or the `Error` as required.
+
+Some thoughts:
+
+* There are other type constructors that may be useful
+  "under-the-hood" in implementing various features. However I doubt
+  people would use these in day-to-day programming in Harth:
+
+  * Intersection `A&B`
+  * Difference `A\B`
+    * Note that complement `~B` is essentially `Anything\B`.
+  * Multiple inheritance isn't all bad.
+  * Exceptions are mostly bad.
+
+I'm probably stepping on a few toes, but that's the beauty of
+designing your own language. I may change my mind if you can persuade
+me with good arguments, theory and practice.
+
 [Harth]: /
 [Type]: https://en.wikipedia.org/wiki/Data_type
 [Type System]: https://en.wikipedia.org/wiki/Type_system
