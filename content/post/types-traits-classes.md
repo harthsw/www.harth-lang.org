@@ -1,12 +1,8 @@
----
-date: 2016-03-21T08:51:00-07:00
-title: Types, Traits and Classes
-keywords:
-  - "harth"
-  - "type"
-  - "trait"
-  - "class"
----
++++
+date = "2016-03-21T08:51:00-07:00"
+title = "Types, Traits and Classes"
+keywords = ["harth", "type", "trait", "class"]
++++
 
 # Introduction
 

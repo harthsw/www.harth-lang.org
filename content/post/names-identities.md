@@ -1,16 +1,8 @@
----
-date: 2016-03-15T10:50:43-07:00
-title: Names and Identities
-keywords:
-  - "harth"
-  - "name"
-  - "path"
-  - "guid"
-  - "definition"
-  - "reference"
-  - "binding"
-  - "scope"
----
++++
+date = "2016-03-15T10:50:43-07:00"
+title = "Names and Identities"
+keywords = ["harth", "name", "path", "guid", "definition", "reference", "binding", "scope"]
++++
 
 # Introduction
 

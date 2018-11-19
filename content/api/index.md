@@ -1,11 +1,8 @@
----
-title: "Language API"
-description: "Harth and C++ API for Harth Programming Language"
-keywords: 
-  - "harth"
-  - "api"
-  - "doxygen"
----
++++
+title = "Language API"
+description = "Harth and C++ API for Harth Programming Language"
+keywords = ["harth", "api", "doxygen"]
++++
 
 # Components
 

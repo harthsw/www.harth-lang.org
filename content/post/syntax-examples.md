@@ -1,11 +1,8 @@
----
-date: 2016-03-01T11:57:19-08:00
-title: "Syntax Ideas and Prototype Examples"
-keywords:
-  - "harth"
-  - "syntax"
-  - "example"
----
++++
+date = "2016-03-01T11:57:19-08:00"
+title = "Syntax Ideas and Prototype Examples"
+keywords = ["harth", "syntax", "example"]
++++
 
 # Familiar Programming Language with Fully Reified, Immutable, and Homoiconic code/data.
 

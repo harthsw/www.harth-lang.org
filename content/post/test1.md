@@ -1,14 +1,9 @@
----
-date: "2016-02-24T11:38:50-08:00"
-title: "Test Blog Page"
-description: "Test Blog Page, shows result of basic Markdown and Hugo templates with styles."
-keywords:
-  - "harth"
-  - "blog"
-menu:
-  main:
-    parent: "mn_blog"
----
++++
+date = "2016-02-24T11:38:50-08:00"
+title = "Test Blog Page"
+description = "Test Blog Page, shows result of basic Markdown and Hugo templates with styles."
+keywords = ["harth", "blog"]
++++
 
 # Reason
 

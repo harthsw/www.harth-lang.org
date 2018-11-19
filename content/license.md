@@ -1,11 +1,8 @@
----
-title: "License"
-description: "License non-code blog conent and source code files and snippets."
-keywords:
-  - "license"
-  - "blog"
-  - "code"
----
++++
+title = "License"
+description = "License non-code blog conent and source code files and snippets."
+keywords = ["license", "blog", "code"]
++++
 
 ### Content license
 

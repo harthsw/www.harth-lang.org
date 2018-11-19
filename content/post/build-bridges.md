@@ -1,11 +1,8 @@
----
-date: 2016-03-02T12:09:53-08:00
-title: Build Bridges, Not Walls
-keywords:
-  - "harth"
-  - "architecture"
-  - "bridges"
----
++++
+date = "2016-03-02T12:09:53-08:00"
+title = "Build Bridges, Not Walls"
+keywords = ["harth", "architecture", "bridges"]
++++
 
 # Architecture
 
