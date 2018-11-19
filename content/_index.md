@@ -1,5 +1,4 @@
 +++
-type = "index"
 title = "Harth Programming Language"
 date = "2016-02-29T19:00:00-08:00"
 description = "Home page for the Harth Programming Language"
