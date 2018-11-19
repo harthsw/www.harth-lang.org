@@ -1,9 +1,10 @@
 # Useful Makefile scripts.
 DEPLOY_PATH = .deploy
 PREVIEW_PATH = .preview
+THEME = harth-hugo-theme
 
 deploy: themes
-	git push
+	dep push
 	hugo-deploy -d $(DEPLOY_PATH)
 
 preview: themes
@@ -11,4 +12,4 @@ preview: themes
 	hugo server -v -d $(PREVIEW_PATH) --renderToDisk --disableFastRender --watch
 
 themes:
-	[[ -d themes/harth-hugo-theme ]] || dep refresh
+	[[ -d themes/$(THEME) ]] || dep refresh
