@@ -8,7 +8,7 @@ deploy: themes
 
 preview: themes
 	rm -rf $(PREVIEW_PATH)
-	hugo server -d $(PREVIEW_PATH) --renderToDisk=true --watch=true
+	hugo server -v -d $(PREVIEW_PATH) --renderToDisk --disableFastRender --watch
 
 themes:
 	[[ -d themes/harth-hugo-theme ]] || dep refresh
