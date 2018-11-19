@@ -11,11 +11,11 @@ keywords:
 
 Harth is split into multiple components, each having their own repositories:
 
-## [Harth Kernel](/api/en/0.2/harth-kernel/annotated.html)
+## Harth Kernel
 
 A C++ API that abstracts the underlying operating system.
 
-## [Harth Lang](/api/en/0.2/harth-lang/annotated.html)
+## Harth Lang
 
 {{< todo "This is not yet auto-built. Need bridge from Harth output to Doxygen." >}}
 
@@ -24,6 +24,3 @@ The core Harth Language component. Includes:
 * /Harth/Lang/Core - basic types.
 * /Harth/Lang/IO - basic input/output types.
 * /Harth/Lang/Collection - immutable and mutable collection types.
-
-
-

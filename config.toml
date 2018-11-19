@@ -43,23 +43,25 @@ GoogleAnalytics = "UA-71830715-3"
     # facebook = "..."
     # youtube = "..."
 
+[menu]
+
 [[menu.main]]
   name = "Home"
   identifier = "mn_home"
   url = "/"
   weight = 1
 
-[[menu.main]]
-  name = "Language Reference"
-  identifier = "mn_ref"
-  url = "/ref/"
-  weight = 2
+# [[menu.main]]
+#   name = "Language Reference"
+#   identifier = "mn_ref"
+#   url = "/ref/"
+#   weight = 2
 
-[[menu.main]]
-  name = "Language API"
-  identifier = "mn_api"
-  url = "/api/"
-  weight = 3
+# [[menu.main]]
+#   name = "Language API"
+#   identifier = "mn_api"
+#   url = "/api/"
+#   weight = 3
 
 [[menu.main]]
   name = "Blog"

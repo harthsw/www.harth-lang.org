@@ -465,8 +465,8 @@ server). The “server” should really also provide information to
 format/colour/indent code - and/or possibly provide standard editor
 component.
 
-[Harth]: http://www.harth-lang.org/
-[blog]: http://www.harth-lang.org/post/
+[Harth]: /
+[blog]: /post/
 [C]: https://en.wikipedia.org/wiki/C_(programming_language)
 [C++]: https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language
 [C#]: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
