@@ -77,9 +77,6 @@ interesting ideas worth borrowing:
 
 {{< todo "Implement these later as auto-builds from markdown docs and Doxygen code from source." >}}
 
-* Read the [Language Reference] - uses Markdown/Hugo.
-* Read The [Language API] - uses Doxygen.
-
 # Project Background (September 14 2015)
 
 The high level vision for the project is to:
