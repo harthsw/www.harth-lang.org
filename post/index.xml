@@ -50,10 +50,10 @@ Bridges In Real Life The city of Vancouver in British Columbia (where I live), t
       <pubDate>Tue, 01 Mar 2016 11:57:19 -0800</pubDate>
       
       <guid>http://www.harth-lang.org/blog/2016/03/01/syntax-ideas-and-prototype-examples/</guid>
-      <description>Familiar Programming Language with Fully Reified, Immutable, and Homoiconic code/data. Familiar The syntax and text of a [Harth] program should be familiar to most programmers.
-Reified [Reified] means that all levels of the programming language model (text, lexical/tokens, AST, Semantic Model, Project, Binaries) are processed and available at run-time as ordinary data.
+      <description>Familiar Programming Language with Fully Reified, Immutable, and Homoiconic code/data. Familiar The syntax and text of a Harth program should be familiar to most programmers.
+Reified Reified means that all levels of the programming language model (text, lexical/tokens, AST, Semantic Model, Project, Binaries) are processed and available at run-time as ordinary data.
 The data where possible immutable (or near enough).
-Immutable [Immutable] data gives greater flexibility for shared state, caching, checksum, versioning, undo.</description>
+Immutable Immutable data gives greater flexibility for shared state, caching, checksum, versioning, undo.</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@ Immutable [Immutable] data gives greater flexibility for shared state, caching, 
       <pubDate>Wed, 24 Feb 2016 11:38:50 -0800</pubDate>
       
       <guid>http://www.harth-lang.org/blog/2016/02/24/test-blog-page/</guid>
-      <description>Reason This blog is a test page. It&amp;rsquo;s meant to test the [Harth-Hugo-Theme].
+      <description>Reason This blog is a test page. It&amp;rsquo;s meant to test the Harth-Hugo-Theme.
 Code Shortcode Example code block:
 #include &amp;lt;iostream&amp;gt;#define IABS(x) ((x) &amp;lt; 0 ? -(x) : (x))  int main(int argc, char *argv[]) { /* An annoying &amp;#34;Hello World&amp;#34; example */ for (auto i = 0; i &amp;lt; 0xFFFF; i++) cout &amp;lt;&amp;lt; &amp;#34;Hello, World!&amp;#34; &amp;lt;&amp;lt; endl; char c = &amp;#39;\n&amp;#39;; unordered_map &amp;lt;string, vector&amp;lt;string&amp;gt; &amp;gt; m; m[&amp;#34;key&amp;#34;] = &amp;#34;\\\\&amp;#34;; // this is an error  return -2e3 + 12l; } classThing { public: Thing(); int CallFunc(int x, int y); }; try { Thing t; int x = t.</description>
     </item>

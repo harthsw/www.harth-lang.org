@@ -124,11 +124,11 @@
 
 <h2 id="familiar">Familiar</h2>
 
-<p>The syntax and text of a [Harth] program should be familiar to most programmers.</p>
+<p>The syntax and text of a <a href="http://www.harth-lang.org/">Harth</a> program should be familiar to most programmers.</p>
 
 <h2 id="reified">Reified</h2>
 
-<p>[Reified] means that all levels of the programming language model (text,
+<p><a href="https://en.wikipedia.org/wiki/Reification_(computer_science)">Reified</a> means that all levels of the programming language model (text,
   lexical/tokens, AST, Semantic Model, Project, Binaries) are processed and available at run-time
   as ordinary data.</p>
 
@@ -136,11 +136,11 @@
 
 <h2 id="immutable">Immutable</h2>
 
-<p>[Immutable] data gives greater flexibility for shared state, caching, checksum, versioning, undo.</p>
+<p><a href="https://en.wikipedia.org/wiki/Immutable_object">Immutable</a> data gives greater flexibility for shared state, caching, checksum, versioning, undo.</p>
 
 <h2 id="homoiconic">Homoiconic</h2>
 
-<p>[Homoiconic] means that the text, lexemes, tokens, AST, Semantic data,
+<p><a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconic</a> means that the text, lexemes, tokens, AST, Semantic data,
 Project and binaries have the same shared written syntax (in human
 and/or binary) as any other language data and/or code.</p>
 
@@ -203,11 +203,11 @@ by a <code>Char*</code>, an abstract sequence of zero or more Unicode characters
 
 <p>The method returns a <code>NodeTree</code> which represents any valid or invalid
 AST tree of <code>Node</code>, essentially a view of the AST tree as a
-[Homogeneous AST]. This view and the underlyig data in immutable.</p>
+<a href="https://www.safaribooksonline.com/library/view/language-implementation-patterns/9781680500097/f_0045.html">Homogeneous AST</a>. This view and the underlyig data in immutable.</p>
 
 <p>This means the source text, lexeme and AST syntax tree can be easily
 versioned, editted, undo using functional style immutable data
-structures (which are provided by [Harth] in the standard library).</p>
+structures (which are provided by <a href="http://www.harth-lang.org/">Harth</a> in the standard library).</p>
 
 <h2 id="semantic-analysis-of-parse-tree">Semantic Analysis of Parse Tree</h2>
 <div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Semantic</span><span class="o">/</span><span class="n">Analyze</span><span class="p">(</span><span class="nl">tree</span> <span class="p">:</span> <span class="n">NodeTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SemanticModel</span>
@@ -379,7 +379,7 @@ implemented using semantic information.</p>
 
 <h2 id="backend-binary-generator">Backend Binary Generator</h2>
 
-<p>The backend binary and object generator uses the latest [LLVM] to
+<p>The backend binary and object generator uses the latest <a href="http://llvm.org">LLVM</a> to
 convert a <code>SemanticModel</code> into an internal set of linkage/executable
 <code>LLVM/Module*</code>. These are either cached and/or written to disk as
 appropriate.</p>
@@ -428,7 +428,7 @@ bash$
 <li><code>main</code> takes only one argument, the <code>String</code> passed to the executable and/or script.</li>
 <li><code>_</code> means variable value is unamed and never used. Essentially the arguments are ignored.</li>
 <li><code>String*</code> means a sequence of zero or more String, it&rsquo;s like a
-bounded array, but has a abstract type of <code>Sequence&lt;String&gt;</code>. See [Types].</li>
+bounded array, but has a abstract type of <code>Sequence&lt;String&gt;</code>. See <a href="TODO">Types</a>.</li>
 <li><code>main</code> has no return type written, it is intuit from the block return type. See below.</li>
 <li><code>main</code> must have one of the following types, and must exist and be named at global scope:
 
@@ -464,7 +464,7 @@ bounded array, but has a abstract type of <code>Sequence&lt;String&gt;</code>. S
 <p>The key addition is the POSIX magic <code>#!/usr/bin/env hs</code> which runs the
 script text through the <code>hs</code> (aka. <code>harth-script</code>) JIT script compiler
 and execution engine found on <code>$PATH</code>. The <code>#!</code> is always treated as a
-comment by [Harth].</p>
+comment by <a href="http://www.harth-lang.org/">Harth</a>.</p>
 
 <div class="harth-console-panel">
   <pre class="harth-console">
@@ -499,7 +499,7 @@ bash$
 <h2 id="example-3-hello-world-in-repl">Example 3: Hello World In REPL</h2>
 <div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span>
 </code></pre></div>
-<p>At an interactive [Harth] shell (or REPL), one can simply execute any statement, expression or program. So the above will result in:</p>
+<p>At an interactive <a href="http://www.harth-lang.org/">Harth</a> shell (or REPL), one can simply execute any statement, expression or program. So the above will result in:</p>
 
 <div class="harth-console-panel">
   <pre class="harth-console">
@@ -668,10 +668,10 @@ analysis would be able to display lexical, semantic feed back, possibly on-the
 fly (highlighting) and provide errors and documentation as required.
 
 <ul>
-<li>See [Emacs FlyCheck] for an example of this working in other languages pretty well.</li>
+<li>See <a href="http://www.flycheck.org">Emacs FlyCheck</a> for an example of this working in other languages pretty well.</li>
 <li>Emacs basically requires a very good text to reflection system
 underneath the hood. Languages such as Python and C# tend to
-provide this these days. Therefore [Harth] must and will, builtin, free, easy.</li>
+provide this these days. Therefore <a href="http://www.harth-lang.org/">Harth</a> must and will, builtin, free, easy.</li>
 </ul></li>
 </ul>
 
@@ -683,13 +683,37 @@ provide this these days. Therefore [Harth] must and will, builtin, free, easy.</
       
     </h3>
   </div>
-  <div class="panel-body">  
-    
+  
+    <div class="panel-body">
       The TODO notes and some semi-colons have been removed from the source. Hey it&#39;s a prototype. Whatevers.
-    
-  </div>
+    </div>
+  
 </div>
 
+
+<h1 id="warning">Warning</h1>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      
+        Warning
+      
+    </h3>
+  </div>
+  
+    <div class="panel-body">
+      All the syntax and semantics discussed here are simplified, reality is likely to be more complex, different and changing.
+    </div>
+  
+</div>
+
+
+<!-- Local Variables: -->
+
+<!-- indent-tabs-mode: nil -->
+
+<!-- End: -->
 
 
 <!-- BEGIN partials/disqus-comment.html -->
