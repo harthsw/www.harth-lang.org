@@ -13,7 +13,7 @@
     <title>Names and Identities &middot; Harth Programming Language</title>    
     <meta name="description" content="Harth Programming Language">
     <meta name="author" content="Harvey Thompson">
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.46" />
     
 
 <!-- END partials/header-page.html -->
@@ -82,10 +82,6 @@
   
     <li><a href="/">Home</a></li>
   
-    <li><a href="/ref/">Language Reference</a></li>
-  
-    <li><a href="/api/">Language API</a></li>
-  
     <li><a href="/post/">Blog</a></li>
   
     <li><a href="/license/">License</a></li>
@@ -124,7 +120,7 @@
 </div>
 
 
-<h1 id="introduction:144e4496109b69e469539e03deb99a58">Introduction</h1>
+<h1 id="introduction">Introduction</h1>
 
 <p>An important aspect of new programming languages and their design is <em>Naming and Identities</em>.</p>
 
@@ -135,45 +131,42 @@
 <li>How does the language uniquely identify these same things (classes, functions, etc).</li>
 </ul>
 
-<h1 id="names:144e4496109b69e469539e03deb99a58">Names</h1>
+<h1 id="names">Names</h1>
 
 <p>Software Engineers, usually English speaking, typically use easy to
 remember and descriptive names for classes, functions and
 similar. There is a lot of variance in style and length, so our new
 language has to cope with this.</p>
 
-<h2 id="name:144e4496109b69e469539e03deb99a58">Name</h2>
+<h2 id="name">Name</h2>
 
 <p>The <a href="/">Harth Programming Language</a> will have a <code>Name</code> type to represent
 the simplest name. This is typically used to represent local
 variables, function parameters. For example the <code>x</code> local variable defined below:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">var</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">var</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">1</span>
 </code></pre></div>
-
 <p>The <code>Name</code> type therefore:</p>
 
 <ul>
 <li>Represents a simple UN-scoped named definition (here <code>x</code>).</li>
 <li>Is represented by a <code>String</code>; the name of the definition (here <code>&quot;x&quot;</code>).</li>
 </ul>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="k">class</span> <span class="nc">Name</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="k">class</span><span class="err"> </span><span class="nc">Name</span>
 <span class="p">{</span>
     <span class="n">property</span> <span class="nl">Text</span> <span class="p">:</span> <span class="n">String</span> 
 <span class="p">}</span>
 </code></pre></div>
-
-<h2 id="path:144e4496109b69e469539e03deb99a58">Path</h2>
+<h2 id="path">Path</h2>
 
 <p>The <code>Path</code> type will represent more complex names. This is typically
 used to represent classes, functions and other definitions which have
 non-local scope. For example:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">package</span> <span class="o">/</span><span class="n">MyPackage</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">package</span> <span class="o">/</span><span class="n">MyPackage</span>
 
-<span class="k">class</span> <span class="nc">MyType</span>
+<span class="k">class</span><span class="err"> </span><span class="nc">MyType</span>
 <span class="p">{</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Here the class <code>MyType</code>;</p>
 
 <ul>
@@ -181,13 +174,12 @@ non-local scope. For example:</p>
 <li>which is the fully qualified &ldquo;path&rdquo;,</li>
 <li>is similar to an absolute UNIX path.</li>
 </ul>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="k">class</span> <span class="nc">Path</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="k">class</span><span class="err"> </span><span class="nc">Path</span>
 <span class="p">{</span>
     <span class="n">property</span> <span class="nl">Parent</span> <span class="p">:</span> <span class="n">Path</span><span class="o">?</span>
     <span class="n">property</span> <span class="nl">Name</span> <span class="p">:</span> <span class="n">Name</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>The <code>Path</code> type:</p>
 
 <ul>
@@ -195,12 +187,12 @@ non-local scope. For example:</p>
 <li>Contains the final <code>Name</code> instance; the simple local name.</li>
 </ul>
 
-<h2 id="url:144e4496109b69e469539e03deb99a58">URL</h2>
+<h2 id="url">URL</h2>
 
 <p>We could also derive a <code>URL</code> type to represent paths for naming files,
 URLs and other similar resources later on.</p>
 
-<h1 id="identities:144e4496109b69e469539e03deb99a58">Identities</h1>
+<h1 id="identities">Identities</h1>
 
 <p>Identities are used more by the language itself to represent:</p>
 
@@ -210,7 +202,7 @@ URLs and other similar resources later on.</p>
 but your identity does not).</li>
 </ul>
 
-<h2 id="names-vs-identities:144e4496109b69e469539e03deb99a58">Names vs Identities</h2>
+<h2 id="names-vs-identities">Names vs Identities</h2>
 
 <p>A <code>Name</code> or <code>Path</code> is more useful as a label to define or refer to
 something using human textual names. Much like our own name, we could
@@ -221,14 +213,14 @@ useful to the human.</p>
 immutable; whatever that something is always has the same unchanging
 identity. This is more useful to the computer.</p>
 
-<h2 id="identity:144e4496109b69e469539e03deb99a58">Identity</h2>
+<h2 id="identity">Identity</h2>
 
 <p>For <code>Identity</code> we could use a <a href="*G*lobally *U*nique
 *ID*entifier">GUID</a> or <a href="*U*niversal *U*nique *ID*entifier">UUID</a>.</p>
 
 <p>I think initally it would be best that <code>Identity</code> composes and hides
 this decision as much as possible:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="k">class</span> <span class="nc">Identity</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="k">class</span><span class="err"> </span><span class="nc">Identity</span>
 <span class="p">{</span>
     <span class="n">property</span> <span class="nl">Value</span> <span class="p">:</span> <span class="n">Int128</span>
 
@@ -236,20 +228,19 @@ this decision as much as possible:</p>
     <span class="n">property</span> <span class="nl">ID</span> <span class="p">:</span> <span class="n">GUID</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>The <code>Identity</code> has a <code>Value</code> (initially an 128-bit integer), and
 internally we would use a standard <a href="https://en.wikipedia.org/wiki/Globally_unique_identifier">GUID</a> or <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a> type.</p>
 
-<h1 id="definitions-and-references:144e4496109b69e469539e03deb99a58">Definitions and References</h1>
+<h1 id="definitions-and-references">Definitions and References</h1>
 
 <p>We will also need <code>Definition</code> and <code>Reference</code> types to represent
 definitions and references to class et. al.</p>
 
-<h2 id="definition:144e4496109b69e469539e03deb99a58">Definition</h2>
+<h2 id="definition">Definition</h2>
 
 <p>All definitions such as classes, functions, local variables and
 parameters would be sub-types of <code>Definition</code>:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="k">class</span> <span class="nc">Definition</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="k">class</span><span class="err"> </span><span class="nc">Definition</span>
 <span class="p">{</span>
     <span class="n">property</span> <span class="nl">ID</span> <span class="p">:</span> <span class="n">Identity</span>
     <span class="n">property</span> <span class="nl">Path</span> <span class="p">:</span> <span class="n">Path</span> 
@@ -257,7 +248,6 @@ parameters would be sub-types of <code>Definition</code>:</p>
     <span class="n">property</span> <span class="nl">References</span> <span class="p">:</span> <span class="n">Sequence</span><span class="o">&lt;</span><span class="n">Reference</span><span class="o">&gt;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>A definition would have:</p>
 
 <ul>
@@ -267,17 +257,16 @@ parameters would be sub-types of <code>Definition</code>:</p>
 <li>Zero or more <code>References</code>; any known references to this definition.</li>
 </ul>
 
-<h2 id="reference:144e4496109b69e469539e03deb99a58">Reference</h2>
+<h2 id="reference">Reference</h2>
 
 <p>All references to classes, functions, local variables and
 parameters would be sub-types of <code>Reference</code>:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="k">class</span> <span class="nc">Reference</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="k">class</span><span class="err"> </span><span class="nc">Reference</span>
 <span class="p">{</span>
     <span class="n">property</span> <span class="nl">Path</span> <span class="p">:</span> <span class="n">Path</span> 
     <span class="n">property</span> <span class="nl">Definition</span> <span class="p">:</span> <span class="n">Definition</span><span class="o">?</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>A <code>Reference</code> has:</p>
 
 <ul>
@@ -285,25 +274,25 @@ parameters would be sub-types of <code>Reference</code>:</p>
 <li>An optional <code>Definition</code>; the currently &ldquo;bound&rdquo; definition with the given <code>Path</code>.</li>
 </ul>
 
-<h1 id="semantic-analysis-types:144e4496109b69e469539e03deb99a58">Semantic Analysis Types</h1>
+<h1 id="semantic-analysis-types">Semantic Analysis Types</h1>
 
 <p>During the Semantic Analysis phase of compilation, we will also need
 &ldquo;Binding&rdquo; and <code>Scope</code> processes and types to manage linking
 <code>Definition</code> and <code>Reference</code> instances (class definitions and class
 references by name for example).</p>
 
-<h2 id="binding:144e4496109b69e469539e03deb99a58">Binding</h2>
+<h2 id="binding">Binding</h2>
 
 <p>The process of &ldquo;Binding&rdquo; is where all <code>Reference</code> instances are bound
 by name to their respective <code>Definition</code>. Typically binding is done
 during the Semantic Analysis of the compiler.</p>
 
-<h2 id="scope:144e4496109b69e469539e03deb99a58">Scope</h2>
+<h2 id="scope">Scope</h2>
 
 <p>The <code>Scope</code> of a &ldquo;Binding&rdquo; would need to be modeled. The semantic
 analysis phase would need to build the definition scopes (packages,
 classes, functions) during analysis.</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="k">class</span> <span class="nc">Scope</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="k">class</span><span class="err"> </span><span class="nc">Scope</span>
 <span class="p">{</span>
     <span class="n">property</span> <span class="nl">Parent</span> <span class="p">:</span> <span class="n">Scope</span><span class="o">?</span>
     <span class="n">property</span> <span class="nl">Owner</span> <span class="p">:</span> <span class="n">Definition</span>
@@ -311,7 +300,6 @@ classes, functions) during analysis.</p>
     <span class="n">property</span> <span class="nl">References</span> <span class="p">:</span> <span class="n">Sequence</span><span class="o">&lt;</span><span class="n">Reference</span><span class="o">&gt;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>A <code>Scope</code> has:</p>
 
 <ul>
@@ -321,7 +309,7 @@ classes, functions) during analysis.</p>
 <li>Zero or more <code>References</code>; any known references to this definitions in this scope.</li>
 </ul>
 
-<h1 id="conclusion:144e4496109b69e469539e03deb99a58">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>Not much new here, if you are very familiar with semantic analysis, names and types.</p>
 
@@ -380,13 +368,16 @@ classes, functions) during analysis.</p>
 </body>
     
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-71830715-3', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-71830715-3', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
     

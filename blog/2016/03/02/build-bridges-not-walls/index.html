@@ -13,7 +13,7 @@
     <title>Build Bridges, Not Walls &middot; Harth Programming Language</title>    
     <meta name="description" content="Harth Programming Language">
     <meta name="author" content="Harvey Thompson">
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.46" />
     
 
 <!-- END partials/header-page.html -->
@@ -82,10 +82,6 @@
   
     <li><a href="/">Home</a></li>
   
-    <li><a href="/ref/">Language Reference</a></li>
-  
-    <li><a href="/api/">Language API</a></li>
-  
     <li><a href="/post/">Blog</a></li>
   
     <li><a href="/license/">License</a></li>
@@ -124,7 +120,7 @@
 </div>
 
 
-<h1 id="architecture:f4ea7c33036e76036c1190ce73e84816">Architecture</h1>
+<h1 id="architecture">Architecture</h1>
 
 <p>Often in software archictecure you have a few large components that
 need to connect. In real-life this might be analagous to two different
@@ -133,7 +129,7 @@ have built a bridge between them to cross this natural boundary.</p>
 
 <p>Fearful or foolish people might have built walls between them, but we&rsquo;re not foolish.</p>
 
-<h1 id="bridges-in-real-life:f4ea7c33036e76036c1190ce73e84816">Bridges In Real Life</h1>
+<h1 id="bridges-in-real-life">Bridges In Real Life</h1>
 
 <p>The city of Vancouver in British Columbia (where I live), there&rsquo;s the
 <a href="https://en.wikipedia.org/wiki/Port_Mann_Bridge">Port Mann Bridge</a> that connects Vancouver with the city of Surrey to
@@ -143,19 +139,19 @@ the south.</p>
 and work in Vancouver. The <a href="http://www.pmh1project.com/Pages/default.aspx">Port Mann Highway 1 Project</a> aimed to
 upgrade the old bridge to increase capacity.</p>
 
-<h2 id="port-mann-bridge-before:f4ea7c33036e76036c1190ce73e84816">Port Mann Bridge Before</h2>
+<h2 id="port-mann-bridge-before">Port Mann Bridge Before</h2>
 
 <p><img src="/img/bridge-before.jpg" alt="before" /></p>
 
 <p>Built in 1964, the old 5 lane bridge was often congested at rush hour.</p>
 
-<h2 id="port-mann-bridge-during-construction:f4ea7c33036e76036c1190ce73e84816">Port Mann Bridge During Construction</h2>
+<h2 id="port-mann-bridge-during-construction">Port Mann Bridge During Construction</h2>
 
 <p><img src="/img/bridge-during.jpg" alt="during" /></p>
 
 <p>A <a href="http://aerialphotoimage.com/360/Vancouver/PortMannBridgeAerial.html">Cool 360 View</a> show construction in progress.</p>
 
-<h2 id="port-mann-bridge-after:f4ea7c33036e76036c1190ce73e84816">Port Mann Bridge After</h2>
+<h2 id="port-mann-bridge-after">Port Mann Bridge After</h2>
 
 <p><img src="/img/bridge-after.jpg" alt="after" /></p>
 
@@ -169,7 +165,7 @@ by as much as half, saving some commuters up to an hour a day.</em>
 - <a href="http://www.pmh1project.com/Pages/default.aspx">Port Mann Highway 1 Project</a></p>
 </blockquote>
 
-<h1 id="bridges-in-software-archiecture:f4ea7c33036e76036c1190ce73e84816">Bridges in Software Archiecture</h1>
+<h1 id="bridges-in-software-archiecture">Bridges in Software Archiecture</h1>
 
 <p>Back to software, and often we have two or more components in a
 project which have different sources (or locations) and
@@ -234,13 +230,16 @@ That would be <em>very</em> silly (it was indeed an April Fools).</p>
 </body>
     
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-71830715-3', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-71830715-3', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
     

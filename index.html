@@ -13,7 +13,7 @@
     <title>Harth Programming Language</title>    
     <meta name="description" content="Harth Programming Language">
     <meta name="author" content="Harvey Thompson">
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.46" />
     
     <link href="http://www.harth-lang.org/index.xml" rel="alternate" type="application/rss+xml" title="Harth Programming Language" />
     <link href="http://www.harth-lang.org/index.xml" rel="feed" type="application/rss+xml" title="Harth Programming Language" />
@@ -85,10 +85,6 @@
   
     <li><a href="/">Home</a></li>
   
-    <li><a href="/ref/">Language Reference</a></li>
-  
-    <li><a href="/api/">Language API</a></li>
-  
     <li><a href="/post/">Blog</a></li>
   
     <li><a href="/license/">License</a></li>
@@ -123,24 +119,14 @@
 
 
 
-  
 
-  
-
-  
-
-  
-
-  
-    
-
-<h1 id="the-harth-programming-language:d680e8a854a7cbad6d490c445cba2eba">The Harth Programming Language</h1>
+<h1 id="the-harth-programming-language">The Harth Programming Language</h1>
 
 
 <p>Last Update: February 29, 2016</p>
 
 
-<h2 id="why-the-name-harth:d680e8a854a7cbad6d490c445cba2eba">Why The Name &ldquo;Harth&rdquo;?</h2>
+<h2 id="why-the-name-harth">Why The Name &ldquo;Harth&rdquo;?</h2>
 
 <p>Harth is a contraction of <strong>Har</strong>vey <strong>Th</strong>ompson. That way people can
 be sure who the original author was.</p>
@@ -151,7 +137,7 @@ cooked or new tools are forged.</p>
 
 <p><img src="/img/hearth-blacksmith.jpg" alt="Hearth" style="width: 400px;"/></p>
 
-<h2 id="yet-another-programming-language:d680e8a854a7cbad6d490c445cba2eba">Yet Another Programming Language?</h2>
+<h2 id="yet-another-programming-language">Yet Another Programming Language?</h2>
 
 <blockquote>
 <p>The nice thing about standards is that there are so many of them to choose from.</p>
@@ -162,22 +148,22 @@ cooked or new tools are forged.</p>
 <p>I&rsquo;ve used many programming languages in my 30 years of
 programming. Each of them have some good and not-so good parts. I&rsquo;ve
 often wondered what would happen if you took all the reasonable bits
-of each and made a programming language from that. <a href="http://www.harth-lang.org/">Harth</a> is that
+of each and made a programming language from that. [Harth] is that
 experiment.</p>
 
-<p>Hopefully <a href="http://www.harth-lang.org/">Harth</a> will not turn into a Jack-of-all-Trades (and master
+<p>Hopefully [Harth] will not turn into a Jack-of-all-Trades (and master
 of none), nor a confusing Swiss-Army-Knife programming language (the
 sort you use if you can&rsquo;t find your professional toolbox).</p>
 
-<p>See also Mike Taylor&rsquo;s: &ldquo;What is your <a href="https://reprog.wordpress.com/2010/03/18/so-what-actually-is-my-favourite-programming-language/">Favourite Programming Language</a>?&rdquo;</p>
+<p>See also Mike Taylor&rsquo;s: &ldquo;What is your [Favourite Programming Language]?&rdquo;</p>
 
-<p>Mine would probably be Emacs. Wait, Waaa? <a href="https://www.gnu.org/software/emacs/">Emacs</a> is actually a <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a> Programming Language runtime disguised as an extremely customizable editor.</p>
+<p>Mine would probably be Emacs. Wait, Waaa? [Emacs] is actually a [Lisp] Programming Language runtime disguised as an extremely customizable editor.</p>
 
 <p>Vi-Schmi. Visual Whatevers.</p>
 
-<h2 id="programming-languages-i-borrowed-ideas-from:d680e8a854a7cbad6d490c445cba2eba">Programming Languages I Borrowed Ideas From</h2>
+<h2 id="programming-languages-i-borrowed-ideas-from">Programming Languages I Borrowed Ideas From</h2>
 
-<p>In building <a href="http://www.harth-lang.org/">Harth</a> I&rsquo;m borrowing some of the &ldquo;good&rdquo; ideas from
+<p>In building [Harth] I&rsquo;m borrowing some of the &ldquo;good&rdquo; ideas from
 various existing programming languages. Each of them are well worth
 learning and using in their own right. I&rsquo;m also very aware and am
 grateful for the massive amount of work put in by all the clever
@@ -186,32 +172,32 @@ people behind each of these programming languages.</p>
 <p>Programming languages I&rsquo;ve actually used:</p>
 
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a></li>
-<li><a href="https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language">C++</a></li>
-<li><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)">Lisp</a></li>
-<li><a href="http://www.python.org/">Python</a></li>
+<li>[C]</li>
+<li>[C++]</li>
+<li>[C#]</li>
+<li>[Java]</li>
+<li>[Lisp]</li>
+<li>[Python]</li>
 </ul>
 
 <p>Programming languages I&rsquo;ve not really used, but have read about
 interesting ideas worth borrowing:</p>
 
 <ul>
-<li><a href="http://www.ceylon-lang.org/">Ceylon</a></li>
-<li><a href="http://www.erlang.org/">Erlang</a></li>
-<li><a href="http://www.julialang.org/">Julia</a></li>
-<li><a href="http://kotlinlang.org/">Kotlin</a></li>
-<li><a href="http://www.ruby-lang.org/">Ruby</a></li>
-<li><a href="http://www.rust-lang.org/">Rust</a></li>
-<li><a href="https://developer.apple.com/swift/">Swift</a></li>
+<li>[Ceylon]</li>
+<li>[Erlang]</li>
+<li>[Julia]</li>
+<li>[Kotlin]</li>
+<li>[Ruby]</li>
+<li>[Rust]</li>
+<li>[Swift]</li>
 </ul>
 
-<h1 id="find-out-more:d680e8a854a7cbad6d490c445cba2eba">Find Out More</h1>
+<h1 id="find-out-more">Find Out More</h1>
 
 <ul>
 <li>Read the rest of this page.</li>
-<li>Read the <a href="http://www.harth-lang.org/post/">Blog</a> posts.</li>
+<li>Read the [Blog] posts.</li>
 </ul>
 
 <div class="panel panel-danger">
@@ -235,7 +221,7 @@ interesting ideas worth borrowing:</p>
 <li>Read The [Language API] - uses Doxygen.</li>
 </ul>
 
-<h1 id="project-background-september-14-2015:d680e8a854a7cbad6d490c445cba2eba">Project Background (September 14 2015)</h1>
+<h1 id="project-background-september-14-2015">Project Background (September 14 2015)</h1>
 
 <p>The high level vision for the project is to:</p>
 
@@ -250,7 +236,7 @@ saved in text files. There are many other tools which provide some
 additional functions that help programmers. These features may already
 exist in in the code editor, or may find found in a separate tool.</p>
 
-<h2 id="other-programmer-tools:d680e8a854a7cbad6d490c445cba2eba">Other Programmer Tools</h2>
+<h2 id="other-programmer-tools">Other Programmer Tools</h2>
 
 <p>Some of the tools or features a programmer needs are;</p>
 
@@ -303,7 +289,7 @@ each with 1001 different problems to solve.</li>
 locally and on the web, and use this this to collaborate with others.</li>
 </ul>
 
-<h2 id="woah-too-much:d680e8a854a7cbad6d490c445cba2eba">Woah, Too Much!</h2>
+<h2 id="woah-too-much">Woah, Too Much!</h2>
 
 <p>There is an almost endless list of tools a programmer might
 need. Consider Home Depot and how many hammers, drills, spanners,
@@ -317,7 +303,7 @@ one person to achieve.</p>
 
 <p>But we have to start somewhere.</p>
 
-<h2 id="long-term-aims:d680e8a854a7cbad6d490c445cba2eba">Long Term Aims</h2>
+<h2 id="long-term-aims">Long Term Aims</h2>
 
 <p>So a more realistic aim for this project is to:</p>
 
@@ -333,7 +319,7 @@ same patterns and even mistakes. We have to try to think a little
 differently, dig for the hidden gems of ideas that a few smart people
 have discovered, some of these could make a big difference.</p>
 
-<h2 id="medium-term-aims:d680e8a854a7cbad6d490c445cba2eba">Medium Term Aims</h2>
+<h2 id="medium-term-aims">Medium Term Aims</h2>
 
 <p>So the more focused aim of this project is to:</p>
 
@@ -355,8 +341,8 @@ try something a little different.</p>
 <li>If you &ldquo;do not care yet&rdquo;, use <code>dynamic</code> which essentially says
 &ldquo;call method/function dynamically with cache runtime checks, your
 code may crash&rdquo;.</li>
-<li>Dynamic is in <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a> and a few other Net based languages you know!</li>
-<li>See Mike Taylor&rsquo;s <a href="https://reprog.wordpress.com/2010/06/05/we-cant-afford-to-write-safe-software/">Static And Dynamic Typing</a></li>
+<li>Dynamic is in [C#] and a few other Net based languages you know!</li>
+<li>See Mike Taylor&rsquo;s [Static And Dynamic Typing]</li>
 </ul></li>
 <li>What if we didn’t write code as text saved to a text file?
 
@@ -400,7 +386,7 @@ the human can concentrate on the creative side more?</li>
 <li>Code completer means this:</li>
 </ul></li>
 </ul>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">function</span> <span class="nf">DoubleInt</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">function</span> <span class="nf">DoubleInt</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 <span class="p">}</span>
@@ -409,16 +395,14 @@ the human can concentrate on the creative side more?</li>
     <span class="k">return</span> <span class="p">(</span><span class="n">DoubleInt</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">DoubleInt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <ul>
 <li><p>Roughly: 8 Lines of 24 words, of 145 keystores.</p></li>
 
 <li><p>Might only be typed as (where space is also auto-complete):</p></li>
 </ul>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">fun</span> <span class="n">DoubleInt</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">I</span><span class="p">)</span> <span class="o">-</span> <span class="n">I</span> <span class="n">ret</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">fun</span> <span class="n">DoubleInt</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">I</span><span class="p">)</span> <span class="o">-</span> <span class="n">I</span> <span class="n">ret</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="n">fun</span> <span class="n">PairDouble</span><span class="p">(</span><span class="nl">x</span> <span class="p">:</span> <span class="n">I</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">I</span><span class="p">,</span> <span class="n">I</span><span class="p">)</span> <span class="n">ret</span> <span class="p">(</span> <span class="n">di</span> <span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">di</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
 </code></pre></div>
-
 <ul>
 <li>Roughly: 2 Lines of 24 words of 90 keystokes.</li>
 
@@ -462,7 +446,7 @@ GUIs. Much like most decent editors.</p></li>
 
 <p>Still this is a quite a lot of work, so we need a more realistic shorter term aims for this project.</p>
 
-<h2 id="goals-for-2015:d680e8a854a7cbad6d490c445cba2eba">Goals For 2015</h2>
+<h2 id="goals-for-2015">Goals For 2015</h2>
 
 <p>The goal for the end of year 2015 is to:</p>
 
@@ -495,7 +479,7 @@ Think of it as a soft-error return.</li>
 you can&rsquo;t get round it without being explicit (ie. I &ldquo;assert&rdquo; it
 cannot be null).</li>
 <li>Programs always can crash :-(</li>
-<li>See <a href="http://www.610yesnolovely.org/blog/2015/02/16/houston-we-have-an-error-part-2/">Error 1</a>.</li>
+<li>See [Error 1] [Error 2].</li>
 <li>Non-exceptional run-time error handling - the programmer must
 explicitly and consciously handle the problems user’s might face
 as close to the source as possible.</li>
@@ -546,9 +530,9 @@ seen it done in many products, only hinted at in research.</li>
 </ul></li>
 </ul>
 
-<h1 id="status:d680e8a854a7cbad6d490c445cba2eba">Status</h1>
+<h1 id="status">Status</h1>
 
-<h1 id="on-september-14-2015:d680e8a854a7cbad6d490c445cba2eba">On September 14, 2015</h1>
+<h1 id="on-september-14-2015">On September 14, 2015</h1>
 
 <p>Rough completion for this years goal (not for a full final
 implementation) from the above list:</p>
@@ -578,7 +562,7 @@ of the week to avoid burn out.</p>
 <li>Total committed changes: 2670</li>
 </ul>
 
-<h1 id="on-october-27-2015:d680e8a854a7cbad6d490c445cba2eba">On October 27, 2015</h1>
+<h1 id="on-october-27-2015">On October 27, 2015</h1>
 
 <p>I’ve completed the Prototype goals already two months ahead of
 schedule! :-D</p>
@@ -591,166 +575,13 @@ schedule! :-D</p>
       
     </h3>
   </div>
-  
-    <div class="panel-body">
+  <div class="panel-body">  
+    
       Though not the stretch ones though, they were optional; they’ll eventually get done when it makes sense.
-    </div>
-  
+    
+  </div>
 </div>
 
-
-<p>The plan was to finish the prototype in November and December, but
-though it’s taken nine months to program the “brains” of the project,
-once that was done it took only two weeks to implement the prototype
-features as extensions for an existing editor (Emacs).</p>
-
-<h1 id="on-feb-29-2016:d680e8a854a7cbad6d490c445cba2eba">On Feb 29, 2016</h1>
-
-<p>The <a href="http://www.harth-lang.org/">Harth</a> website goes live.</p>
-
-<ul>
-<li>Initially just the home page.
-
-<ul>
-<li>Static web site built with <a href="http://gohugo.io/">Hugo</a>.</li>
-<li>Uses <a href="https://github.com/harthsw/harth-hugo-theme">Harth-Hugo-Theme</a>, <a href="http://getbootstrap.com">Bootstrap</a>, <a href="http://pygments.org">Pygments</a> and some other CSS/Javascript.</li>
-</ul></li>
-<li>Eventually will host Harth blog.
-
-<ul>
-<li>Organized by date.</li>
-</ul></li>
-<li>Eventually will host Harth Technical Reference and API documentation.
-
-<ul>
-<li>Organized by language and version.</li>
-<li>Automatically built from Harth code itself.</li>
-</ul></li>
-</ul>
-
-<h1 id="financing-and-business-plan:d680e8a854a7cbad6d490c445cba2eba">Financing and Business Plan</h1>
-
-<p>This project is <strong>NOT</strong> a business. Essentially I&rsquo;m on sabbatical from
-work and doing research and development using some savings.</p>
-
-<p>This project is entirely self funded. I&rsquo;ll run out of money sometime in <sup>2016</sup>&frasl;<sub>2017</sub>.</p>
-
-<p>I have some ideas on a business plan; for now I only need money to live and eat.</p>
-
-<p>The short term plan:</p>
-
-<ul>
-<li>Set up a simple business.</li>
-<li>Get some financing probably <a href="https://www.kickstarter.com">Kickstarter</a> or <a href="https://www.patreon.com">Patreon</a>.</li>
-</ul>
-
-<p>The long term plan (subject to changing my mind on a whime) is:</p>
-
-<ul>
-<li>The product will should hopefully &ldquo;almost&rdquo; free, as in peanuts.
-
-<ul>
-<li>Probably a yearly subscription.</li>
-<li>Think <a href="https://www.atlassian.com/purchase/product/jira-software">Atlassian Jira</a> &ldquo;free&rdquo; model.</li>
-</ul></li>
-<li>It will remain under my control (which means you can give me lots of
-cash, I just get to keep 51%).</li>
-<li>I reserve the right to sell it to whoever I like for one
-trillion-billion whatevers. I&rsquo;m not greedy however and thus:
-
-<ul>
-<li>Head towards inverse tithing (I keep 10%, give away 90% to worthy causes/endeavours).</li>
-<li>I&rsquo;d probably only buy a reasonable house and car.</li>
-<li>Do lots of cool things for education, software and charity.</li>
-<li>I may occasionally splash out on a nice holiday or a first class plane ticket.</li>
-</ul></li>
-<li>I&rsquo;m well aware that the likelihood of this leading to success is minimal.
-
-<ul>
-<li>Failing this, I&rsquo;ll go get a normal job making software controlled widgets for space drones.</li>
-</ul></li>
-</ul>
-
-<h1 id="source-and-binary-products:d680e8a854a7cbad6d490c445cba2eba">Source and Binary Products</h1>
-
-<p>Currently the prototype(s) are closed source, the code and built
-products are internal prototypes for research and development.</p>
-
-<p>The projection for first usable alpha is roughly somewhere within 2016
-to 2017 (plus or minus as many years as required). Translation: I have
-no idea really, other than that&rsquo;s a huge undertaking.</p>
-
-<p>Obviously if a few people help out (especially full time), this might
-be reduced very slightly.</p>
-
-<h2 id="what-does-the-prototype-v0-2-demonstrate:d680e8a854a7cbad6d490c445cba2eba">What Does The Prototype (V0.2) Demonstrate?</h2>
-
-<p>This has essentially demonstrated one of the ideas; by providing the
-“brains” as components, programmers can write better tools.</p>
-
-<p>I can demonstrate editing a very simple program with the following
-features:</p>
-
-<ul>
-<li>Syntax error checking as you type;
-
-<ul>
-<li>Editor puts red squiggly lines on erroneous text, with explanations of errors on popups.</li>
-<li>(For prototype only updates on save).</li>
-</ul></li>
-<li>Find definition;
-
-<ul>
-<li>editor jumps to definition of type.</li>
-<li>(For prototype, works only on types).</li>
-</ul></li>
-<li>Find references;
-
-<ul>
-<li>editor can cycle through all references to type.</li>
-<li>(For prototype, works only on types).</li>
-</ul></li>
-<li>Auto-complete names;
-
-<ul>
-<li>editor either completes unique name or gives pop-up list of possible completions to select.</li>
-</ul></li>
-</ul>
-
-<p>Note that the features adapt to changes in the program as you edit
-it - the “brains” re-analyses the whole program as it’s been written.</p>
-
-<h2 id="technical-details-v0-2:d680e8a854a7cbad6d490c445cba2eba">Technical Details (V0.2)</h2>
-
-<ul>
-<li>Create a standalone “server” process which reads, parses and
-analyses a whole project from disk.</li>
-<li>By connecting over TCP and sending commands, the “server” responds
-to requests for information about the project.</li>
-<li>The “server” can update (reload at the moment, eventually
-incremental updates) the analysis of the whole project files.</li>
-<li>Extended Emacs (a standard well known programmable editor) to talk
-to this server process.</li>
-<li>Extended and adapted existing Emacs packages (flycheck, ggtags,
-company) which provide the front-end/UI/Emacs for virtually “free”.
-(No point reinventing the wheel here).</li>
-</ul>
-
-<p>Not everyone uses Emacs as a program editor, but it would be fairly
-easy to write plugins for other editors; most of the work is done in
-the server process (for example: you can simply use telnet or netcat
-to talk to the server, it’s just a TCP text service like a web
-server). The “server” should really also provide information to
-format/colour/indent code - and/or possibly provide standard editor
-component.</p>
-
-  
-
-  
-
-  
-
-  
 
 
 <!-- BEGIN partials/disqus-comment.html -->
@@ -784,13 +615,16 @@ component.</p>
 </body>
     
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-71830715-3', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-71830715-3', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
     

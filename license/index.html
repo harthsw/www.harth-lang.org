@@ -13,7 +13,7 @@
     <title>License &middot; Harth Programming Language</title>    
     <meta name="description" content="Harth Programming Language">
     <meta name="author" content="Harvey Thompson">
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.46" />
     
 
 <!-- END partials/header-page.html -->
@@ -82,10 +82,6 @@
   
     <li><a href="/">Home</a></li>
   
-    <li><a href="/ref/">Language Reference</a></li>
-  
-    <li><a href="/api/">Language API</a></li>
-  
     <li><a href="/post/">Blog</a></li>
   
     <li><a href="/license/">License</a></li>
@@ -124,11 +120,11 @@
 </div>
 
 
-<h3 id="content-license:53e892b8b41cc4caece1cfd5ef21d6e7">Content license</h3>
+<h3 id="content-license">Content license</h3>
 
 <p>All non-code blog content is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons BY-NC-SA</a>.</p>
 
-<h3 id="code-license:53e892b8b41cc4caece1cfd5ef21d6e7">Code license</h3>
+<h3 id="code-license">Code license</h3>
 
 <p>All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.</p>
 
@@ -180,13 +176,16 @@ limitations under the License.</p>
 </body>
     
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-71830715-3', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-71830715-3', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
     

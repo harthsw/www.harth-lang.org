@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>http://www.harth-lang.org/</loc>
-    <lastmod>2016-03-21T08:51:00-07:00</lastmod>
-    <priority>0</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>http://www.harth-lang.org/blog/2016/03/21/types-traits-and-classes/</loc>
@@ -38,11 +33,18 @@
   </url>
   
   <url>
-    <loc>http://www.harth-lang.org/api/</loc>
+    <loc>http://www.harth-lang.org/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.harth-lang.org/license/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.harth-lang.org/post/</loc>
+    <lastmod>2016-03-21T08:51:00-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

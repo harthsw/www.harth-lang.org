@@ -13,7 +13,7 @@
     <title>Syntax Ideas and Prototype Examples &middot; Harth Programming Language</title>    
     <meta name="description" content="Harth Programming Language">
     <meta name="author" content="Harvey Thompson">
-    <meta name="generator" content="Hugo 0.15" />
+    <meta name="generator" content="Hugo 0.46" />
     
 
 <!-- END partials/header-page.html -->
@@ -82,10 +82,6 @@
   
     <li><a href="/">Home</a></li>
   
-    <li><a href="/ref/">Language Reference</a></li>
-  
-    <li><a href="/api/">Language API</a></li>
-  
     <li><a href="/post/">Blog</a></li>
   
     <li><a href="/license/">License</a></li>
@@ -124,45 +120,44 @@
 </div>
 
 
-<h1 id="familiar-programming-language-with-fully-reified-immutable-and-homoiconic-code-data:656c0d85793f7695097199a3e4d2b870">Familiar Programming Language with Fully Reified, Immutable, and Homoiconic code/data.</h1>
+<h1 id="familiar-programming-language-with-fully-reified-immutable-and-homoiconic-code-data">Familiar Programming Language with Fully Reified, Immutable, and Homoiconic code/data.</h1>
 
-<h2 id="familiar:656c0d85793f7695097199a3e4d2b870">Familiar</h2>
+<h2 id="familiar">Familiar</h2>
 
-<p>The syntax and text of a <a href="http://www.harth-lang.org/">Harth</a> program should be familiar to most programmers.</p>
+<p>The syntax and text of a [Harth] program should be familiar to most programmers.</p>
 
-<h2 id="reified:656c0d85793f7695097199a3e4d2b870">Reified</h2>
+<h2 id="reified">Reified</h2>
 
-<p><a href="https://en.wikipedia.org/wiki/Reification_(computer_science)">Reified</a> means that all levels of the programming language model (text,
+<p>[Reified] means that all levels of the programming language model (text,
   lexical/tokens, AST, Semantic Model, Project, Binaries) are processed and available at run-time
   as ordinary data.</p>
 
 <p>The data where possible immutable (or near enough).</p>
 
-<h2 id="immutable:656c0d85793f7695097199a3e4d2b870">Immutable</h2>
+<h2 id="immutable">Immutable</h2>
 
-<p><a href="https://en.wikipedia.org/wiki/Immutable_object">Immutable</a> data gives greater flexibility for shared state, caching, checksum, versioning, undo.</p>
+<p>[Immutable] data gives greater flexibility for shared state, caching, checksum, versioning, undo.</p>
 
-<h2 id="homoiconic:656c0d85793f7695097199a3e4d2b870">Homoiconic</h2>
+<h2 id="homoiconic">Homoiconic</h2>
 
-<p><a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconic</a> means that the text, lexemes, tokens, AST, Semantic data,
+<p>[Homoiconic] means that the text, lexemes, tokens, AST, Semantic data,
 Project and binaries have the same shared written syntax (in human
 and/or binary) as any other language data and/or code.</p>
 
 <p>Thus the distinction between code, data, and functionality blurs.</p>
 
-<h1 id="text-to-semantic-flow:656c0d85793f7695097199a3e4d2b870">Text to Semantic Flow</h1>
+<h1 id="text-to-semantic-flow">Text to Semantic Flow</h1>
 
-<h2 id="input-output:656c0d85793f7695097199a3e4d2b870">Input/Output</h2>
+<h2 id="input-output">Input/Output</h2>
 
 <p>Text is read from any stream of characters and internally represented
 by a <code>Char*</code>, an abstract sequence of zero or more Unicode characters.</p>
 
 <p>Note that <code>Char</code> and <code>Sequence&lt;Lexeme&gt;</code> are immutable data structures.</p>
 
-<h2 id="lexical-analysis:656c0d85793f7695097199a3e4d2b870">Lexical Analysis</h2>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">method</span> <span class="n">Lexer</span><span class="o">/</span><span class="n">Read</span><span class="p">(</span><span class="nl">text</span> <span class="p">:</span> <span class="n">Char</span><span class="o">*</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Lexeme</span><span class="o">*</span>
+<h2 id="lexical-analysis">Lexical Analysis</h2>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Lexer</span><span class="o">/</span><span class="n">Read</span><span class="p">(</span><span class="nl">text</span> <span class="p">:</span> <span class="n">Char</span><span class="o">*</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Lexeme</span><span class="o">*</span>
 </code></pre></div>
-
 <p>Method takes some <code>text</code> of type <code>Char*</code>; a sequence of Unicode characters of any valid Unicode value.</p>
 
 <p>The method returns <code>Lexeme*</code>; that is zero or more <code>Lexeme</code> objects.</p>
@@ -199,26 +194,24 @@ by a <code>Char*</code>, an abstract sequence of zero or more Unicode characters
 <li>Note that <code>Lexeme</code> and <code>Sequence&lt;Lexeme&gt;</code> are immutable data structures.</li>
 </ul>
 
-<h2 id="lexemes-to-parse-tree:656c0d85793f7695097199a3e4d2b870">Lexemes to Parse Tree</h2>
+<h2 id="lexemes-to-parse-tree">Lexemes to Parse Tree</h2>
 
 <p>The <code>Lexeme*</code> is further processed by a recursive descent parser (eventually hand written).</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">method</span> <span class="n">Parser</span><span class="o">/</span><span class="n">Read</span><span class="p">(</span><span class="nl">lexemes</span> <span class="p">:</span> <span class="n">Lexeme</span><span class="o">*</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NodeTree</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Parser</span><span class="o">/</span><span class="n">Read</span><span class="p">(</span><span class="nl">lexemes</span> <span class="p">:</span> <span class="n">Lexeme</span><span class="o">*</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NodeTree</span>
 </code></pre></div>
-
 <p>Method takes some <code>lexemes</code> of type <code>Lexeme*</code>; a sequence of zero or more <code>Lexeme</code>.</p>
 
 <p>The method returns a <code>NodeTree</code> which represents any valid or invalid
 AST tree of <code>Node</code>, essentially a view of the AST tree as a
-<a href="https://www.safaribooksonline.com/library/view/language-implementation-patterns/9781680500097/f_0045.html">Homogeneous AST</a>. This view and the underlyig data in immutable.</p>
+[Homogeneous AST]. This view and the underlyig data in immutable.</p>
 
 <p>This means the source text, lexeme and AST syntax tree can be easily
 versioned, editted, undo using functional style immutable data
-structures (which are provided by <a href="http://www.harth-lang.org/">Harth</a> in the standard library).</p>
+structures (which are provided by [Harth] in the standard library).</p>
 
-<h2 id="semantic-analysis-of-parse-tree:656c0d85793f7695097199a3e4d2b870">Semantic Analysis of Parse Tree</h2>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">method</span> <span class="n">Semantic</span><span class="o">/</span><span class="n">Analyze</span><span class="p">(</span><span class="nl">tree</span> <span class="p">:</span> <span class="n">NodeTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SemanticModel</span>
+<h2 id="semantic-analysis-of-parse-tree">Semantic Analysis of Parse Tree</h2>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Semantic</span><span class="o">/</span><span class="n">Analyze</span><span class="p">(</span><span class="nl">tree</span> <span class="p">:</span> <span class="n">NodeTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SemanticModel</span>
 </code></pre></div>
-
 <p>The tree input of type <code>NodeTree</code> is converted into a static
 <code>SemanticModel</code> instance; from the outside perspective this is
 immutable (it&rsquo;s actually either &ldquo;frozen&rdquo; once completed and/or backed
@@ -255,7 +248,7 @@ tools) to ask any semantic, syntactic, lexical, or textual question.</p>
 for almost instant restarts; the models are all checksummed/hashed for
 fast comparison checks. Any tool would start by:</p>
 
-<h2 id="startup-and-caching-model:656c0d85793f7695097199a3e4d2b870">Startup and Caching Model</h2>
+<h2 id="startup-and-caching-model">Startup and Caching Model</h2>
 
 <ul>
 <li>Look at text model (collection of <code>Char*</code> stored in files, memory, repositories etc).</li>
@@ -271,10 +264,10 @@ machines, processes, and/or threads over any connection type.</p>
 instantly reading all source code at the highest fidelity - using the least
 amount of work (at least this time). That is approaching &ldquo;Read many, write once&rdquo; levels.</p>
 
-<h2 id="compiler-script-and-repl:656c0d85793f7695097199a3e4d2b870">Compiler, Script and REPL</h2>
+<h2 id="compiler-script-and-repl">Compiler, Script and REPL</h2>
 
 <p>The backend of the Compiler essentially looks like:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">method</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Eval</span><span class="p">(</span><span class="nl">text</span> <span class="p">:</span> <span class="n">Char</span><span class="o">*</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Anything</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Eval</span><span class="p">(</span><span class="nl">text</span> <span class="p">:</span> <span class="n">Char</span><span class="o">*</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Anything</span>
 
 <span class="n">method</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Load</span><span class="p">(</span><span class="nl">files</span> <span class="p">:</span> <span class="n">Name</span><span class="o">*</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SemanticModel</span>
 
@@ -282,7 +275,6 @@ amount of work (at least this time). That is approaching &ldquo;Read many, write
 <span class="n">method</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Link</span><span class="p">(</span><span class="nl">project</span> <span class="p">:</span> <span class="n">Project</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Executable</span>
 <span class="n">method</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Run</span><span class="p">(</span><span class="nl">exec</span> <span class="p">:</span> <span class="n">Executable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Anything</span>
 </code></pre></div>
-
 <p>A <code>Project</code> is the fully reified and homoiconic representation of an
 executable program; by default it contains an immutable representation
 of all semantic information, code, binaries, libraries, debug
@@ -301,7 +293,7 @@ information etc.</p>
 </ul>
 
 <p>The method <code>Load</code> allows for a number of files to be loaded into a <code>SemanticModel</code>:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">method</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Load</span><span class="p">(</span><span class="nl">files</span> <span class="p">:</span> <span class="n">Name</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Load</span><span class="p">(</span><span class="nl">files</span> <span class="p">:</span> <span class="n">Name</span><span class="o">*</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">let</span> <span class="n">files</span> <span class="o">=</span> <span class="n">assume</span><span class="p">(</span><span class="n">IO</span><span class="o">/</span><span class="n">ReadFiles</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
     <span class="n">let</span> <span class="n">trees</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">_</span> <span class="o">=&gt;</span> <span class="n">Parser</span><span class="o">/</span><span class="n">Read</span><span class="p">(</span><span class="n">Lexer</span><span class="o">/</span><span class="n">Read</span><span class="p">(</span><span class="n">_</span><span class="p">.</span><span class="n">SourceText</span><span class="p">)))</span>
@@ -309,13 +301,12 @@ information etc.</p>
     <span class="k">return</span> <span class="n">Semantic</span><span class="o">/</span><span class="n">Analyze</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>The methods <code>Compile</code>, <code>Link</code> and <code>Run</code> allow for finer control.</p>
 
-<h3 id="compiler:656c0d85793f7695097199a3e4d2b870">Compiler</h3>
+<h3 id="compiler">Compiler</h3>
 
 <p>A compiler might look like this:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">args</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">args</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">let</span> <span class="n">model</span> <span class="o">=</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Load</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
     <span class="n">let</span> <span class="n">project</span> <span class="o">=</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Compile</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
@@ -323,15 +314,14 @@ information etc.</p>
     <span class="n">match</span> <span class="p">(</span><span class="n">executable</span><span class="p">)</span>
     <span class="p">{</span>
     <span class="k">case</span> <span class="nl">Error</span><span class="p">:</span> <span class="n">abort</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
-    <span class="k">case</span> <span class="nl">Anything</span><span class="p">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Compilation success</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="k">case</span> <span class="nl">Anything</span><span class="p">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Compilation success</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<h3 id="script-interpreter:656c0d85793f7695097199a3e4d2b870">Script Interpreter</h3>
+<h3 id="script-interpreter">Script Interpreter</h3>
 
 <p>A script interpreter might look like this:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">args</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">args</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">let</span> <span class="n">model</span> <span class="o">=</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Load</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
     <span class="n">let</span> <span class="n">project</span> <span class="o">=</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Compile</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
@@ -341,46 +331,42 @@ information etc.</p>
     <span class="p">{</span>
     <span class="k">case</span> <span class="nl">Int</span><span class="p">:</span> <span class="k">return</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
     <span class="k">case</span> <span class="nl">Error</span><span class="p">:</span> <span class="n">abort</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
-    <span class="k">case</span> <span class="nl">Anything</span><span class="p">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%O</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span> <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">case</span> <span class="nl">Anything</span><span class="p">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%O</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span> <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<h3 id="script-interpreter-1:656c0d85793f7695097199a3e4d2b870">Script Interpreter</h3>
+<h3 id="script-interpreter-1">Script Interpreter</h3>
 
 <p>A REPL interpreter might look like this:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">args</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">args</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">let</span> <span class="n">input</span> <span class="o">=</span> <span class="n">IO</span><span class="o">/</span><span class="n">Stdin</span>
     <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">.</span><span class="n">EOF</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">let</span> <span class="n">text</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">(</span><span class="s">&quot;Harth&gt; &quot;</span><span class="p">)</span>
+        <span class="n">let</span> <span class="n">text</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">(</span><span class="s">&#34;Harth&gt; &#34;</span><span class="p">)</span>
         <span class="n">let</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Compiler</span><span class="o">/</span><span class="n">Eval</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
         <span class="n">match</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span>
         <span class="p">{</span>
         <span class="k">case</span> <span class="nl">Error</span><span class="p">:</span> <span class="n">_</span><span class="p">.</span><span class="n">PrintStackTrace</span><span class="p">()</span>
-        <span class="k">case</span> <span class="nl">Anything</span><span class="p">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%O</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span> <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">case</span> <span class="nl">Anything</span><span class="p">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%O</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span> <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<h2 id="debugging:656c0d85793f7695097199a3e4d2b870">Debugging?</h2>
+<h2 id="debugging">Debugging?</h2>
 
 <p>The debugger essentially provides a few basic helpers on top of
 semantic name and source text resolution:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">method</span> <span class="n">Debugger</span><span class="o">/</span><span class="n">Location</span><span class="p">(</span><span class="nl">functionName</span> <span class="p">:</span> <span class="n">Name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Location</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Debugger</span><span class="o">/</span><span class="n">Location</span><span class="p">(</span><span class="nl">functionName</span> <span class="p">:</span> <span class="n">Name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Location</span>
 <span class="n">method</span> <span class="n">Debugger</span><span class="o">/</span><span class="n">Location</span><span class="p">(</span><span class="nl">fileName</span> <span class="p">:</span> <span class="n">Name</span><span class="p">,</span> <span class="nl">line</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="nl">column</span> <span class="p">:</span> <span class="n">Int</span><span class="o">?</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Location</span>
 <span class="n">method</span> <span class="n">Debugger</span><span class="o">/</span><span class="n">Break</span><span class="p">(</span><span class="nl">loc</span> <span class="p">:</span> <span class="n">Location</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Breakpoint</span>
 </code></pre></div>
-
 <p>The <code>Breakpoint</code> result can be modified for single shot, read/write, conditional etc.</p>
 
 <p>Additionally the JIT and/or compiler can live insert any compiled
 expression (actually a parsed <code>NodeTree</code>) into code:</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">method</span> <span class="n">Debugger</span><span class="o">/</span><span class="n">LiveEdit</span><span class="p">(</span><span class="nl">loc</span> <span class="p">:</span> <span class="n">Location</span><span class="p">,</span> <span class="nl">code</span> <span class="p">:</span> <span class="n">NodeTree</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">method</span> <span class="n">Debugger</span><span class="o">/</span><span class="n">LiveEdit</span><span class="p">(</span><span class="nl">loc</span> <span class="p">:</span> <span class="n">Location</span><span class="p">,</span> <span class="nl">code</span> <span class="p">:</span> <span class="n">NodeTree</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Since all internal data can be converted to human string with
 <code>ToString()</code> and/or <code>printf</code>, a watch point might be implemented by
 <code>LiveEdit</code> insertion of <code>printf()</code> for each variable and/or state.</p>
@@ -391,25 +377,24 @@ expression (actually a parsed <code>NodeTree</code>) into code:</p>
 <code>Debugger/Continue()</code>, <code>Run()</code>, <code>Step()</code> and <code>Next()</code> can be
 implemented using semantic information.</p>
 
-<h2 id="backend-binary-generator:656c0d85793f7695097199a3e4d2b870">Backend Binary Generator</h2>
+<h2 id="backend-binary-generator">Backend Binary Generator</h2>
 
-<p>The backend binary and object generator uses the latest <a href="http://llvm.org">LLVM</a> to
+<p>The backend binary and object generator uses the latest [LLVM] to
 convert a <code>SemanticModel</code> into an internal set of linkage/executable
 <code>LLVM/Module*</code>. These are either cached and/or written to disk as
 appropriate.</p>
 
-<h1 id="programming-language-examples:656c0d85793f7695097199a3e4d2b870">Programming Language Examples</h1>
+<h1 id="programming-language-examples">Programming Language Examples</h1>
 
-<h2 id="example-1-hello-world:656c0d85793f7695097199a3e4d2b870">Example 1: Hello World</h2>
+<h2 id="example-1-hello-world">Example 1: Hello World</h2>
 
 <p>The basic program (executable, script or REPL) is to print &ldquo;Hello World&rdquo;:</p>
 
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="lineno">1 </span><span class="hll"><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">_</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
-</span><span class="lineno">2 </span><span class="p">{</span>
-<span class="lineno">3 </span><span class="hll">    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-</span><span class="lineno">4 </span><span class="p">}</span>
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="hl"><span class="ln">1</span><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">_</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
+</span><span class="ln">2</span><span class="p">{</span>
+<span class="hl"><span class="ln">3</span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span>
+</span><span class="ln">4</span><span class="p">}</span>
+<span class="ln">5</span></code></pre></div>
 
 <p>This code can be made into an executable, shell script or typed interactively at a REPL:</p>
 
@@ -430,7 +415,7 @@ bash$
 </div>
 
 
-<h3 id="notes-for-line-1:656c0d85793f7695097199a3e4d2b870">Notes for line <strong>1</strong>:</h3>
+<h3 id="notes-for-line-1">Notes for line <strong>1</strong>:</h3>
 
 <ul>
 <li><code>function</code> denotes that a function name, type and body will appear.
@@ -443,7 +428,7 @@ bash$
 <li><code>main</code> takes only one argument, the <code>String</code> passed to the executable and/or script.</li>
 <li><code>_</code> means variable value is unamed and never used. Essentially the arguments are ignored.</li>
 <li><code>String*</code> means a sequence of zero or more String, it&rsquo;s like a
-bounded array, but has a abstract type of <code>Sequence&lt;String&gt;</code>. See <a href="TODO">Types</a>.</li>
+bounded array, but has a abstract type of <code>Sequence&lt;String&gt;</code>. See [Types].</li>
 <li><code>main</code> has no return type written, it is intuit from the block return type. See below.</li>
 <li><code>main</code> must have one of the following types, and must exist and be named at global scope:
 
@@ -455,7 +440,7 @@ bounded array, but has a abstract type of <code>Sequence&lt;String&gt;</code>. S
 </ul></li>
 </ul>
 
-<h3 id="notes-for-line-3:656c0d85793f7695097199a3e4d2b870">Notes for line <strong>3</strong>:</h3>
+<h3 id="notes-for-line-3">Notes for line <strong>3</strong>:</h3>
 
 <ul>
 <li>The body is a block (<code>BlockNode</code>) which contains <code>ExpressionNode*</code> (in this case one expression).</li>
@@ -467,20 +452,19 @@ bounded array, but has a abstract type of <code>Sequence&lt;String&gt;</code>. S
 <li>Thus the block only does something by side-effect.</li>
 </ul>
 
-<h2 id="example-2-hello-world-script:656c0d85793f7695097199a3e4d2b870">Example 2: Hello World Script</h2>
+<h2 id="example-2-hello-world-script">Example 2: Hello World Script</h2>
 
 <p>A more correct and portable (to Linux, MacOS, Windows Cygwin) script should be in an executable file of any name.</p>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="cp">#!/usr/bin/env hs</span>
-<span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">_</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#!/usr/bin/env hs
+</span><span class="cp"></span><span class="n">function</span> <span class="nf">main</span><span class="p">(</span><span class="nl">_</span> <span class="p">:</span> <span class="n">String</span><span class="o">*</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>The key addition is the POSIX magic <code>#!/usr/bin/env hs</code> which runs the
 script text through the <code>hs</code> (aka. <code>harth-script</code>) JIT script compiler
 and execution engine found on <code>$PATH</code>. The <code>#!</code> is always treated as a
-comment by <a href="http://www.harth-lang.org/">Harth</a>.</p>
+comment by [Harth].</p>
 
 <div class="harth-console-panel">
   <pre class="harth-console">
@@ -512,11 +496,10 @@ bash$
 </div>
 
 
-<h2 id="example-3-hello-world-in-repl:656c0d85793f7695097199a3e4d2b870">Example 3: Hello World In REPL</h2>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+<h2 id="example-3-hello-world-in-repl">Example 3: Hello World In REPL</h2>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello World!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">)</span>
 </code></pre></div>
-
-<p>At an interactive <a href="http://www.harth-lang.org/">Harth</a> shell (or REPL), one can simply execute any statement, expression or program. So the above will result in:</p>
+<p>At an interactive [Harth] shell (or REPL), one can simply execute any statement, expression or program. So the above will result in:</p>
 
 <div class="harth-console-panel">
   <pre class="harth-console">
@@ -527,24 +510,24 @@ Harth&gt;
 </div>
 
 
-<h3 id="example-4-the-harth-lang-collection-sequence-class:656c0d85793f7695097199a3e4d2b870">Example 4: The /Harth/Lang/Collection/Sequence class</h3>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">harth</span> <span class="mf">0.1</span>
+<h3 id="example-4-the-harth-lang-collection-sequence-class">Example 4: The /Harth/Lang/Collection/Sequence class</h3>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">harth</span> <span class="mf">0.1</span>
 <span class="n">package</span> <span class="o">/</span><span class="n">Harth</span><span class="o">/</span><span class="n">Lang</span><span class="o">/</span><span class="n">Collection</span>
 <span class="n">import</span> <span class="o">/</span><span class="n">Harth</span><span class="o">/</span><span class="n">Lang</span><span class="o">/</span><span class="n">Core</span>
 
-<span class="cm">/**</span>
-<span class="cm"> * A Sequence is an abstract finite stream of elements which can be counted, accessed by index.</span>
-<span class="cm"> * </span>
-<span class="cm"> * New sequences can be created using Builder, Append(), Prepend() and similar functions.</span>
-<span class="cm"> * </span>
-<span class="cm"> * Operations performance may vary from O(1) to O(n) or more. LinearSequence and IndexedSequence</span>
-<span class="cm"> * provide tighter bounds on performance order.</span>
-<span class="cm"> * </span>
-<span class="cm"> * Typically most classes should internally use concrete types such as List&lt;T&gt; or Array&lt;T&gt;, but</span>
-<span class="cm"> * should return or accept Sequence&lt;T&gt; from methods for maximum usefulness.</span>
-<span class="cm"> */</span>
+<span class="cm">/**
+</span><span class="cm"> * A Sequence is an abstract finite stream of elements which can be counted, accessed by index.
+</span><span class="cm"> * 
+</span><span class="cm"> * New sequences can be created using Builder, Append(), Prepend() and similar functions.
+</span><span class="cm"> * 
+</span><span class="cm"> * Operations performance may vary from O(1) to O(n) or more. LinearSequence and IndexedSequence
+</span><span class="cm"> * provide tighter bounds on performance order.
+</span><span class="cm"> * 
+</span><span class="cm"> * Typically most classes should internally use concrete types such as List&lt;T&gt; or Array&lt;T&gt;, but
+</span><span class="cm"> * should return or accept Sequence&lt;T&gt; from methods for maximum usefulness.
+</span><span class="cm"> */</span>
 <span class="err">@</span><span class="k">const</span>
-<span class="k">class</span> <span class="nc">Sequence</span><span class="o">&lt;</span><span class="n">out</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">extends</span> <span class="n">Stream</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="err"> </span><span class="nc">Sequence</span><span class="o">&lt;</span><span class="n">out</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">extends</span> <span class="n">Stream</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
 <span class="p">{</span>
     <span class="err">@</span><span class="n">abstract</span>
     <span class="n">property</span> <span class="nl">ReverseIterator</span> <span class="p">:</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
@@ -589,7 +572,6 @@ Harth&gt;
     <span class="n">method</span> <span class="n">Drop</span><span class="p">(</span><span class="nl">n</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;%</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Some things to note:</p>
 
 <ul>
@@ -619,26 +601,26 @@ doesn&rsquo;t actually exist&rdquo;.</li>
 <li>Hey, where&rsquo;s the body?</li>
 </ul>
 
-<h3 id="example-4-the-harth-lang-collection-basesequence-class:656c0d85793f7695097199a3e4d2b870">Example 4: The /Harth/Lang/Collection/BaseSequence class</h3>
-<div class="highlight"><pre><code class="language-C++" data-lang="C++"><span></span><span class="n">harth</span> <span class="mf">0.1</span>
+<h3 id="example-4-the-harth-lang-collection-basesequence-class">Example 4: The /Harth/Lang/Collection/BaseSequence class</h3>
+<div class="highlight"><pre class="chroma"><code class="language-C++" data-lang="C++"><span class="n">harth</span> <span class="mf">0.1</span>
 <span class="n">package</span> <span class="o">/</span><span class="n">Harth</span><span class="o">/</span><span class="n">Lang</span><span class="o">/</span><span class="n">Collection</span>
 <span class="n">import</span> <span class="o">/</span><span class="n">Harth</span><span class="o">/</span><span class="n">Lang</span><span class="o">/</span><span class="n">Core</span>
 
-<span class="cm">/**</span>
-<span class="cm"> * BaseSequence provides basic implementation of Sequence using some concrete SeqT type.</span>
-<span class="cm"> * Sub-classes are LinearSequence and IndexedSequence which provide different performance</span>
-<span class="cm"> * properties for methods; for example Get() and Size() are O(n) and O(1) respectively.</span>
-<span class="cm"> * </span>
-<span class="cm"> * Sub-classes must at minimum must provide:</span>
-<span class="cm"> * - Iterator or ReverseIterator (the opposite has a default implementation)</span>
-<span class="cm"> * - Builder</span>
-<span class="cm"> * </span>
-<span class="cm"> * Default implementations are provided for all other operations, though these may have terrible</span>
-<span class="cm"> * performance up to O(n^2). Sub-classes should really override with better performance</span>
-<span class="cm"> * implementations were possible.</span>
-<span class="cm"> */</span>
+<span class="cm">/**
+</span><span class="cm"> * BaseSequence provides basic implementation of Sequence using some concrete SeqT type.
+</span><span class="cm"> * Sub-classes are LinearSequence and IndexedSequence which provide different performance
+</span><span class="cm"> * properties for methods; for example Get() and Size() are O(n) and O(1) respectively.
+</span><span class="cm"> * 
+</span><span class="cm"> * Sub-classes must at minimum must provide:
+</span><span class="cm"> * - Iterator or ReverseIterator (the opposite has a default implementation)
+</span><span class="cm"> * - Builder
+</span><span class="cm"> * 
+</span><span class="cm"> * Default implementations are provided for all other operations, though these may have terrible
+</span><span class="cm"> * performance up to O(n^2). Sub-classes should really override with better performance
+</span><span class="cm"> * implementations were possible.
+</span><span class="cm"> */</span>
 <span class="err">@</span><span class="k">const</span>
-<span class="k">class</span> <span class="nc">BaseSequence</span><span class="o">&lt;</span><span class="n">out</span> <span class="n">T</span><span class="p">,</span> <span class="n">out</span> <span class="n">SeqT</span><span class="o">&gt;</span> <span class="n">extends</span> <span class="n">Sequence</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="err"> </span><span class="nc">BaseSequence</span><span class="o">&lt;</span><span class="n">out</span> <span class="n">T</span><span class="p">,</span> <span class="n">out</span> <span class="n">SeqT</span><span class="o">&gt;</span> <span class="n">extends</span> <span class="n">Sequence</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
 <span class="p">{</span>
     <span class="err">@</span><span class="k">override</span>
     <span class="n">property</span> <span class="nl">Iterator</span> <span class="p">:</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
@@ -666,7 +648,6 @@ doesn&rsquo;t actually exist&rdquo;.</li>
     <span class="cm">/* ... */</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <ul>
 <li>Note property and method overrides.</li>
 <li>Note crazy generics: means derived classes can control return type.
@@ -687,14 +668,14 @@ analysis would be able to display lexical, semantic feed back, possibly on-the
 fly (highlighting) and provide errors and documentation as required.
 
 <ul>
-<li>See <a href="http://www.flycheck.org">Emacs FlyCheck</a> for an example of this working in other languages pretty well.</li>
+<li>See [Emacs FlyCheck] for an example of this working in other languages pretty well.</li>
 <li>Emacs basically requires a very good text to reflection system
 underneath the hood. Languages such as Python and C# tend to
-provide this these days. Therefore <a href="http://www.harth-lang.org/">Harth</a> must and will, builtin, free, easy.</li>
+provide this these days. Therefore [Harth] must and will, builtin, free, easy.</li>
 </ul></li>
 </ul>
 
-<p><div class="panel panel-info">
+<div class="panel panel-info">
   <div class="panel-heading">
     <h3 class="panel-title">
       
@@ -702,37 +683,13 @@ provide this these days. Therefore <a href="http://www.harth-lang.org/">Harth</a
       
     </h3>
   </div>
-  
-    <div class="panel-body">
+  <div class="panel-body">  
+    
       The TODO notes and some semi-colons have been removed from the source. Hey it&#39;s a prototype. Whatevers.
-    </div>
-  
-</div>
-</p>
-
-<h1 id="warning:656c0d85793f7695097199a3e4d2b870">Warning</h1>
-
-<p><div class="panel panel-warning">
-  <div class="panel-heading">
-    <h3 class="panel-title">
-      
-        Warning
-      
-    </h3>
+    
   </div>
-  
-    <div class="panel-body">
-      All the syntax and semantics discussed here are simplified, reality is likely to be more complex, different and changing.
-    </div>
-  
 </div>
-</p>
 
-<!-- Local Variables: -->
-
-<!-- indent-tabs-mode: nil -->
-
-<!-- End: -->
 
 
 <!-- BEGIN partials/disqus-comment.html -->
@@ -766,13 +723,16 @@ provide this these days. Therefore <a href="http://www.harth-lang.org/">Harth</a
 </body>
     
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-71830715-3', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-71830715-3', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 
     
